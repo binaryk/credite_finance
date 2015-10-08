@@ -14,7 +14,7 @@ class AlterTableAnsambluri extends Migration {
 	{
 		Schema::table('ansambluri_rezidentiale', function(Blueprint $t){
 			$t->text('detalii_localizare_descriere');
-			$t->date('data_finalizare');
+			// $t->date('data_finalizare');
 		});
 	}
 

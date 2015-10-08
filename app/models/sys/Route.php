@@ -80,6 +80,7 @@ Date de baza
 
 			->add('get', 'apartamente_proprietar', 'apartamente_proprietar/{id}/{id_proprietar}', 'ApartamenteProprietarController@index', 'Imobiliare\Datatable')
 			->add('get', 'apartamente_proprietar-row-source', 'apartamente_proprietar/row-source/{id}/{id_proprietar}', 'ApartamenteProprietarController@rows', 'Imobiliare\Datatable')
+			
 			->add('get', 'editare-apartament-gasit', 'proprietari{id}', 'ApartamenteProprietarController@editFindApartament', 'Imobiliare\Datatable')
 
 			->add('get', 'apartament_photo', 'apartament-poze/{id}/{id_apartament}', 'ApartamentPhotosController@index', 'Imobiliare\Datatable')

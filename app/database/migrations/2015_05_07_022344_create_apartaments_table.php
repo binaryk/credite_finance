@@ -75,6 +75,8 @@ class CreateApartamentsTable extends Migration {
 			$table->text('adresa_exacta');
 			$table->text('detalii');
 			$table->text('detalii_private');
+			$table->tinyinteger('vechime_imobil');
+			$table->integer('tip_imobil')->unsigned()->nullable();
 
 
 			$table

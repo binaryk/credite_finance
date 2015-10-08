@@ -14,7 +14,7 @@
 		"cartalyst/sentry": "2.1.*",
 		"laracasts/validation": "~1.0",
 		"baum/baum": "~1.0",
-		"intervention/image"          : "2.*",
+		"intervention/image" : "2.*",
 		"thujohn/pdf": "dev-master",
 		"tecnick.com/tcpdf": "^6.2"
 	},

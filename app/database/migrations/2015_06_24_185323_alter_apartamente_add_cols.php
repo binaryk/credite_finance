@@ -13,8 +13,8 @@ class AlterApartamenteAddCols extends Migration {
 	public function up()
 		{
 			Schema::table('apartamente', function(Blueprint $t){
-				$t->tinyinteger('vechime_imobil');
-				$t->integer('tip_imobil')->unsigned()->nullable();
+				// $t->tinyinteger('vechime_imobil');
+				// $t->integer('tip_imobil')->unsigned()->nullable();
 
 			});
 		}

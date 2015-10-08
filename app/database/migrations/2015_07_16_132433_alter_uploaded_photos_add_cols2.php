@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class AlterUploadedPhotosAddCols extends Migration {
+class AlterUploadedPhotosAddCols2 extends Migration {
 
 	/**
 	 * Run the migrations.
