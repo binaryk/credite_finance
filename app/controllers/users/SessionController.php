@@ -46,11 +46,12 @@ class SessionsController extends \BaseController {
 
 		catch (\Cartalyst\Sentry\Users\UserNotFoundException $e)
 		{
-		   	return Redirect::back()->withInput()->withErrorMessage('Email sau parola incorect.');
+
+		   	return Redirect::back()->withInput()->withFlashDanger("Email sau parola incorect."); 
 		}
 		catch (\Cartalyst\Sentry\Users\UserNotActivatedException $e)
 		{
-		   	return Redirect::back()->withInput()->withErrorMessage('Utilizatorul nu este activat.');
+		   	return Redirect::back()->withInput()->withFlashDanger('Utilizatorul nu este activat.');
 		}
 
 		// Logged in successfully - redirect based on type of user

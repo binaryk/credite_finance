@@ -1,0 +1,164 @@
+@font-face {
+    font-family: Proxima;
+    src: url(../../../build/fonts/ProximaNova-Regular.otf);
+}
+* {
+    font-family: 'Proxima', helvetica, arial;
+}
+.form-group { margin: 0px;}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+form.form-horizontal {
+    padding: 0 20px;
+}
+.login .content .form-title {
+    font-weight: 300;
+    font-family: 'Proxima', helvetica, arial;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #5b595a;
+}
+
+.login .content {
+    background: none;
+    background-color: rgb(255,255,255);
+    border-radius: 5px!important;
+    margin-top:60px;
+}
+
+input.form-control {
+    background: #fcfcfc!important;
+    border: 1px solid #eee;
+    margin: 5px auto;
+    padding: 15px;
+    width: 100%;
+    display: block;
+    border-radius: 3px!important;
+    font-size: 18px;
+    transition: opacity 0.4s;
+    text-align: left;
+    height: auto;
+    font-family: Proxima, helvetica, arial;
+}
+.alert-danger {
+    background-color: #eee04c!important;
+    border: none;
+    color: #000!important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+.alert-success {
+    background-color: #eee04c!important;
+    border: none;
+    color: #000!important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+.input-icon > .form-control {
+    padding-left: 10px;
+}
+.blue.btn{
+    color: #FFFFFF;
+    background-color: #15ce73;
+    width: 100%;
+    line-height: 2;
+    border-radius: 5px!important;
+    font-size: 1.3em;
+}
+
+.blue.btn:hover, .blue.btn:focus, .blue.btn:active, .blue.btn.active {
+    background-color: #18b96a;
+}
+.login .content .form-actions {
+    background-color: transparent;
+    clear: both;
+    border: 0px;
+    padding: 0px 16px 25px 14px;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+.login .content h4 {
+    color: #b2aba5;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: underline;
+}
+.login .content .create-account {
+    border-top: none;
+    padding-top: 0px;
+    margin-top: 0px;
+    position: relative;
+    top: 66px;
+    margin-top: -66px;
+    text-align: center;
+}
+.login .content .create-account a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.login .copyright {visibility: hidden;}
+.login .logo {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.login {
+    background-color: #9dc6fe !important;
+}
+
+/* reseteaza parola */
+
+.login .content h3 {
+    color: #5b595a;
+    font-weight: 300;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-out {
+    border-top: medium none;
+    margin-top: 13px;
+    padding-top: 0;
+    position: relative;
+    text-align: center;
+    top: 61px;
+}
+.login .content .forget-form .form-actions {
+    border: 0 none;
+    margin-bottom: 0;
+    padding: 0 28px 25px 31px;
+}
+.btn-default {
+    color: #fff!important;
+    background-color: transparent!important;
+    border-color: transparent!important;
+    text-decoration: underline!important;
+    padding: 0!important;
+    margin: 0!important;
+    vertical-align: baseline!important;
+    line-height: 0!important;
+}
+.terms {
+    color: #b2aba5!important;
+    text-align: center;
+    padding-top: 37px;
+}
+.form-out.reg {
+    border-top: medium none;
+    margin-top: -44px;
+    padding-top: 0;
+    position: relative;
+    text-align: center;
+    top: 61px;
+}

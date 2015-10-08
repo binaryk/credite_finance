@@ -87,7 +87,7 @@ class RemindersController extends Controller {
 				return Redirect::back()->withErrorMessage(Lang::get($response))->withInput();
 
 			case Password::PASSWORD_RESET:
-				return Redirect::to('login')->withFlashMessage('Parola a fost resetata cu succes!');
+				return Redirect::to('login')->withFlashDanger('Parola a fost resetata cu succes!');
 		}
 	}
 

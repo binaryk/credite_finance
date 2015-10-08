@@ -25,7 +25,7 @@
 <!-- BEGIN THEME STYLES -->
 {{HTML::style("assets/global/css/components.css") }}
 {{HTML::style("assets/admin/layout/css/layout.css") }}
-{{HTML::style("assets/admin/layout/css/themes/darkblue.css") }}
+{{HTML::style("assets/admin/layout/css/themes/light2.css") }}
 
 @yield('custom-styles')
 <link rel="shortcut icon" href="favicon.ico"/>

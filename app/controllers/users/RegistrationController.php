@@ -49,7 +49,7 @@ class RegistrationController extends \BaseController {
     	// Assign the group to the user
     	$user->addGroup($usersGroup);
 
-		return Redirect::to('login')->withFlashMessage('Utilizator creat cu succes!');
+		return Redirect::to('login')->withFlashSuccess('Utilizator creat cu succes!');
 
 
 	}
