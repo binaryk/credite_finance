@@ -6,6 +6,9 @@
 <meta content="" name="proiect imobiliare">
 <meta content="" name="Binaryk">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<link rel="shortcut icon" href="{{ asset('admin/img/icons/favicon.png') }}">
+
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
 {{HTML::style("assets/global/plugins/font-awesome/css/font-awesome.min.css") }}
@@ -28,6 +31,5 @@
 {{HTML::style("assets/admin/layout/css/themes/light2.css") }}
 
 @yield('custom-styles')
-<link rel="shortcut icon" href="favicon.ico"/>
 
 </head>
