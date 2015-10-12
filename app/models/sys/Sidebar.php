@@ -13,29 +13,13 @@ class Sidebar {
 			'options' => [],
 			'active' => [],
 		],
-		'dezvoltatori' => [
+		'persoane_fizice' => [
 			'header' => [
-				'caption' => 'Dezvoltatori',
+				'caption' => 'Persoane fizice',
 				'icon' => 'icon-user',
 			],
 			'options' => [],
-			'active' => ['dezvoltatori*', 'ansamblu-poze*', 'cladire-poze*','cautare_dezvoltatori*','apartament-cladire-poze*'],
-		],
-		'imobile' => [
-			'header' => [
-				'caption' => 'Imobile',
-				'icon' => 'icon-home',
-			],
-			'options' => [],
-			'active' => ['proprietari', 'apartamente_proprietar*', 'cautare-apartamente*', 'apartament-detalii-oferta*', 'apartament-poze*', 'proprietar*'],
-		],
-		'agentii' => [
-			'header' => [
-				'caption' => 'Agentii',
-				'icon' => 'fa fa-shopping-cart',
-			],
-			'options' => [],
-			'active' => ['agentii*'],
+			'active' => ['persoane=fizice*'],
 		],
 		'date-baza' => [
 			'header' => [
@@ -71,13 +55,19 @@ class Sidebar {
 			/**
 		Dezvoltatori
 		 **/
-			->addOption('dezvoltatori', \URL::route('dezvoltatori-index'), 'Dezvoltatori', 'fa-circle-o')
-			->addOption('dezvoltatori', \URL::route('cautare_dezvoltatori_index'), 'Cautare dezvoltatori', 'fa-circle-o')
-
-			->addOption('imobile', \URL::route('proprietar-index'), 'Imobile', 'fa-circle-o')
-			->addOption('imobile', \URL::route('cautare-apartamente-index'), 'Cautare imobile', 'fa-circle-o')
-			->addOption('agentii', \URL::route('agentii-index'), 'Cautare agentii', 'fa-shopping-cart')
-			->addOption('principal', \URL::route('home'), 'Pagina principală', 'fa-home')
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credite imobiliare', 'fa-circle-o')
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Prima Casa', 'fa-circle-o')
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credit de achizitie', 'fa-circle-o')
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credit nevoie personale cu ipoteca', 'fa-circle-o')
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credit constructie', 'fa-circle-o')
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credit de renovari/amenajari', 'fa-circle-o')
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Refinantari', 'fa-circle-o')
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credite de consum', 'fa-circle-o')  
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Nevoi personale', 'fa-circle-o')  
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credite medivcale/studii/vacanta', 'fa-circle-o')  
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Leasing', 'fa-circle-o')  
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Refinantari', 'fa-circle-o')  
+			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Imobile', 'fa-circle-o')  
 		;
 	}
 

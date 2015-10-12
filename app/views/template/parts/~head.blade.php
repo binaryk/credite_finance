@@ -20,7 +20,7 @@
 <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
 {{HTML::style("assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css") }}
 {{HTML::style("assets/global/plugins/fullcalendar/fullcalendar.min.css") }}
-{{HTML::style("assets/global/plugins/jqvmap/jqvmap/jqvmap.css") }}
+{{HTML::style("assets/global/plugins/jqvmap/jqvmap/jqvmap.css") }}  
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN PAGE STYLES -->
 {{HTML::style("assets/admin/pages/css/tasks.css") }}
@@ -30,6 +30,6 @@
 {{HTML::style("assets/admin/layout/css/layout.css") }}
 {{HTML::style("assets/admin/layout/css/themes/light2.css") }}
 
-@yield('custom-styles')
+@yield('custom-styles')  
 
 </head>
