@@ -3,6 +3,7 @@
 $app = new Illuminate\Foundation\Application; 
 $env = $app->detectEnvironment(array(
 	'leed_server'     => ['cpanel.leed.ro'],
+	'iura'     		  => ['Covalli-PC'],
 	'binaryk_server'  => ['binaryk'],
 	'02-calin'  	  => ['Dell', 'PC1'],
 	'local'     	  => ['WIN-KE1FRDKJTPK'],
