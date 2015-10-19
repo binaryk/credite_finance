@@ -22,45 +22,55 @@
 		<ul class="sub-menu">
 			<li>
 				<a href="javascript:;">
-				<i class="icon-settings"></i> Credite imobiliare <span class="arrow"></span>
+				<i class="icon-home"></i> Credite imobiliare <span class="arrow"></span>
 				</a>
 				<ul class="sub-menu">
 					<li>
-						<a href="#"><i class="icon-camera"></i> Prima Casa</a>
+						<a href="#">
+						Prima Casa</a>
 					</li>
 					<li>
-						<a href="#"><i class="icon-link"></i> Credit de achizitie</a>
+						<a href="#">
+						Credit de achizitie</a>
 					</li>
 					<li>
-						<a href="#"><i class="icon-pointer"></i> Credit nevoie personale cu ipoteca</a>
+						<a href="#"> 
+						Credit nevoi personale cu ipoteca</a>
 					</li>
 					<li>
-						<a href="#"><i class="icon-camera"></i> Credit constructie</a>
+						<a href="#"> 
+						Credit constructie</a>
 					</li>
 					<li>
-						<a href="#"><i class="icon-link"></i> Credit de renovari/amenajari</a>
+						<a href="#">
+						Credit de renovari/amenajari</a>
 					</li>
 					<li>
-						<a href="#"><i class="icon-pointer"></i> Refinantari</a>
+						<a href="#">
+						Refinantari</a>
 					</li>
 				</ul>
 			</li>
 			<li>
 				<a href="javascript:;">
-				<i class="icon-globe"></i> Credite de consum <span class="arrow"></span>
+				<i class="icon-wallet"></i> Credite de consum <span class="arrow"></span>
 				</a>
 				<ul class="sub-menu">
 					<li>
-						<a href="#"><i class="icon-tag"></i> Nevoi personale</a>
+						<a href="#">
+						Nevoi personale</a>
 					</li>
 					<li>
-						<a href="#"><i class="icon-pencil"></i> Credite medivcale/studii/vacanta</a>
+						<a href="#">
+						Credite medicale/studii/vacanta</a>
 					</li>
 					<li>
-						<a href="#"><i class="icon-graph"></i> Leasing</a>
+						<a href="#">
+						Leasing</a>
 					</li>
 					<li>
-						<a href="#"><i class="icon-graph"></i> Refinantari</a>
+						<a href="#">
+						Refinantari</a>
 					</li>
 				</ul>
 			</li>
@@ -71,10 +81,9 @@
 			</li>
 		</ul>
 		<a href="javascript:;">
-		<i class="icon-folder"></i>
+		<i class="icon-briefcase"></i>
 		<span class="title">Persoane Juridice</span>
 		<span class="arrow "></span>
 		</a>
-	</li>
-	
+	</li>	
 </ul>

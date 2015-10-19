@@ -1,10 +1,10 @@
 <?php
 
-namespace Imobiliare;
+namespace Credite;
 
 /**
  * Class Grids
- * @package Imobiliare
+ * @package Credite
  */
 class Grids {
 
@@ -15,35 +15,7 @@ class Grids {
 		/**
 		 * Lupacescu Eduard - KleverSystem
 		 */
-		'imobile' => '\Imobiliare\Imobile\Grid\ImobileRecord',
-		'tip_intermediar' => '\Imobiliare\Imobile\Grid\TipIntermediariRecord',
-		'tip_categorie_imobil' => '\Imobiliare\Imobile\Grid\TipCategorieImobilRecord',
-		'tip_stadii_ansamblu' => '\Imobiliare\Imobile\Grid\TipStadiiAnsambluRecord',
-		'tip_imobile' => '\Imobiliare\Imobile\Grid\TipImobileRecord',
-		'judet' => '\Imobiliare\Imobile\Grid\JudetRecord',
-		'localitati' => '\Imobiliare\Imobile\Grid\LocalitateRecord',
-		'dezvoltatori' => '\Imobiliare\Imobile\Grid\DezvoltatoriRecord',
-		'dezvoltator-ansambluri' => '\Imobiliare\Imobile\Grid\DezvoltatoriAnsambluriRecord',
-		'ansamblu_imobile' => '\Imobiliare\Imobile\Grid\AnsambluriImobileRecord',
-		'apartament_imobil' => '\Imobiliare\Imobile\Grid\ApartamentImobilRecord',
-		'cladire_imobil' => '\Imobiliare\Imobile\Grid\CladireImobilRecord',
-		'teren_imobil' => '\Imobiliare\Imobile\Grid\TerenImobilRecord',
-		'proprietari' 			 => '\Imobiliare\Imobile\Grid\ProprietariRecord',
-		'apartamente_proprietar' => '\Imobiliare\Imobile\Grid\ApartamenteProprietarRecord',
-		'apartament_photo' 		 => '\Imobiliare\Imobile\Grid\ApartamentePhotosRecord',
-		'agentii' 				 => '\Imobiliare\Imobile\Grid\AgentiiRecord',
-		'ansamblu_photo' 		 => '\Imobiliare\Imobile\Grid\AnsambluPhotosRecord',
-		'cladire_photo'  		 => '\Imobiliare\Imobile\Grid\CladirePhotosRecord',
-		'cladire_apartament' 	 => '\Imobiliare\Imobile\Grid\CladireApartamenteRecord',
-		'apartament_cladire_photo' 	 => '\Imobiliare\Imobile\Grid\ApartamentCladirePhotosRecord',
-
-		/**
-		 * Calin Verdes - COMPTECH SOFT
-		 */
-		'cauta-apartamente' => 'Apartamente\Grid\ApartamenteRecord',
-		'utilizatori' => 'Utilizatori\Grid\UtilizatoriRecord',
-
-		'cauta_dezvoltatori' => 'Apartamente\Grid\DezvoltatoriCautaRecord',
+		'prima-casa' => '\Credite\PersoaneFizice\Grid\PersoaneFiziceGrid', 
 
 
 	];

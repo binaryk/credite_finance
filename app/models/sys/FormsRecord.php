@@ -1,6 +1,6 @@
 <?php
 
-namespace Imobiliare;
+namespace Credite;
 
 class FormsRecord
 {

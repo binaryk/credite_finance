@@ -73,10 +73,14 @@ Date de baza
 			->add('post', 'delete-cladire-photo', 'delete-cladire-photo', 'CladirePhotosController@delete', 'Imobiliare\Datatable')
 			->add('get', 'download-cladire-document', 'download-cladire-document/{document_id}', 'CladirePhotosController@download', 'Imobiliare\Datatable')
 			/**
-		Proprietari apartamente
+		Persoane fizice
 		 */
+
+			->add('get', 'prima-casa-index', 'prima-casa', 'PrimaCasaController@index', 'Credite\Datatable')
+			->add('get', 'persoane-fizice-row-source', 'persoane-fizice/{id}', 'PrimaCasaController@rows', 'Credite\Datatable')
+			
+
 			->add('get', 'proprietar-index', 'proprietari', 'ProprietariController@index', 'Imobiliare\Datatable')
-			->add('get', 'proprietar-row-source', 'proprietari/{id}', 'ProprietariController@rows', 'Imobiliare\Datatable')
 
 			->add('get', 'apartamente_proprietar', 'apartamente_proprietar/{id}/{id_proprietar}', 'ApartamenteProprietarController@index', 'Imobiliare\Datatable')
 			->add('get', 'apartamente_proprietar-row-source', 'apartamente_proprietar/row-source/{id}/{id_proprietar}', 'ApartamenteProprietarController@rows', 'Imobiliare\Datatable')

@@ -12,7 +12,7 @@ class DatatableController extends \Datatable\DatatableController
      */
     public function index($id)
 	{
-        $this->show( \Imobiliare\Grids::make($id)->toIndexConfig($id) );
+        $this->show( \Credite\Grids::make($id)->toIndexConfig($id) );
 	}
 
     public function test($cevq){
@@ -24,7 +24,7 @@ class DatatableController extends \Datatable\DatatableController
      */
     public function rows($id)
 	{
-		return $this->dataset( \Imobiliare\Grids::make($id)->toRowDatasetConfig($id) );
+		return $this->dataset( \Credite\Grids::make($id)->toRowDatasetConfig($id) );
 	}
 
     /**
@@ -33,7 +33,7 @@ class DatatableController extends \Datatable\DatatableController
      */
     public function loadForm($id)
 	{
-		return $this->get_dtform_properties( \Imobiliare\Forms::make($id)->toFormConfig($id), \Input::all() );
+		return $this->get_dtform_properties( \Credite\Forms::make($id)->toFormConfig($id), \Input::all() );
 	}
 
     /**
@@ -42,6 +42,6 @@ class DatatableController extends \Datatable\DatatableController
     public function doAction()
 	{
         // dd(\Input::all());
-		return $this->do_action(\Imobiliare\Forms::make($id = \Input::get('code') )->toActionConfig($id), \Input::all() );
+		return $this->do_action(\Credite\Forms::make($id = \Input::get('code') )->toActionConfig($id), \Input::all() );
 	}
 }

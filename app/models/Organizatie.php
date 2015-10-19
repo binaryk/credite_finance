@@ -1,5 +1,5 @@
 <?php
-namespace Imobiliare;
+namespace Credite;
 class Organizatie extends \Eloquent {
 	protected $table = 'organizatii';
 	protected $fillable = [

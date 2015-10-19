@@ -1,6 +1,6 @@
 <?php
 
-namespace Imobiliare;
+namespace Credite;
 
 class Forms
 {
@@ -9,26 +9,7 @@ class Forms
 	protected $forms =[];
 
 	protected $maps = [
-		'tip_intermediar'        => '\Imobiliare\Nomenclatoare\Form\TipIntermediariRecord',
-		'tip_categorie_imobil'   => '\Imobiliare\Nomenclatoare\Form\TipCategorieImobilRecord',
-		'tip_stadii_ansamblu'    => '\Imobiliare\Nomenclatoare\Form\TipStadiiAnsambluRecord',
-		'tip_imobile'    		 => '\Imobiliare\Nomenclatoare\Form\TipImobilRecord',
-		'judet'    		 		 => '\Imobiliare\Nomenclatoare\Form\JudetRecord',
-		'localitati'    		 => '\Imobiliare\Nomenclatoare\Form\LocalitateRecord',
-		'dezvoltatori'    		 => '\Imobiliare\Nomenclatoare\Form\DezvoltatoriRecord',
-		'dezvoltator-ansambluri' => '\Imobiliare\Nomenclatoare\Form\DezvoltatoriAnsambluriRecord',
-		'ansamblu_imobile' 		 => '\Imobiliare\Nomenclatoare\Form\AnsambluriImobileRecord',
-		'apartament_imobil'      => '\Imobiliare\Nomenclatoare\Form\ApartamentImobilRecord',
-		'cladire_imobil'      	 => '\Imobiliare\Nomenclatoare\Form\CladireImobilRecord',
-		'teren_imobil'      	 => '\Imobiliare\Nomenclatoare\Form\TerenImobilRecord',
-		'proprietari'      	 	 => '\Imobiliare\Nomenclatoare\Form\ProprietariRecord',
-		'apartamente_proprietar' => '\Imobiliare\Nomenclatoare\Form\ApartamenteProprietarRecord',
-		'apartament_photo' 	 	 => '\Imobiliare\Nomenclatoare\Form\ApartamentePhotosRecord',
-		'agentii'		 	 	 => '\Imobiliare\Nomenclatoare\Form\AgentiiRecord',
-		'ansamblu_photo'		 => '\Imobiliare\Nomenclatoare\Form\AnsambluriPhotosRecord',
-		'cladire_photo'		  	 => '\Imobiliare\Nomenclatoare\Form\CladiriPhotosRecord',
-		'cladire_apartament'	 => '\Imobiliare\Nomenclatoare\Form\CladiriApartamenteRecord',
-		'apartament_cladire_photo'	 => '\Imobiliare\Nomenclatoare\Form\ApartamentCladiriPhotosRecord',
+		'prima-casa'        => '\Credite\PersoaneFizice\Form\PersoaneFiziceRecord', 
 
 	];
 
