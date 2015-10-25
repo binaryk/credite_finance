@@ -10,7 +10,7 @@ class Forms
 
 	protected $maps = [
 		'prima-casa'        => '\Credite\PersoaneFizice\Form\PersoaneFiziceRecord', 
-
+		'client-documents'	=> '\Credite\PersoaneFizice\Form\ClientDocumentsRecord',
 	];
 
 	public function __construct($id)

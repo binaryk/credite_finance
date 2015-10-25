@@ -1,5 +1,15 @@
 <div class="row">
-
+{{-- 
+<div class="col-md-12"> 
+<div class="tab-pane" id="tab_images">
+	<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10">
+		<a id="tab_images_uploader_pickfiles" href="javascript:;" class="btn yellow">
+		<i class="fa fa-plus"></i> Select Files </a>
+		<a id="tab_images_uploader_uploadfiles" href="javascript:;" class="btn green">
+		<i class="fa fa-share"></i> Upload Files </a>
+	</div>
+</div>
+ --}}
 <div class="col-md-12"> 
 <!-- BEGIN PORTLET-->
 	<div class="portlet light bg-inverse" style="background-color: white; border: 1px solid #d3d3d3;">
@@ -21,6 +31,11 @@
 
 		<div class="portlet-body" > 
 			<div id="context" data-toggle="context" data-target="#context-menu"> 
+				<div class="row">
+					<div class="col-md-6">
+						{{ $controls[61]->out() }}
+					</div>
+				</div>
 				<div class="row"> 
 					<div class="col-md-6">
 						{{ $controls[0]->out() }}
@@ -70,7 +85,7 @@
 					<div class="col-md-6">{{ $controls[6]->out() }}</div>
 				</div> 
 				<div class="row">
-					<div class="col-md-12 caption">Venit obtinut din:</div>
+					<div class="col-md-12 caption"><b>Venit obtinut din:</b></div>
 					<!-- Salariu -->
 					<div class="col-md-4">{{ $controls[7]->out() }}</div> 
 					<!-- Diurne -->
@@ -119,7 +134,7 @@
 					<div class="col-md-6">{{ $controls[26]->out() }}</div>
 				</div>
 				<div class="row">
-				<div class="col-md-12 caption">Alte venituri obtinute din:</div>
+				<div class="col-md-12 caption"><b>Alte venituri obtinute din:</b></div>
 					<!-- Alt salariu -->
 					<div class="col-md-4">{{ $controls[27]->out() }}</div>  
 					<!-- Alt diurne-->

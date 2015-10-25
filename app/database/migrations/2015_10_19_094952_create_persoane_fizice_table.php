@@ -16,6 +16,7 @@ class CreatePersoaneFiziceTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('id_organizatie');
+			$table->text('tip_client',50);
 
 			//Sectiunea 1: Date de identificare
 			$table->text('nume',50);

@@ -9,7 +9,7 @@ class PersoaneFiziceGrid extends \Credite\GridsRecord
         parent::__construct($id);
         $this->view           = 'persoane_fizice.prima_casa.index'; 
         $this->icon           = 'admin/img/icons/dt/settings.png';
-        $this->caption        = 'Prima Casa';
+        $this->caption        = 'Clienti';
         $this->toolbar        = 'persoane_fizice.prima_casa.toolbar';
         $this->name           = 'dt';
         $this->display_start  = 0;
@@ -40,11 +40,38 @@ class PersoaneFiziceGrid extends \Credite\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Nume persoana fizica', 'style'   => 'width:90%',],
+                'header'    => ['caption' => 'Nume persoană fizică', 'style'   => 'width:22%',],
                 'type'      => 'field',
                 'source'    => 'nume',//numele coloanei din tabelul din BD
             ], 
+            '3' => [
+                'id'        => 'prenume',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Prenume persoană fizică', 'style'   => 'width:22%',],
+                'type'      => 'field',
+                'source'    => 'prenume',//numele coloanei din tabelul din BD
+            ], 
             '4' => [
+                'id'        => 'e-mail',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'E-mail', 'style'   => 'width:23%',],
+                'type'      => 'field',
+                'source'    => 'e-mail',//numele coloanei din tabelul din BD
+            ], 
+            '5' => [
+                'id'        => 'telefon',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Telefon', 'style'   => 'width:23%',],
+                'type'      => 'field',
+                'source'    => 'telefon',//numele coloanei din tabelul din BD
+            ], 
+            '6' => [
                 'id'        => 'action',
                 'orderable' => 'no',
                 'class'     => 'td-align-left td-actions',
@@ -57,7 +84,7 @@ class PersoaneFiziceGrid extends \Credite\GridsRecord
         $this->fields = [
             'fields'      => '',
             'searchables' => 'id, nume',
-            'orderables'  => [1 => "id"],
+            'orderables'  => [],//[1 => "id"],
         ];
         $this->filters = [
             'deleted' => 'deleted_at is null',

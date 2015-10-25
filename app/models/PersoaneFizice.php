@@ -42,24 +42,36 @@ class PersoaneFizice extends \Eloquent
 
     public static function getPerioada(){
         return [
-            'Determinata'   => 'Determinata',
-            'Nedeterminata' => 'Nedeterminata',
+            'Determinată'   => 'Determinată',
+            'Nedeterminată' => 'Nedeterminată',
             ];
     }
 
     public static function getTipAngajator(){
         return [
-            'Institutie publica'   => 'Institutie publica',
-            'Multinationala' => 'Multinationala',
-            'Societate cu capital privat' => 'Societate cu capital privat',
+            'Instituție financiară'   => 'Instituție financiară',
+            'Corporație multinațională' => 'Corporație multinațională',
+            'Sector public' => 'Sector public',
+            'Companie de stat' => 'Companie de stat',
+            'Companie privată romană' => 'Companie privată romană',
+            'Regie autonomă' => 'Regie autonomă',
+            'Companie străină' => 'Companie străină',
+            'Societate cu răspundere limitată' => 'Societate cu răspundere limitată',
+            'Societate în nume colectiv' => 'Societate în nume colectiv',
+            'Societate pe acțiuni' => 'Societate pe acțiuni',
+            'Poliție/Armată' => 'Poliție/Armată',
+            'Jandarmerie' => 'Jandarmerie',
+            'Alte entități' => 'Alte entități', 
             ];
     }
 
     public static function getNrAngajati(){
         return[
-            'Sub 5' => 'Sub 5',
-            'Intre 5 si 20' => 'Intre 5 si 20',
-            'Intre 21 si 250' => 'Intre 21 si 250',
+            'Între 0 și 10' => 'Între 0 și 10',
+            'Între 11 și 20' => 'Între 11 și 20',
+            'Între 21 și 50' => 'Între 21 și 50',
+            'Între 51 și 100' => 'Între 51 și 100',
+            'Între 101 și 250' => 'Între 101 și 250',
             'Peste 250' => 'Peste 250',
         ];
     }
@@ -69,28 +81,73 @@ class PersoaneFizice extends \Eloquent
             'Gimnaziu' => 'Gimnaziu',
             'Liceu' => 'Liceu',
             'Postuniversitare' => 'Postuniversitare',
-            'Scoala postliceala' => 'Scoala postliceala',
-            'Scoala profesionala' => 'Scoala profesionala',
+            'Școală postliceală' => 'Școală postliceală',
+            'Școală profesională' => 'Școală profesională',
             'Superioare' => 'Superioare',
         ];
     }
 
     public static function getStareCivila(){
         return[
-            'Necasatorit/a' => 'Necasatorit/a',
-            'Casatorit/a' => 'Casatorit/a',  
-            'Divortat/a' => 'Divortat/a',
-            'Vaduv/a' => 'Vaduv/a',     
+            'Necăsătorit/ă' => 'Necăsătorit/ă',
+            'Căsătorit/ă' => 'Căsătorit/ă',  
+            'Divorțat/ă' => 'Divorțat/ă',
+            'Văduv/a' => 'Văduv/a',     
         ];
     }
 
     public static function getSitLocativa(){
         return[
             'Chirie' => 'Chirie',
-            'Locuieste cu parintii' => 'Locuieste cu parintii',
-            'Proprietar cu ipoteca' => 'Proprietar cu ipoteca',
-            'Proprietar fara ipoteca' => 'Proprietar fara ipoteca',
-            'Alte situatii' => 'Alte situatii',
+            'Locuiește cu părinții' => 'Locuiește cu părinții',
+            'Proprietar cu ipotecă' => 'Proprietar cu ipotecă',
+            'Proprietar fără ipotecă' => 'Proprietar făra ipotecă',
+            'Alte situații' => 'Alțe situații',
+        ];
+    }
+
+    public static function getBanca(){
+        return[
+            'Alpha Bank' => 'Alpha Bank',                          
+            'Banca Comercială Carpatică' => 'Banca Comercială Carpatică',  
+            'Veneto Bank' => 'Veneto Bank',
+            'Banca Romanească' => 'Banca Romanească',
+            'Banca Transilvania' => 'Banca Transilvania',   
+            'Bancpost' => 'Bancpost',   
+            'BCR' => 'BCR',
+            'BRD' => 'BRD', 
+            'Emporiki Bank' => 'Emporiki Bank',
+            'CEC' => 'CEC',
+            'CreditEurope Bank' => 'CreditEurope Bank',
+            'GarantiBank' => 'GarantiBank',
+            'ING Bank' => 'ING Bank',
+            'Idea Bank' => 'Idea Bank',
+            'Intesa Sanpaolo Bank' => 'Intesa Sanpaolo Bank',
+            'Leumi Bank'  => 'Leumi Bank',
+            'Libra Bank' => 'Libra Bank',
+            'Marfin Bank' => 'Marfin Bank',
+            'Millennium Bank' => 'Millennium Bank',
+            'MKB Romexterra Bank' => 'MKB Romexterra Bank',
+            'OTP Bank' => 'OTP Bank',
+            'Piraeus Bank' => 'Piraeus Bank',
+            'ProCredit Bank' => 'ProCredit Bank',
+            'Raiffeisen Bank' => 'Raiffeisen Bank',
+            'RBS' => 'RBS',
+            'UniCredit Bank' => 'UniCredit Bank',
+        ];
+    }
+
+    public static function getTipClient(){
+        return[
+            'Prima casă' => 'Prima casă',
+            'Credit de achiziție'=> 'Credit de achiziție',
+            'Credit de nevoi personale cu ipotecă' => 'Credit de nevoi personale cu ipotecă',
+            'Credit construcție' => 'Credit construcție',
+            'Credit de renovări/amenajări' => 'Credit de renovări/amenajări',
+            'Refinanțări' => 'Refinanțări',
+            'Nevoi personale' => 'Nevoi personale',
+            'Credite medicale/studii/vacanțe' => 'Credite medicale/studii/vacanțe',
+            'Leasing' => 'Leasing',
         ];
     }
 

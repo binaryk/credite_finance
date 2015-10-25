@@ -37,7 +37,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('nume')
-			->caption('Nume persoana fizica') 
+			->caption('<b>Nume persoană fizică</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('nume')
@@ -48,7 +48,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('prenume')
-			->caption('Prenume persoana fizica') 
+			->caption('<b>Prenume persoană fizică</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Prenume')
 			->controlsource('prenume')
@@ -59,7 +59,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('cnp')
-			->caption('Cod Numeric Personal ') 
+			->caption('<b>Cod Numeric Personal</b>') 
 			->class('form-control  data-source')
 			//->placeholder('CNP')
 			->controlsource('cnp')
@@ -70,7 +70,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('e-mail')
-			->caption('E-mail') 
+			->caption('<b>E-mail</b>') 
 			->class('form-control  data-source')
 			//->placeholder('E-mail')
 			->controlsource('e-mail')
@@ -81,7 +81,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('telefon')
-			->caption('Telefon') 
+			->caption('<b>Telefon</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Telefon')
 			->controlsource('telefon')
@@ -92,7 +92,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('nume_mama')
-			->caption('Numele mamei inainte de casatorie') 
+			->caption('<b>Numele mamei înainte de căsătorie</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Numele mamei')
 			->controlsource('nume_mama')
@@ -103,7 +103,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('salariu_net')
-			->caption('Salariu net') 
+			->caption('<b>Salariu net</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Numele mamei')
 			->controlsource('salariu_net')
@@ -166,7 +166,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('indemniz_copil')->placeholder('Textbox')
-				->value('Indemnizatie de crestere copil')->class('form-control input_label')->enabled(0)
+				->value('Îndemnizație de creștere copil')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('indemniz_copil', '1', false,
 						['class' => 'data-source icheck', 'id' => 'indemniz_copil',
@@ -179,7 +179,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('activitati_indep')->placeholder('Textbox')
-				->value('Activitati independente')->class('form-control input_label')->enabled(0)
+				->value('Activități independente')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('activitati_indep', '1', false,
 						['class' => 'data-source icheck', 'id' => 'activitati_indep',
@@ -296,7 +296,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('norma_de_hrana')->placeholder('Textbox')
-				->value('Norma de hrana')->class('form-control input_label')->enabled(0)
+				->value('Norma de hrană')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('norma_de_hrana', '1', false,
 						['class' => 'data-source icheck', 'id' => 'norma_de_hrana',
@@ -309,7 +309,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('bonuri_de_masa')
-			->caption('Bonuri de masa') 
+			->caption('<b>Bonuri de masă</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Bonuri de masa')
 			->controlsource('bonuri_de_masa')
@@ -320,7 +320,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('no_bonuri_de_masa')->placeholder('Textbox')
-				->value('Nu este cazul cu bonuri de masa')->class('form-control input_label')->enabled(0)
+				->value('Nu este cazul cu bonuri de masă')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('no_bonuri_de_masa', '1', false,
 						['class' => 'data-source icheck', 'id' => 'no_bonuri_de_masa',
@@ -333,7 +333,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('per_contract')
-				->caption('Perioada contractului')
+				->caption('<b>Perioada contractului</b>')
 				->class('form-control data-source input-group form-select init-on-update-delete')
 				->controlsource('per_contract')
 				->controltype('combobox')
@@ -344,7 +344,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('alte_venituri')
-			->caption('Alte venituri') 
+			->caption('<b>Alte venituri</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Bonuri de masa')
 			->controlsource('alte_venituri')
@@ -355,7 +355,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('per_alte_ven')
-				->caption('Perioada altor venituri')
+				->caption('<b>Perioada altor venituri</b>')
 				->class('form-control data-source input-group form-select init-on-update-delete')
 				->controlsource('per_alte_ven')
 				->controltype('combobox')
@@ -418,7 +418,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_indemn_copil')->placeholder('Textbox')
-				->value('Indemnizatie de crestere copil')->class('form-control input_label')->enabled(0)
+				->value('Îndemnizație de creștere copil')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_indemn_copil', '1', false,
 						['class' => 'data-source icheck', 'id' => 'alt_ven_indemn_copil',
@@ -431,7 +431,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_activ_indep')->placeholder('Textbox')
-				->value('Activitati independente')->class('form-control input_label')->enabled(0)
+				->value('Activități independente')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_activ_indep', '1', false,
 						['class' => 'data-source icheck', 'id' => 'alt_ven_activ_indep',
@@ -548,7 +548,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_nrm_de_hrana')->placeholder('Textbox')
-				->value('Norma de hrana')->class('form-control input_label')->enabled(0)
+				->value('Normă de hrană')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_nrm_de_hrana', '1', false,
 						['class' => 'data-source icheck', 'id' => 'alt_ven_nrm_de_hrana',
@@ -561,7 +561,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('tot_ven_net')
-			->caption('Total venit net') 
+			->caption('<b>Total venit net</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Bonuri de masa')
 			->controlsource('tot_ven_net')
@@ -572,7 +572,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('denum_angajator')
-			->caption('Denumire Angajator') 
+			->caption('<b>Denumire angajator</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('denum_angajator')
@@ -583,7 +583,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('tip_angajator')
-				->caption('Tip angajator')
+				->caption('<b>Tip angajator</b>')
 				->class('form-control data-source input-group form-select init-on-update-delete')
 				->controlsource('tip_angajator')
 				->controltype('combobox')
@@ -594,7 +594,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('cui')
-			->caption('CUI') 
+			->caption('<b>CUI</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('cui')
@@ -605,7 +605,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('nr_angajati')
-				->caption('Numar de angajati')
+				->caption('<b>Număr de angajați</b>')
 				->class('form-control data-source input-group form-select init-on-update-delete')
 				->controlsource('nr_angajati')
 				->controltype('combobox')
@@ -616,7 +616,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('dom_de_actvte')
-			->caption('Domeniu de activitate') 
+			->caption('<b>Domeniu de activitate</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('dom_de_actvte')
@@ -627,7 +627,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('ultim_stud_abs')
-				->caption('Ultimele studii absolvite')
+				->caption('<b>Ultimele studii absolvite</b>')
 				->class('form-control data-source input-group form-select init-on-update-delete')
 				->controlsource('ultim_stud_abs')
 				->controltype('combobox')
@@ -638,7 +638,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('st_civila')
-				->caption('Stare civila')
+				->caption('<b>Stare civilă</b>')
 				->class('form-control data-source input-group form-select init-on-update-delete')
 				->controlsource('st_civila')
 				->controltype('combobox')
@@ -649,7 +649,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('functie')
-			->caption('Functie') 
+			->caption('<b>Funcție</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('functie')
@@ -660,7 +660,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('profesie')
-			->caption('Profesie') 
+			->caption('<b>Profesie</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('profesie')
@@ -671,7 +671,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('nr_membri_fam')
-			->caption('Numar membri familie') 
+			->caption('<b>Număr membri familie</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('nr_membri_fam')
@@ -682,7 +682,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('pers_intrtnr')
-			->caption('Persoane in intretinere') 
+			->caption('<b>Persoane în întreținere</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('pers_intrtnr')
@@ -706,7 +706,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('sit_locativa')
-				->caption('Situatie locativa')
+				->caption('<b>Situație locativă</b>')
 				->class('form-control data-source input-group form-select init-on-update-delete')
 				->controlsource('sit_locativa')
 				->controltype('combobox')
@@ -717,7 +717,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('vec_adr_curenta')
-			->caption('Vechime la adresa curenta') 
+			->caption('<b>Vechime la adresa curentă</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('vec_adr_curenta')
@@ -728,7 +728,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('vec_loc_munca')
-			->caption('Vechime la locul de munca actual/anterior') 
+			->caption('<b>Vechime la locul de muncă actual/anterior</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('vec_loc_munca')
@@ -739,7 +739,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('vec_tot_munca')
-			->caption('Vechime totala in munca') 
+			->caption('<b>Vechime totală în muncă</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('vec_tot_munca')
@@ -748,14 +748,14 @@ class PrimaCasaForm extends \Processing\Form\Form
 		)
 		// 59
 		->addControl(
-			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-			->name('bnc_virare_salar')
-			->caption('Banca unde se vireaza salariul') 
-			->class('form-control  data-source')
-			//->placeholder('Nume')
-			->controlsource('bnc_virare_salar')
-			->controltype('textbox')
-			->maxlength(255)
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('bnc_virare_salar')
+				->caption('<b>Banca unde se virează salariul</b>')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('bnc_virare_salar')
+				->controltype('combobox')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getBanca())
 		)
 		// 60
 		->addControl(
@@ -769,6 +769,17 @@ class PrimaCasaForm extends \Processing\Form\Form
 							'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
 					),
 					'after' => NULL])
+		)
+		// 61
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('tip_client')
+				->caption('<b>Tip client</b>')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('tip_client')
+				->controltype('combobox')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getTipClient())
 		)
 		; 
 

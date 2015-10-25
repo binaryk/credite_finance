@@ -15,6 +15,8 @@ Route::group(['before' => 'guest'], function()
 {
 	 Route::get('/register', 'RegistrationController@create');
 	 Route::post('/register', ['as' => 'registration.store', 'uses' => 'RegistrationController@store']);
+
+	 Route::get('/clienti-formular', ['as' =>'clienti-guest', 'uses'=>'Credite\Datatable\PrimaCasaController@index',]);
 });
 
 # Authentication

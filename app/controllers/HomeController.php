@@ -1,7 +1,7 @@
 <?php
 
 class HomeController extends BaseController {
-	protected $caption = 'Bine ați venit pe aplicația <u>Imobiliare</u>';
+	protected $caption = 'Bine ați venit pe aplicația <u>Credite</u>';
 	protected $small = 'aici veți putea gestiona afacerea dumnevoastră';
 
 	public function showWelcome2() {

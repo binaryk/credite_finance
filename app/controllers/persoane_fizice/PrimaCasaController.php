@@ -8,12 +8,13 @@ class PrimaCasaController  extends \Datatable\DatatableController{
         $config = \Credite\Grids::make('prima-casa')->toIndexConfig('prima-casa');
         $config['breadcrumbs'] = [
             [
-            'name' => 'Prima casa',
-            'url'  => "proprietar-index",
+            'name' => 'Clienti',
+            'url'  => "clienti-index",
             'ids' => ''
             ]  
         ];
-        $config['right_menu'] = [ ['caption' => 'Adaugă persoana', 'class' => 'action-insert-record'] ];
+        $config['right_menu'] = [ ['caption' => 'Adaugă persoana', 'class' => 'action-insert-record'],
+                                  ['caption' => 'Trimite link', 'class' => 'generate-link'] ];
         $this->show( $config + ['other-info' => [ 'current_org' => $this->current_org]] );
     }
 

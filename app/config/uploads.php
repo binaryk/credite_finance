@@ -1,12 +1,12 @@
 <?php
 
 return [
-	'apartament-photos' => [
-		'file-name-pattern' => '{{original}}-{{id_apartament}}-{{date}}.{{extension}}',
+	'client-documents' => [
+		'file-name-pattern' => '{{original}}-{{id_client}}-{{date}}.{{extension}}',
 		'max-size' => 5 * 1024,
-		'allowed-extensions' => 'bmp,gif,jpeg,jpg,png',
-		'path' => str_replace('\\', '/', storage_path()) . '/uploads/{{id_apartament}}/',
-		'id_name' => 'id_apartament',
+		'allowed-extensions' => 'bmp,gif,jpeg,jpg,png,pdf,doc,docx',
+		'path' => str_replace('\\', '/', public_path()) . '/uploads/{{id_client}}/',
+		'id_name' => 'id_client',
 	],
 	'ansamblu-photos' => [
 		'file-name-pattern' => '{{original}}-{{id_ansamblu}}-{{date}}.{{extension}}',

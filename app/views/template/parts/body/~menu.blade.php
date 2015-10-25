@@ -11,7 +11,7 @@
 		</a>
 		<ul class="sub-menu">
 			<li>
-				<a href="{{ URL::route('grid-utilizatori') }}"><i class="icon-users"></i>Lista utilizatori</a>
+				<a href="{{ URL::route('grid-utilizatori') }}"><i class="icon-users"></i>Listă utilizatori</a>
 			</li>
 		</ul>
 		<a href="javascript:;">
@@ -27,27 +27,27 @@
 				<ul class="sub-menu">
 					<li>
 						<a href="#">
-						Prima Casa</a>
+						Prima Casă</a>
 					</li>
 					<li>
 						<a href="#">
-						Credit de achizitie</a>
+						Credit de achiziție</a>
 					</li>
 					<li>
 						<a href="#"> 
-						Credit nevoi personale cu ipoteca</a>
+						Credit nevoi personale cu ipotecă</a>
 					</li>
 					<li>
 						<a href="#"> 
-						Credit constructie</a>
+						Credit construcție</a>
 					</li>
 					<li>
 						<a href="#">
-						Credit de renovari/amenajari</a>
+						Credit de renovări/amenajări</a>
 					</li>
 					<li>
 						<a href="#">
-						Refinantari</a>
+						Refinanțări</a>
 					</li>
 				</ul>
 			</li>
@@ -62,7 +62,7 @@
 					</li>
 					<li>
 						<a href="#">
-						Credite medicale/studii/vacanta</a>
+						Credite medicale/studii/vacanțe</a>
 					</li>
 					<li>
 						<a href="#">
@@ -70,7 +70,7 @@
 					</li>
 					<li>
 						<a href="#">
-						Refinantari</a>
+						Refinanțări</a>
 					</li>
 				</ul>
 			</li>
@@ -78,6 +78,11 @@
 				<a href="#">
 				<i class="icon-bar-chart"></i>
 				Imobile </a>
+			</li>
+			<li>
+				<a href="{{URL::route('clienti-index')}}">
+				<i class="icon-users"></i>
+				Clienți </a>
 			</li>
 		</ul>
 		<a href="javascript:;">

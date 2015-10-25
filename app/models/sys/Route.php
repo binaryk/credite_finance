@@ -76,9 +76,15 @@ Date de baza
 		Persoane fizice
 		 */
 
-			->add('get', 'prima-casa-index', 'prima-casa', 'PrimaCasaController@index', 'Credite\Datatable')
+			->add('get', 'clienti-index', 'clienti', 'PrimaCasaController@index', 'Credite\Datatable')
 			->add('get', 'persoane-fizice-row-source', 'persoane-fizice/{id}', 'PrimaCasaController@rows', 'Credite\Datatable')
 			
+			->add('get', 'client-documents', 'client-document/{id}/{id_client}', 'ClientDocumentsController@index', 'Credite\Datatable')
+			->add('get', 'client-documents-row-source', 'client_document/row-source/{id}/{id_client}', 'ClientDocumentsController@rows', 'Credite\Datatable')
+			->add('post', 'upload-client-documents', 'upload-client-document/{id_client}', 'ClientDocumentsController@upload', 'Credite\Datatable')
+			->add('post', 'delete-client-documents', 'delete-client-document', 'ClientDocumentsController@delete', 'Credite\Datatable')
+			->add('get', 'download-client-documents', 'download-client-documents/{document_id}', 'ClientDocumentsController@download', 'Credite\Datatable')
+
 
 			->add('get', 'proprietar-index', 'proprietari', 'ProprietariController@index', 'Imobiliare\Datatable')
 
@@ -87,10 +93,6 @@ Date de baza
 			
 			->add('get', 'editare-apartament-gasit', 'proprietari{id}', 'ApartamenteProprietarController@editFindApartament', 'Imobiliare\Datatable')
 
-			->add('get', 'apartament_photo', 'apartament-poze/{id}/{id_apartament}', 'ApartamentPhotosController@index', 'Imobiliare\Datatable')
-			->add('get', 'apartament_photo-row-source', 'apartament-poze/row-source/{id}/{id_apartament}', 'ApartamentPhotosController@rows', 'Imobiliare\Datatable')
-			->add('post', 'upload-apartament-photo', 'upload-apartament-photo/{id_apartament}', 'ApartamentPhotosController@upload', 'Imobiliare\Datatable')
-			->add('post', 'delete-apartament-photo', 'delete-apartament-photo', 'ApartamentPhotosController@delete', 'Imobiliare\Datatable')
 			->add('get', 'download-apartament-document', 'download-apartament-document/{document_id}', 'ApartamentPhotosController@download', 'Imobiliare\Datatable')
 
 			/**
