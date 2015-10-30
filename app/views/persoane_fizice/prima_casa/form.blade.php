@@ -1,17 +1,5 @@
-<div class="row">
-{{-- 
+<div class="row"> 
 <div class="col-md-12"> 
-<div class="tab-pane" id="tab_images">
-	<div id="tab_images_uploader_container" class="text-align-reverse margin-bottom-10">
-		<a id="tab_images_uploader_pickfiles" href="javascript:;" class="btn yellow">
-		<i class="fa fa-plus"></i> Select Files </a>
-		<a id="tab_images_uploader_uploadfiles" href="javascript:;" class="btn green">
-		<i class="fa fa-share"></i> Upload Files </a>
-	</div>
-</div>
- --}}
-<div class="col-md-12"> 
-<!-- BEGIN PORTLET-->
 	<div class="portlet light bg-inverse" style="background-color: white; border: 1px solid #d3d3d3;">
 		<div class="portlet-title">
 			<div class="caption font-purple-plum">

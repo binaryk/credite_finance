@@ -1,1 +1,0 @@
-{{$record->nume}} {{$record->prenume}}

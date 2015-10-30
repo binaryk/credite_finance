@@ -30,7 +30,6 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php",
 			"app/~libs",
-			"app/~imobiliare",
 			"app/~credite"
 		],
 		"files": ["app/basicAuth/helpers.php"],

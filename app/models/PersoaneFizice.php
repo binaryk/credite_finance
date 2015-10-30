@@ -139,15 +139,15 @@ class PersoaneFizice extends \Eloquent
 
     public static function getTipClient(){
         return[
-            'Prima casă' => 'Prima casă',
-            'Credit de achiziție'=> 'Credit de achiziție',
-            'Credit de nevoi personale cu ipotecă' => 'Credit de nevoi personale cu ipotecă',
-            'Credit construcție' => 'Credit construcție',
-            'Credit de renovări/amenajări' => 'Credit de renovări/amenajări',
-            'Refinanțări' => 'Refinanțări',
-            'Nevoi personale' => 'Nevoi personale',
-            'Credite medicale/studii/vacanțe' => 'Credite medicale/studii/vacanțe',
-            'Leasing' => 'Leasing',
+            '1' => 'Prima casă',
+            '2' => 'Credit de achiziție',
+            '3' => 'Credit de nevoi personale cu ipotecă',
+            '4' => 'Credit construcție',
+            '5' => 'Credit de renovări/amenajări',
+            '6' => 'Refinanțări',
+            '7' => 'Nevoi personale',
+            '8' => 'Credite medicale/studii/vacanțe',
+            '9' => 'Leasing',
         ];
     }
 

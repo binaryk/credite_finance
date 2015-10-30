@@ -7,7 +7,7 @@ Acțiuni <i class="fa fa-angle-down"></i>
 	@if( isset($right_menu) )  
 		@foreach($right_menu as $key => $menu)
 			<li>
-				<a class="{{ $menu['class'] }}"> {{$menu['caption']}}</a> 
+				<a class="{{ $menu['class'] }}" @if(isset($menu['action'])) href="{{ @$menu['action'] }}" @endif> {{$menu['caption']}}</a> 
 			</li>
 		@endforeach
 	@endif  

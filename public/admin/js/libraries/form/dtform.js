@@ -17,7 +17,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	this.dt                = dt;
 	this.record_id         = null;
 	this.refresh           = 1;
-
+	var self 			   = this;
 	this.aftershow          = function(record, action){};
 	this.afterEmptyControls = function(record, action){};
 	this.afterdatasource    = function(record){ return record; }
@@ -333,8 +333,50 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
         		{
         			if( self.refresh == 1)
         			{
+        				// self.hideform();
+        				// self.dt.draw( false );
+        			}
+        			else
+        				if( self.refresh == 2)
+        				{
+        					location.reload();
+        				}
+        		}
+        	}
+		});
+	};
+
+	this.doactionextern = function(action)
+	{
+
+		this.hideActionMessage();
+		this.hideFieldsErrors();
+		var self = this;
+		console.log(self.datasource());
+		console.log('action+' + action);
+		console.log('action+' + action);
+		console.log('model+' + self.model);
+		console.log('model+' + self.model);
+		console.log(this.doactionurl);
+		$.ajax({
+			url      : this.doactionurl,
+        	type     : 'post',
+        	dataType : 'json',
+        	data     : {'action' : action, 'model' : self.model, 'data' : self.datasource(), 'record_id' : self.record_id, 'code' :  self.formid.replace('#form-', '')},
+        	success  : function(result)
+        	{
+        		self.showActionMessage(result);
+        		swal('Success!', 'Datele au fost trimise catre procesare cu succes!', 'success');
+        		if( ! result.success)
+        		{
+        			self.showFieldsErrors(result.fieldserrors);
+        			$(self.classDoButton).removeClass('disabled');
+        		}
+        		else
+        		{
+        			if( self.refresh == 1)
+        			{
         				self.hideform();
-        				self.dt.draw( false );
         			}
         			else
         				if( self.refresh == 2)
@@ -385,9 +427,12 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 
 
 		$(document).on( 'click', this.classDoButton, function(){
+			if($(this).hasClass('client-extern')){
+				self.record_id = 'insert';
+			}
 			if( ! $(this).hasClass('disabled') )
 			{
-				self.doaction( $(this).attr('data-action') );
+				self.doactionextern( $(this).attr('data-action') );
 				$(this).addClass('disabled');
 			}
 		});

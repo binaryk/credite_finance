@@ -1,3 +1,4 @@
+@if(! Request::is('confirm-link/*'))
 <li class="dropdown dropdown-user">
 	<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">{{HTML::image("assets/admin/layout/img/logo_creditfin.png",null, ['width' => '30px', 'height' => '29px']) }}<span class="username username-hide-on-mobile"> CreditFin </span>
 	<i class="fa fa-angle-down"></i></a>
@@ -8,3 +9,4 @@
 		<li><a href="{{ URL::to('logout') }}"><i class="icon-key"></i> Log Out </a></li>
 	</ul>
 </li>
+@endif

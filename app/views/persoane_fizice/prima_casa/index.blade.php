@@ -9,5 +9,12 @@
 			$('input').iCheck('uncheck');
 		}
 	}
-	$('.action-insert-record').trigger('click');
-@stop
+ 	$('.generate-link').click(function(e){
+ 		e.preventDefault();
+ 		$.post("{{ URL::route('post_generate_link') }}",function(response){
+ 			console.log(response);
+ 			swal("Success!", "Copiază link-ul:  " + response, "success"); 
+
+ 		});
+ 	}) 
+@stop 

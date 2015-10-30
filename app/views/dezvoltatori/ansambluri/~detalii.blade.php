@@ -1,1 +1,0 @@
-<strong>Localizare/descriere:</strong> {{$record->detalii_localizare_descriere}}<br/>

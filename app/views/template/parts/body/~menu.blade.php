@@ -26,27 +26,27 @@
 				</a>
 				<ul class="sub-menu">
 					<li>
-						<a href="#">
+						<a href="{{ URL::route('clienti-index', ['type' => '1']) }}">
 						Prima Casă</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ URL::route('clienti-index', ['type' => '2']) }}">
 						Credit de achiziție</a>
 					</li>
 					<li>
-						<a href="#"> 
+						<a href="{{ URL::route('clienti-index', ['type' => '3']) }}"> 
 						Credit nevoi personale cu ipotecă</a>
 					</li>
 					<li>
-						<a href="#"> 
+						<a href="{{ URL::route('clienti-index', ['type' => '4']) }}"> 
 						Credit construcție</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ URL::route('clienti-index', ['type' => '5']) }}">
 						Credit de renovări/amenajări</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ URL::route('clienti-index', ['type' => '6']) }}">
 						Refinanțări</a>
 					</li>
 				</ul>
@@ -57,19 +57,19 @@
 				</a>
 				<ul class="sub-menu">
 					<li>
-						<a href="#">
+						<a href="{{ URL::route('clienti-index', ['type' => '7']) }}">
 						Nevoi personale</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ URL::route('clienti-index', ['type' => '8']) }}">
 						Credite medicale/studii/vacanțe</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ URL::route('clienti-index', ['type' => '9']) }}">
 						Leasing</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{{ URL::route('clienti-index', ['type' => '10']) }}">
 						Refinanțări</a>
 					</li>
 				</ul>

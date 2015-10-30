@@ -1,8 +1,12 @@
 <div class="page-container">
-	@include('template.parts.body.~sidebar')
+		@include('template.parts.body.~sidebar')
+	@if(! Request::is('confirm-link/*'))
+	@endif
 	<div class="page-content-wrapper">
 		<div class="page-content">
+		@if(! Request::is('confirm-link/*'))
 			@include('template.parts.body.~page-header')
+		@endif
 			@yield('content')
 		</div>
 	</div>

@@ -1,1 +1,0 @@
-{{ Easy\Form\StringHelper::Items([$record->nume_proprietar, $record->telefon_proprietar]) }}

@@ -29,6 +29,9 @@
 {{HTML::style("assets/global/css/components.css") }}
 {{HTML::style("assets/admin/layout/css/layout.css") }}
 {{HTML::style("assets/admin/layout/css/themes/light2.css") }}
+{{HTML::style("sweetalert/dist/sweetalert.css") }}
+
+
 
 @yield('custom-styles')  
 

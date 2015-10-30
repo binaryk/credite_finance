@@ -52,22 +52,6 @@ class Sidebar {
 			->addOption('date-baza', \URL::route('datatable-index', ['id' => 'tip_stadii_ansamblu']), 'Tipuri stadii ansamblu', 'fa-circle-o')
 			->addOption('date-baza', \URL::route('datatable-index', ['id' => 'tip_imobile']), 'Tipuri imobile', 'fa-circle-o')
 			->addOption('date-baza', \URL::route('datatable-index', ['id' => 'judet']), 'Judet', 'fa-circle-o')
-			/**
-		Dezvoltatori
-		 **/
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credite imobiliare', 'fa-circle-o')
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Prima Casa', 'fa-circle-o')
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credit de achizitie', 'fa-circle-o')
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credit nevoie personale cu ipoteca', 'fa-circle-o')
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credit constructie', 'fa-circle-o')
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credit de renovari/amenajari', 'fa-circle-o')
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Refinantari', 'fa-circle-o')
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credite de consum', 'fa-circle-o')  
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Nevoi personale', 'fa-circle-o')  
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Credite medivcale/studii/vacanta', 'fa-circle-o')  
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Leasing', 'fa-circle-o')  
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Refinantari', 'fa-circle-o')  
-			->addOption('persoane_fizice', \URL::route('dezvoltatori-index'), 'Imobile', 'fa-circle-o')  
 		;
 	}
 
