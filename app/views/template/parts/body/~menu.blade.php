@@ -1,23 +1,11 @@
-<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+<ul class="page-sidebar-menu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
 	<li class="sidebar-toggler-wrapper"><div class="sidebar-toggler"></div></li>
 	<li class="sidebar-search-wrapper">@include('template.parts.body.~search-form')</li>
-
-
-
-	<li class="start">
-		<a href="javascript:;"><i class="icon-user"></i>
-			<span class="title">Utilizatori</span>
-			<span class="arrow"></span>
-		</a>
-		<ul class="sub-menu">
-			<li>
-				<a href="{{ URL::route('grid-utilizatori') }}"><i class="icon-users"></i>Listă utilizatori</a>
-			</li>
-		</ul>
+	<li>
 		<a href="javascript:;">
-		<i class="icon-folder"></i>
-		<span class="title">Persoane Fizice</span>
-		<span class="arrow "></span>
+			<i class="icon-folder"></i>
+			<span class="title">Persoane Fizice</span>
+			<span class="arrow "></span>
 		</a>
 		<ul class="sub-menu">
 			<li>
@@ -85,10 +73,24 @@
 				Clienți </a>
 			</li>
 		</ul>
+	</li>
+	<li>
 		<a href="javascript:;">
-		<i class="icon-briefcase"></i>
-		<span class="title">Persoane Juridice</span>
-		<span class="arrow "></span>
+			<i class="icon-briefcase"></i>
+			<span class="title">Persoane Juridice</span>
+			<span class="arrow "></span>
 		</a>
-	</li>	
+	</li>
+	<li class="start">
+		<a href="javascript:;"><i class="icon-user"></i>
+			<span class="title">Utilizatori</span>
+			<span class="arrow"></span>
+		</a>
+		<ul class="sub-menu">
+			<li>
+				<a href="{{ URL::route('grid-utilizatori') }}"><i class="icon-users"></i>Listă utilizatori</a>
+			</li>
+		</ul>
+	</li>
+		
 </ul>

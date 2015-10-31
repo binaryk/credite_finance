@@ -57,7 +57,7 @@
 </div>
 @stop
 
-@section('custom-styles')
+@section('custom-styles-1')
 	{{ $dt->styles() }}
 @stop
 

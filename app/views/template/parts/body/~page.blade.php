@@ -4,7 +4,7 @@
 	@endif
 	<div class="page-content-wrapper">
 		<div class="page-content">
-		@if(! Request::is('confirm-link/*'))
+		@if(! Request::is('confirm-link/*') && ! Request::is('/'))
 			@include('template.parts.body.~page-header')
 		@endif
 			@yield('content')

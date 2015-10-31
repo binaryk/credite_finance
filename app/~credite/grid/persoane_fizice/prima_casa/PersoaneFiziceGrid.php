@@ -16,8 +16,38 @@ class PersoaneFiziceGrid extends \Credite\GridsRecord
         $this->display_length = 10;
         $this->default_order  = "1,'asc'";
         $this->form           = 'Credite\PersoaneFizice\Form\PrimaCasaForm';
-        $this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css, assets/global/plugins/icheck/skins/all.css';
-        $this->js             = 'admin/js/libraries/form/dtform.js, assets/global/plugins/icheck/icheck.min.js, assets/admin/pages/scripts/form-icheck.js';
+        $this->css            = 'packages/datatables/css/1.10.4/datatable.css,
+                                        packages/datatables/css/1.10.4/dataTables.bootstrap.css,
+                                      admin/css/dt/dt.css,
+                                      admin/css/dt/toolbar.css,
+                                      admin/css/dt/dtform.css,
+                                      assets/global/plugins/icheck/skins/all.css,
+                                      assets/global/plugins/bootstrap-datepicker/css/datepicker3.css,
+                                      assets/global/plugins/bootstrap-select/bootstrap-select.min.css,
+                                      assets/global/plugins/select2/select2.css,
+                                      assets/global/css/plugins.css
+                                       ';
+                                       /*
+                                       packages/datatables/css/1.10.4/datatable.css
+packages/datatables/css/1.10.4/dataTables.bootstrap.css
+admin/css/dt/dt.css
+admin/css/dt/toolbar.css
+admin/css/dt/dtform.css
+assets/global/plugins/icheck/skins/all.css
+assets/global/plugins/bootstrap-datepicker/css/datepicker3.css
+assets/global/plugins/bootstrap-select/bootstrap-select.min.css
+assets/global/plugins/select2/select2.css
+assets/global/css/plugins.css
+                                        */
+      $this->js             = 'admin/js/libraries/form/dtform.js,
+                               assets/global/plugins/icheck/icheck.min.js,
+                               assets/admin/pages/scripts/form-icheck.js,
+                               assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js,
+                               assets/global/plugins/bootstrap-select/bootstrap-select.min.js,
+                               assets/global/plugins/select2/select2.min.js,
+                               assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js,
+                               assets/admin/pages/scripts/components-pickers.js,
+                               assets/admin/pages/scripts/portlet-draggable.js';
         $this->row_source     = 'persoane-fizice-row-source';
         $this->rows_source_sql 				= 'SELECT
                                                 * 
@@ -54,13 +84,13 @@ class PersoaneFiziceGrid extends \Credite\GridsRecord
                 'source'    => 'prenume',//numele coloanei din tabelul din BD
             ], 
             '4' => [
-                'id'        => 'e-mail',
+                'id'        => 'email',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'E-mail', 'style'   => 'width:23%',],
                 'type'      => 'field',
-                'source'    => 'e-mail',//numele coloanei din tabelul din BD
+                'source'    => 'email',//numele coloanei din tabelul din BD
             ], 
             '5' => [
                 'id'        => 'telefon',

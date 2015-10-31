@@ -2,6 +2,7 @@
 @yield('after-jq')
 {{ HTML::script("assets/global/plugins/bootstrap/js/bootstrap.min.js") }}
 {{ HTML::script("assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js") }} 
+{{ HTML::script("assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js") }} 
 
 {{ HTML::script("assets/global/scripts/metronic.js") }}
 {{ HTML::script("assets/admin/layout/scripts/layout.js") }} 

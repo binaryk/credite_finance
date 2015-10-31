@@ -1,0 +1,9 @@
+.dt-form-container > .portlet-title {
+	background: -webkit-gradient(linear, 100% 37%, 13% 61%, from(#065829), to(#004A28));
+    height: 10px;
+    overflow: hidden;
+}
+
+.btn-close-form{
+	background: transparent;;
+}

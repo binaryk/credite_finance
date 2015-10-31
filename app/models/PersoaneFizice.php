@@ -8,7 +8,7 @@ class PersoaneFizice extends \Eloquent
 {
     use SoftDeletingTrait;
     protected $table = 'persoane_fizice';
-    protected $guarded = [];
+    protected $guarded = ['client_extern'];
 
     public static function getRecord( $id )
     {
@@ -16,7 +16,14 @@ class PersoaneFizice extends \Eloquent
     }
 
     public static function createRecord($data )
-    { 
+    {  
+        
+        if($data['client_extern'] == 1){
+            /*trimite email*/
+            $client = self::create($data);   
+            self::sendEmail($client);
+            return $client;
+        }
         return self::create($data);
     }
 
@@ -40,6 +47,30 @@ class PersoaneFizice extends \Eloquent
         return $record->delete();
     }
 
+    public static function sendEmail($client){
+        /**
+         * Declansez evenimentul de trimitere email
+         **/
+        $mail = new \Mailers\Mailer();
+
+        $mail->sendTo(
+            'lupacescueduard@yahoo.com', 
+            'Clientul - ' . $client->nume . ' ' . $client->prenume, 
+            'emails.client.confirmare', 
+            [
+                'body' => \View::make('extern.email-content')->with([
+                        'client'          => $client,
+                    ])->render(),
+                'client'  => $client,
+            ]
+        );
+        \Event::fire('client.send-confirm-email', [
+            'client'          => $client,
+        ]);
+
+        return ['success' => true];
+    } 
+
     public static function getPerioada(){
         return [
             'Determinată'   => 'Determinată',
@@ -49,91 +80,91 @@ class PersoaneFizice extends \Eloquent
 
     public static function getTipAngajator(){
         return [
-            'Instituție financiară'   => 'Instituție financiară',
-            'Corporație multinațională' => 'Corporație multinațională',
-            'Sector public' => 'Sector public',
-            'Companie de stat' => 'Companie de stat',
-            'Companie privată romană' => 'Companie privată romană',
-            'Regie autonomă' => 'Regie autonomă',
-            'Companie străină' => 'Companie străină',
-            'Societate cu răspundere limitată' => 'Societate cu răspundere limitată',
-            'Societate în nume colectiv' => 'Societate în nume colectiv',
-            'Societate pe acțiuni' => 'Societate pe acțiuni',
-            'Poliție/Armată' => 'Poliție/Armată',
-            'Jandarmerie' => 'Jandarmerie',
-            'Alte entități' => 'Alte entități', 
+            '1'   => 'Instituție financiară',
+            '2' => 'Corporație multinațională',
+            '3' => 'Sector public',
+            '4' => 'Companie de stat',
+            '5' => 'Companie privată romană',
+            '6' => 'Regie autonomă',
+            '7' => 'Companie străină',
+            '8' => 'Societate cu răspundere limitată',
+            '9' => 'Societate în nume colectiv',
+            '10' => 'Societate pe acțiuni',
+            '11' => 'Poliție/Armată',
+            '12' => 'Jandarmerie',
+            '13' => 'Alte entități', 
             ];
     }
 
     public static function getNrAngajati(){
         return[
-            'Între 0 și 10' => 'Între 0 și 10',
-            'Între 11 și 20' => 'Între 11 și 20',
-            'Între 21 și 50' => 'Între 21 și 50',
-            'Între 51 și 100' => 'Între 51 și 100',
-            'Între 101 și 250' => 'Între 101 și 250',
-            'Peste 250' => 'Peste 250',
+            '1' => 'Între 0 și 10',
+            '2' => 'Între 11 și 20',
+            '3' => 'Între 21 și 50',
+            '4' => 'Între 51 și 100',
+            '5' => 'Între 101 și 250',
+            '6'  => 'Peste 250',
         ];
     }
 
     public static function getUltimStudii(){
         return[
-            'Gimnaziu' => 'Gimnaziu',
-            'Liceu' => 'Liceu',
-            'Postuniversitare' => 'Postuniversitare',
-            'Școală postliceală' => 'Școală postliceală',
-            'Școală profesională' => 'Școală profesională',
-            'Superioare' => 'Superioare',
+            '1' => 'Gimnaziu',
+            '2' => 'Liceu',
+            '3' => 'Postuniversitare',
+            '4' => 'Școală postliceală',
+            '5' => 'Școală profesională',
+            '6' => 'Superioare',
         ];
     }
 
     public static function getStareCivila(){
         return[
-            'Necăsătorit/ă' => 'Necăsătorit/ă',
-            'Căsătorit/ă' => 'Căsătorit/ă',  
-            'Divorțat/ă' => 'Divorțat/ă',
-            'Văduv/a' => 'Văduv/a',     
+            '1' => 'Necăsătorit/ă',
+            '2' => 'Căsătorit/ă',  
+            '3' => 'Divorțat/ă',
+            '4' => 'Văduv/a',     
         ];
     }
 
     public static function getSitLocativa(){
         return[
-            'Chirie' => 'Chirie',
-            'Locuiește cu părinții' => 'Locuiește cu părinții',
-            'Proprietar cu ipotecă' => 'Proprietar cu ipotecă',
-            'Proprietar fără ipotecă' => 'Proprietar făra ipotecă',
-            'Alte situații' => 'Alțe situații',
+            '1' => 'Chirie',
+            '2' => 'Locuiește cu părinții',
+            '3' => 'Proprietar cu ipotecă',
+            '4' => 'Proprietar făra ipotecă',
+            '5' => 'Alțe situații',
         ];
     }
 
     public static function getBanca(){
         return[
-            'Alpha Bank' => 'Alpha Bank',                          
-            'Banca Comercială Carpatică' => 'Banca Comercială Carpatică',  
-            'Veneto Bank' => 'Veneto Bank',
-            'Banca Romanească' => 'Banca Romanească',
-            'Banca Transilvania' => 'Banca Transilvania',   
-            'Bancpost' => 'Bancpost',   
-            'BCR' => 'BCR',
-            'BRD' => 'BRD', 
-            'Emporiki Bank' => 'Emporiki Bank',
-            'CEC' => 'CEC',
-            'CreditEurope Bank' => 'CreditEurope Bank',
-            'GarantiBank' => 'GarantiBank',
-            'ING Bank' => 'ING Bank',
-            'Idea Bank' => 'Idea Bank',
-            'Intesa Sanpaolo Bank' => 'Intesa Sanpaolo Bank',
-            'Leumi Bank'  => 'Leumi Bank',
-            'Libra Bank' => 'Libra Bank',
-            'Marfin Bank' => 'Marfin Bank',
-            'Millennium Bank' => 'Millennium Bank',
-            'MKB Romexterra Bank' => 'MKB Romexterra Bank',
-            'OTP Bank' => 'OTP Bank',
-            'Piraeus Bank' => 'Piraeus Bank',
-            'ProCredit Bank' => 'ProCredit Bank',
-            'Raiffeisen Bank' => 'Raiffeisen Bank',
-            'RBS' => 'RBS',
-            'UniCredit Bank' => 'UniCredit Bank',
+            '1' => 'Alpha Bank',                          
+            '2' => 'Banca Comercială Carpatică',  
+            '3' => 'Veneto Bank',
+            '4' => 'Banca Romanească',
+            '5' => 'Banca Transilvania',   
+            '6' => 'Bancpost',   
+            '7' => 'BCR',
+            '8' => 'BRD', 
+            '9' => 'Emporiki Bank',
+            '10' => 'CEC',
+            '11' => 'CreditEurope Bank',
+            '12' => 'GarantiBank',
+            '13' => 'ING Bank',
+            '14' => 'Idea Bank',
+            '15' => 'Intesa Sanpaolo Bank',
+            '16'  => 'Leumi Bank',
+            '17' => 'Libra Bank',
+            '18' => 'Marfin Bank',
+            '19' => 'Millennium Bank',
+            '20' => 'MKB Romexterra Bank',
+            '21' => 'OTP Bank',
+            '22' => 'Piraeus Bank',
+            '23' => 'ProCredit Bank',
+            '24' => 'Raiffeisen Bank',
+            '25' => 'RBS',
+            '26' => 'UniCredit Bank',
         ];
     }
 

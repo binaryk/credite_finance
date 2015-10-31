@@ -30,7 +30,8 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php",
 			"app/~libs",
-			"app/~credite"
+			"app/~credite",
+			"app/mailers"
 		],
 		"files": ["app/basicAuth/helpers.php"],
 		"psr-4": {

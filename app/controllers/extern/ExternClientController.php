@@ -9,6 +9,10 @@ use Credite\Clienti\PrepareControlsExternController;
 class ExternClientController  extends \BaseController{
     protected $layout = 'template.layout';
 
+    public function __consruct(){
+      parent::__consruct();
+    } 
+
     public function link_generate(){
 
         $breadcrumbs = [
@@ -33,7 +37,8 @@ class ExternClientController  extends \BaseController{
         $controller = new PrepareControlsExternController();
           $controls = $controller->controls()['controls'];
           $model    = $controller->controls()['model'];
-          return View::make('extern.form')->with(compact('controls', 'model'));
+          $current_org = $this->current_org;
+          return View::make('extern.form')->with(compact('controls', 'model','current_org'));
       }  
 
 
@@ -47,4 +52,15 @@ class ExternClientController  extends \BaseController{
         }
         return $randomString;
     } 
+
+    public function sendEmailUpdateContract()
+    {
+        /**
+         * Declansez evenimentul de trimitere email
+         **/
+        \Event::fire('client-extern.formular-complete', [
+            'replacements' => $proiect->_infos($this),
+        ]);
+        return ['success' => true];
+    }
 }

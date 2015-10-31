@@ -244,10 +244,15 @@
 			</div>
 		</div>
 		<!-- END PORTLET-->
-
+		{{
+			Form::hidden('id_organizatie', $current_org->id, ['id' => 'id_organizatie', 'class' => 'data-source', 'data-control-source' => 'id_organizatie', 'data-control-type' => 'persistent'])
+		}}
+		{{
+			Form::hidden('client_extern', 1, ['id' => 'client_extern', 'class' => 'data-source', 'data-control-source' => 'client_extern', 'data-control-type' => 'persistent'])
+		}}
 	</div>
 	<div class="form-actions col-md-12">
-		<button class="btn-do-action btn blue m-icon btn-do-insert pull-right client-extern" data-action="insert">Salvează <i class="m-icon-swapleft"></i></button>
+		<button class="btn-do-action-extern btn blue m-icon btn-do-insert pull-right client-extern" data-action="insert">Salvează <i class="m-icon-swapleft"></i></button>
 	</div>
 
 </div>
@@ -260,7 +265,6 @@
 
 	var form = new DTFORM("prima-casa", "{{URL::route('datatable-load-form', ['id' => 'prima-casa'])}}", '{{ $model }}', "{{URL::route('datatable-do-action', ['id' => 'prima-casa'])}}",'prima-casa');
 	form.refresh = 1;
-
 	form.afterEmptyControls = function(record, action){
 		$('.btn-do-action').removeAttr('disabled');
 	}

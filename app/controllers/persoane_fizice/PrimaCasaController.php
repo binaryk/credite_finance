@@ -4,7 +4,7 @@ use Credite\PersoaneFizice;
 class PrimaCasaController  extends \Datatable\DatatableController{
     protected $layout = 'template.layout';
 
-    public function index($type = NULL){
+    public function index($type = NULL, $edit = NULL){
         $config = \Credite\Grids::make('prima-casa')->toIndexConfig('prima-casa');
 
         $config['row-source'] .= $type ? '/'.$type  : ''; 
@@ -32,7 +32,7 @@ class PrimaCasaController  extends \Datatable\DatatableController{
         }
         $config['right_menu'] = [ ['caption' => 'Adaugă persoana', 'class' => 'action-insert-record'],
                                   ['caption' => 'Trimite link', 'class' => 'generate-link'/*, 'action' => \URL::route('generate-link')*/] ];
-        $this->show( $config + ['other-info' => [ 'current_org' => $this->current_org]] );
+        $this->show( $config + ['other-info' => [ 'current_org' => $this->current_org, 'edit' => $edit ]] );
     }
 
     public function rows($id, $type = NULL){

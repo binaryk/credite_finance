@@ -32,7 +32,7 @@ Date de baza
 		Persoane fizice
 		 */
 
-			->add('get', 'clienti-index', 'clienti/{type?}', 'PrimaCasaController@index', 'Credite\Datatable')
+			->add('get', 'clienti-index', 'clienti/{type?}/{edit?}', 'PrimaCasaController@index', 'Credite\Datatable')
 			->add('get', 'persoane-fizice-row-source', 'persoane-fizice/{id}/{type?}', 'PrimaCasaController@rows', 'Credite\Datatable')
 			
 			->add('get', 'client-documents', 'client-document/{id}/{id_client}', 'ClientDocumentsController@index', 'Credite\Datatable')

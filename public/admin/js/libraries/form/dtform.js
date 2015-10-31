@@ -5,6 +5,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	this.classActionDelete   = '.action-delete-record';
 	this.classActionClose    = '.btn-close-form';
 	this.classDoButton       = '.btn-do-action';
+	this.classDoButtonExtern = '.btn-do-action-extern';
 	this.classSourceControls = '.data-source';
 	this.inputTypeCheckbox   = '.input_label'
 	this.idMessageBox        = '#dt-action-message';
@@ -17,7 +18,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	this.dt                = dt;
 	this.record_id         = null;
 	this.refresh           = 1;
-	var self 			   = this;
+
 	this.aftershow          = function(record, action){};
 	this.afterEmptyControls = function(record, action){};
 	this.afterdatasource    = function(record){ return record; }
@@ -333,8 +334,8 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
         		{
         			if( self.refresh == 1)
         			{
-        				// self.hideform();
-        				// self.dt.draw( false );
+        				self.hideform();
+        				self.dt.draw( false );
         			}
         			else
         				if( self.refresh == 2)
@@ -346,9 +347,9 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 		});
 	};
 
+
 	this.doactionextern = function(action)
 	{
-
 		this.hideActionMessage();
 		this.hideFieldsErrors();
 		var self = this;
@@ -389,6 +390,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	};
 
 
+
 	this.bindActions = function()
 	{ 
 		var self = this;
@@ -427,9 +429,15 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 
 
 		$(document).on( 'click', this.classDoButton, function(){
-			if($(this).hasClass('client-extern')){
-				self.record_id = 'insert';
+			if( ! $(this).hasClass('disabled') )
+			{
+				self.doaction( $(this).attr('data-action') );
+				$(this).addClass('disabled');
 			}
+		});
+
+
+		$(document).on( 'click', this.classDoButtonExtern, function(){
 			if( ! $(this).hasClass('disabled') )
 			{
 				self.doactionextern( $(this).attr('data-action') );

@@ -69,11 +69,11 @@ class PrimaCasaForm extends \Processing\Form\Form
 		// 3
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-			->name('e-mail')
+			->name('email')
 			->caption('<b>E-mail</b>') 
 			->class('form-control  data-source')
 			//->placeholder('E-mail')
-			->controlsource('e-mail')
+			->controlsource('email')
 			->controltype('textbox')
 			->maxlength(255)
 		)
@@ -114,6 +114,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('salariu')->placeholder('Textbox')
+				// ->caption('Salariu')
 				->value('Salariu')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('salariu', '1', false,
@@ -127,6 +128,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('diurne')->placeholder('Textbox')
+				// ->caption('Diurne')
 				->value('Diurne')->class('form-control input_label')->enabled(0)
 				->addon([ 
 					'before' => \Form::checkbox('diurne', '1', false,
@@ -140,6 +142,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('pensie')->placeholder('Textbox')
+				// ->caption('Pensie')
 				->value('Pensie')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('pensie', '1', false,
@@ -153,6 +156,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('dividende')->placeholder('Textbox')
+				// ->caption('Dividende')
 				->value('Dividende')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('dividende', '1', false,
@@ -166,6 +170,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('indemniz_copil')->placeholder('Textbox')
+				// ->caption('Îndemnizație de creștere copil')
 				->value('Îndemnizație de creștere copil')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('indemniz_copil', '1', false,
@@ -179,6 +184,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('activitati_indep')->placeholder('Textbox')
+				// ->caption('Activități independente')
 				->value('Activități independente')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('activitati_indep', '1', false,
@@ -192,6 +198,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('profesii_liberale')->placeholder('Textbox')
+				// ->caption('Profesii liberale')
 				->value('Profesii liberale')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('profesii_liberale', '1', false,
@@ -205,6 +212,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('drepturi_de_autor')->placeholder('Textbox')
+				// ->caption('Drepturi de autor')
 				->value('Drepturi de autor')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('drepturi_de_autor', '1', false,
@@ -218,6 +226,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('chirii')->placeholder('Textbox')
+				// ->caption('Chirii')
 				->value('Chirii')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('chirii', '1', false,
@@ -231,6 +240,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('rente_viagere')->placeholder('Textbox')
+				// ->caption('Rente viagere')
 				->value('Rente viagere')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('rente_viagere', '1', false,
@@ -244,6 +254,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('comisioane')->placeholder('Textbox')
+				// ->caption('Comisioane')
 				->value('Comisioane')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('comisioane', '1', false,
@@ -257,6 +268,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('ore_suplimentare')->placeholder('Textbox')
+				// ->caption('Ore suplimentare')
 				->value('Ore suplimentare')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('ore_suplimentare', '1', false,
@@ -270,6 +282,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('contracte_de_management')->placeholder('Textbox')
+				// ->caption('Contracte de management')
 				->value('Contracte de management')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('contracte_de_managementcontracte_de_management', '1', false,
@@ -283,6 +296,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('contracte_de_mandat')->placeholder('Textbox')
+				// ->caption('Contracte de mandat')
 				->value('Contracte de mandat')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('contracte_de_mandat', '1', false,
@@ -296,6 +310,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('norma_de_hrana')->placeholder('Textbox')
+				// ->caption('Norma de hrană')
 				->value('Norma de hrană')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('norma_de_hrana', '1', false,
@@ -320,6 +335,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('no_bonuri_de_masa')->placeholder('Textbox')
+				// ->caption('Nu este cazul cu bonuri de masă')
 				->value('Nu este cazul cu bonuri de masă')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('no_bonuri_de_masa', '1', false,
@@ -366,6 +382,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_salar')->placeholder('Textbox')
+				// ->caption('Salariu')
 				->value('Salariu')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_salar', '1', false,
@@ -379,6 +396,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_diurne')->placeholder('Textbox')
+				// ->caption('Diurne')
 				->value('Diurne')->class('form-control input_label')->enabled(0)
 				->addon([ 
 					'before' => \Form::checkbox('alt_ven_diurne', '1', false,
@@ -392,6 +410,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_pensie')->placeholder('Textbox')
+				// ->caption('Pensie')
 				->value('Pensie')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_pensie', '1', false,
@@ -405,6 +424,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_divid')->placeholder('Textbox')
+				// ->caption('Dividende')
 				->value('Dividende')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_divid', '1', false,
@@ -418,6 +438,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_indemn_copil')->placeholder('Textbox')
+				// ->caption('Îndemnizație de creștere copil')
 				->value('Îndemnizație de creștere copil')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_indemn_copil', '1', false,
@@ -431,6 +452,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_activ_indep')->placeholder('Textbox')
+				// ->caption('Activități independente')
 				->value('Activități independente')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_activ_indep', '1', false,
@@ -444,6 +466,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_prfs_lbrl')->placeholder('Textbox')
+				// ->caption('Profesii liberale')
 				->value('Profesii liberale')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_prfs_lbrl', '1', false,
@@ -457,6 +480,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_drept_de_autor')->placeholder('Textbox')
+				// ->caption('Drepturi de autor')
 				->value('Drepturi de autor')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_drept_de_autor', '1', false,
@@ -470,6 +494,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_chirii')->placeholder('Textbox')
+				// ->caption('Chirii')
 				->value('Chirii')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_chirii', '1', false,
@@ -483,6 +508,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_rente_viagere')->placeholder('Textbox')
+				// ->caption('Rente viagere')
 				->value('Rente viagere')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_rente_viagere', '1', false,
@@ -496,6 +522,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_cmsne')->placeholder('Textbox')
+				// ->caption('Comisioane')
 				->value('Comisioane')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_cmsne', '1', false,
@@ -509,6 +536,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_ore_suplim')->placeholder('Textbox')
+				// ->caption('Ore suplimentare')
 				->value('Ore suplimentare')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_ore_suplim', '1', false,
@@ -522,6 +550,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_cntrct_de_mngmnt')->placeholder('Textbox')
+				// ->caption('Contracte de management')
 				->value('Contracte de management')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('contracte_de_managementcontracte_de_management', '1', false,
@@ -535,6 +564,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_cntrct_de_mandat')->placeholder('Textbox')
+				// ->caption('Contracte de mandat')
 				->value('Contracte de mandat')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_cntrct_de_mandat', '1', false,
@@ -548,6 +578,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('alt_ven_nrm_de_hrana')->placeholder('Textbox')
+				// ->caption('Normă de hrană')
 				->value('Normă de hrană')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('alt_ven_nrm_de_hrana', '1', false,
@@ -693,6 +724,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('propr_auto')->placeholder('Textbox')
+				// ->caption('Proprietar autoturism')
 				->value('Proprietar autoturism')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('propr_auto', '1', false,
@@ -761,6 +793,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('istoric_credit')->placeholder('Textbox')
+				// ->caption('Istoric creditare')
 				->value('Istoric creditare')->class('form-control input_label')->enabled(0)
 				->addon([
 					'before' => \Form::checkbox('istoric_credit', '1', false,

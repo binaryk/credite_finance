@@ -22,7 +22,7 @@ class CreatePersoaneFiziceTable extends Migration {
 			$table->text('nume',50);
 			$table->text('prenume',50);
 			$table->text('cnp',50);
-			$table->text('e-mail',50);
+			$table->text('email',50);
 			$table->text('telefon',50);
 			$table->text('nume_mama',50);
 
