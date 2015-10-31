@@ -9,7 +9,6 @@ class ClientMailer extends Mailer
 
 	public function confirmareFormular($client, $admin = NULL)
 	{
-		dd($client);
 		return $this->sendTo(
 			'lupacescueduard@yahoo.com', 
 			'Clientul - ' . $client->nume . ' ' . $client->prenume, 

@@ -5,7 +5,7 @@ return [
 		'file-name-pattern' => '{{original}}-{{id_client}}-{{date}}.{{extension}}',
 		'max-size' => 5 * 1024,
 		'allowed-extensions' => 'bmp,gif,jpeg,jpg,png,pdf,doc,docx',
-		'path' => str_replace('\\', '/', public_path()) . '/uploads/{{id_client}}/',
+		'path' => str_replace('\\', '/', public_path()) . '/uploads/clienti/{{id_client}}/',
 		'id_name' => 'id_client',
 	],
 	'ansamblu-photos' => [

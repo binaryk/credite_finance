@@ -2,7 +2,6 @@
 @section('content')
 @parent  
 
-
 @stop
 @section('datatable-specific-page-jquery-initializations')
 	$('.form-actions').hide();
@@ -22,18 +21,19 @@
 			    object: {width: "auto", height: "160px"},
 			    other:  {width: "auto", height: "160px"}
 			},
-		'dropZoneEnabled' : false,
+		'dropZoneEnabled' : true,
 		'browseLabel'     : 'Alege fişier',
 		'removeLabel'     : 'Şterge selecţia',
 		'uploadLabel'     : 'Încarcă fişierul',
-		'uploadAsync'     : false,
+		'uploadAsync'     : true,
 		'uploadUrl'       : '{{URL::route('upload-client-documents', ['id_client' => $client->id])}}',
 		'fileActionSettings' : 
 			{
 				'removeTitle' : 'Şterge selecţia',
 				'uploadTitle' : 'Încarcă fişierul',
 				'indicatorNewTitle' : 'Fişierul nu este încărcat'
-			}
+			},
+		'multiple' : true
 	});
 
 	upload_document.on('fileuploaded', function(event, data, previewId, index){

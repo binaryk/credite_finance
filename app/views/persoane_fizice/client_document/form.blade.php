@@ -1,1 +1,1 @@
-<input id="file-document" type="file" />
+<input id="file-document" multiple type="file" />

@@ -23,7 +23,7 @@ class ClientDocuments extends \Eloquent
     }
 
     /**
-    Cate poze are o cladire
+    Cate documente are 
      **/
     public static function NumarDocumente($id_client)
     {

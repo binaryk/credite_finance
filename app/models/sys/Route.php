@@ -37,7 +37,7 @@ Date de baza
 			
 			->add('get', 'client-documents', 'client-document/{id}/{id_client}', 'ClientDocumentsController@index', 'Credite\Datatable')
 			->add('get', 'client-documents-row-source', 'client_document/row-source/{id}/{id_client}', 'ClientDocumentsController@rows', 'Credite\Datatable')
-			->add('post', 'upload-client-documents', 'upload-client-document/{id_client}', 'ClientDocumentsController@upload', 'Credite\Datatable')
+			->add('post', 'upload-client-documents', 'upload-client-document/{id_client?}', 'ClientDocumentsController@upload', 'Credite\Datatable')
 			->add('post', 'delete-client-documents', 'delete-client-document', 'ClientDocumentsController@delete', 'Credite\Datatable')
 			->add('get', 'download-client-documents', 'download-client-documents/{document_id}', 'ClientDocumentsController@download', 'Credite\Datatable')
 

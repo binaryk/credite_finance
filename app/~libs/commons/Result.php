@@ -8,6 +8,7 @@ class Result
 	protected $success      = NULL;
 	protected $message      = NULL;
 	protected $fieldserrors = NULL;
+	protected $model		= NULL;
 
 
 	public static function make()
@@ -32,9 +33,10 @@ class Result
 	public function out()
 	{
 		$result = new \StdClass();
-		$result->success     = $this->success;
-		$result->message     = $this->message;
+		$result->success      = $this->success;
+		$result->message      = $this->message;
 		$result->fieldserrors = $this->fieldserrors;
+		$result->model		  = $this->model;
 		return $result;
 	}
 

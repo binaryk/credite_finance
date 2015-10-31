@@ -15,9 +15,8 @@ class Grids {
 		/**
 		 * Lupacescu Eduard - KleverSystem
 		 */
-		'prima-casa' 	=> '\Credite\PersoaneFizice\Grid\PersoaneFiziceGrid', 
+		'prima-casa' 		=> '\Credite\PersoaneFizice\Grid\PersoaneFiziceGrid', 
 		'client-documents' 	=> '\Credite\PersoaneFizice\Grid\ClientDocumentsGrid', 
-		//'apartament_photo'   => '\Imobiliare\Imobile\Grid\ApartamentePhotosRecord',
 
 	];
 

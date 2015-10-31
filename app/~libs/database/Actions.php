@@ -68,7 +68,7 @@ class Actions
 			$record = call_user_func( [$this->model, 'createRecord'], $this->data); 
             if( $record )
             {
-                return \Result::make()->success(true)->message( $this->feedback('success') );
+                return \Result::make()->success(true)->message( $this->feedback('success') )->model($record);
             }
             return \Result::make()->success(false)->message( $this->feedback('error'));
         }
@@ -152,7 +152,8 @@ class Actions
 		return \Response::json(  [
 			'success'      => $result->success(), 
 			'message'      => $result->message(), 
-			'fieldserrors' => $result->fieldserrors()
+			'fieldserrors' => $result->fieldserrors(),
+			'model'		   => $result->model()
 		] );
 	}
 

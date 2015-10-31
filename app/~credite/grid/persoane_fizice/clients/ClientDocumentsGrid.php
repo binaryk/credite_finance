@@ -26,7 +26,7 @@ class ClientDocumentsGrid extends \Credite\GridsRecord
 								 packages/fileinput/js/fileinput.min.js, 
 								 packages/bxslider/jquery.bxslider.js,
 								 assets/global/plugins/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js';
-		$this->row_source     = 'client-documents-row-source';  //'apartament_photo-row-source'; ////////Schimbare
+		$this->row_source     = 'client-documents-row-source';   
 		$this->rows_source_sql 				= 
 			"
 			SELECT 
@@ -117,12 +117,10 @@ class ClientDocumentsGrid extends \Credite\GridsRecord
 		$this->filters = [
 			'deleted' => 'uploaded_docs.deleted_at is null',
 		];
-
 	}
 
     public static function create()
 	{
-		//dd("1");
 		return self::$instance = new ClientDocumentsGrid('client-documents');
 	}
 	

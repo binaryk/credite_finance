@@ -1,4 +1,4 @@
-function DTFORM(formid, loadformurl, model, doactionurl, dt)
+function DTFORM(formid, loadformurl, model, doactionurl, dt, endpoint)
 {
 	this.classActionInsert   = '.action-insert-record';
 	this.classActionUpdate   = '.action-update-record';
@@ -7,7 +7,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	this.classDoButton       = '.btn-do-action';
 	this.classDoButtonExtern = '.btn-do-action-extern';
 	this.classSourceControls = '.data-source';
-	this.inputTypeCheckbox   = '.input_label'
+	this.inputTypeCheckbox   = '.input_label';
 	this.idMessageBox        = '#dt-action-message';
 	this.messageBoxHtml      = '<div  class="alert alert-:type: alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><h4><i class="icon fa fa-:icon:"></i>:caption:</h4>:message:</div>';
 
@@ -18,6 +18,9 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	this.dt                = dt;
 	this.record_id         = null;
 	this.refresh           = 1;
+	this.endpoint         = endpoint;
+	console.log(this.endpoint);
+
 
 	this.aftershow          = function(record, action){};
 	this.afterEmptyControls = function(record, action){};
@@ -366,25 +369,13 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
         	data     : {'action' : action, 'model' : self.model, 'data' : self.datasource(), 'record_id' : self.record_id, 'code' :  self.formid.replace('#form-', '')},
         	success  : function(result)
         	{
-        		self.showActionMessage(result);
-        		swal('Success!', 'Datele au fost trimise catre procesare cu succes!', 'success');
-        		if( ! result.success)
-        		{
-        			self.showFieldsErrors(result.fieldserrors);
-        			$(self.classDoButton).removeClass('disabled');
-        		}
-        		else
-        		{
-        			if( self.refresh == 1)
-        			{
-        				self.hideform();
-        			}
-        			else
-        				if( self.refresh == 2)
-        				{
-        					location.reload();
-        				}
-        		}
+        		console.log(result);
+        		// self.showActionMessage(result);
+        		swal('Success!', 'Datele au fost salvate cu succes! Va rugăm să adăugați documente.', 'success');
+        		$('#client_id').val(result.model.id);
+        		self.upload(result.model);
+        		$('.data-tabs').hide();
+        		$('.photo-tabs').show();
         	}
 		});
 	};
@@ -444,6 +435,49 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 				$(this).addClass('disabled');
 			}
 		});
+	};
+
+
+	/*o mica functie pentru doc uploads, dupa aia o sa fac clasa din ea*/
+
+	this.upload = function(model){
+		self=this;
+		var upload_doc = $("#file-document").fileinput({
+				'previewClass'    : 'one-file',
+				'previewSettings' :
+					{
+					    image:  {width: "auto", height: "160px"},
+					    html:   {width: "auto", height: "160px"},
+					    text:   {width: "auto", height: "160px"},
+					    video:  {width: "auto", height: "160px"},
+					    audio:  {width: "auto", height: "80px"},
+					    flash:  {width: "auto", height: "160px"},
+					    object: {width: "auto", height: "160px"},
+					    other:  {width: "auto", height: "160px"}
+					},
+				'dropZoneEnabled' : true,
+				'browseLabel'     : 'Alege fişier',
+				'removeLabel'     : 'Şterge selecţia',
+				'uploadLabel'     : 'Încarcă fişierul',
+				'uploadAsync'     : true,
+				'uploadUrl'       : self.endpoint + '/' + model.id,
+				'fileActionSettings' : 
+					{
+						'removeTitle' : 'Şterge selecţia',
+						'uploadTitle' : 'Încarcă fişierul',
+						'indicatorNewTitle' : 'Fişierul nu este încărcat'
+					},
+				'multiple' : true
+			});
+
+		upload_doc.on('fileuploaded', function(event, data, previewId, index){
+			$("#file-document").fileinput('clear');
+			swal('Success!', 'Datele au fost trimise catre procesare cu succes!', 'success');
+			setTimeout(function(){
+				location.reload();
+			},1500);
+		});
+
 	};
 	/*
 	se asociaza evenimente la: 

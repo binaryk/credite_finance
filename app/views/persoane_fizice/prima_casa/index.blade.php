@@ -22,7 +22,8 @@
  		e.preventDefault();
  		$.post("{{ URL::route('post_generate_link') }}",function(response){
  			console.log(response);
- 			swal("Copiază link-ul:",response, "success"); 
+ 			prompt("Copiază link-ul: CTRL+C", response);
+ 			//swal("Copiază link-ul:",response, "success"); 
 
  		});
  	}) 

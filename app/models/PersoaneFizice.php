@@ -8,7 +8,7 @@ class PersoaneFizice extends \Eloquent
 {
     use SoftDeletingTrait;
     protected $table = 'persoane_fizice';
-    protected $guarded = ['client_extern'];
+    protected $guarded = ['client_extern', 'client_id'];
 
     public static function getRecord( $id )
     {
@@ -51,19 +51,6 @@ class PersoaneFizice extends \Eloquent
         /**
          * Declansez evenimentul de trimitere email
          **/
-        $mail = new \Mailers\Mailer();
-
-        $mail->sendTo(
-            'lupacescueduard@yahoo.com', 
-            'Clientul - ' . $client->nume . ' ' . $client->prenume, 
-            'emails.client.confirmare', 
-            [
-                'body' => \View::make('extern.email-content')->with([
-                        'client'          => $client,
-                    ])->render(),
-                'client'  => $client,
-            ]
-        );
         \Event::fire('client.send-confirm-email', [
             'client'          => $client,
         ]);
