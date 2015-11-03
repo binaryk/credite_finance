@@ -38,9 +38,9 @@ Route::group(['before' => 'auth|standardUser'], function()
 {
 	Route::get('userProtected', 'StandardUserController@getUserProtected');
 	Route::resource('profiles', 'UsersController', ['only' => ['show', 'edit', 'update']]);
-	Imobile\Route::make()->define();
+	
 });
-
+Imobile\Route::make()->define();
 # Admin Routes
 Route::group(['before' => 'auth|admin'], function()
 {
