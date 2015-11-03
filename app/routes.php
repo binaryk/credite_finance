@@ -38,15 +38,24 @@ Route::group(['before' => 'auth|standardUser'], function()
 {
 	Route::get('userProtected', 'StandardUserController@getUserProtected');
 	Route::resource('profiles', 'UsersController', ['only' => ['show', 'edit', 'update']]);
+	Imobile\Route::make()->define();
 	
 });
-Imobile\Route::make()->define();
 # Admin Routes
 Route::group(['before' => 'auth|admin'], function()
 {
 	Route::get('/admin', ['as' => 'admin_dashboard', 'uses' => 'HomeController@showWelcome']);
     Route::resource('admin/profiles', 'AdminUsersController', ['only' => ['index', 'show', 'edit', 'update', 'destroy']]);
 });
+
+
+Route::get('clienti/{type?}/{edit?}', [ 'as' => 'clienti-index', 'uses' => 'Credite\Datatable\PrimaCasaController@index']);
+Route::get('persoane-fizice/{id}/{type?}', [ 'as' => 'persoane-fizice-row-source', 'uses' => 'Credite\Datatable\PrimaCasaController@rows']);
+Route::get('client-document/{id}/{id_client}', [ 'as' => 'client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@index']);
+Route::get('client_document/row-source/{id}/{id_client}', [ 'as' => 'client-documents-row-source', 'uses' => 'Credite\Datatable\ClientDocumentsController@rows']);
+Route::post('upload-client-document/{id_client?}',[ 'as' => 'upload-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@upload']);
+Route::post('delete-client-document',[ 'as' => 'delete-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@delete']);
+Route::get('download-client-documents/{document_id}', [ 'as' => 'download-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@download']);
 
 include 'macros.php'; // ??? Calin> Ce cauta asta aici la rute
 Route::get('test', 'HomeController@showWelcome2');
