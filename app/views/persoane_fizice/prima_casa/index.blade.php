@@ -29,4 +29,24 @@
  	}) 
 
  	FormiCheck.init();
+ 	if (jQuery().datepicker) {
+ 	$('.datepicker').datepicker(
+ 		{
+ 		language: "ro",
+ 		format: "yyyy-mm-dd",
+ 		autoclose: true,
+ 		rtl: Metronic.isRTL(),
+ 		orientation: "left",
+ 		autoclose: true,
+ 		todayBtn: 'linked',
+ 		clearBtn: true
+ 		}).on('changeDate', function(e)
+ 		{});
+ 		}
+	$('#istoric_credit').on('ifChecked', function(event){
+	  $('.istoric').show();
+	});	
+	$('#istoric_credit').on('ifUnchecked', function(event){
+	  $('.istoric').hide();
+	});	
 @stop 

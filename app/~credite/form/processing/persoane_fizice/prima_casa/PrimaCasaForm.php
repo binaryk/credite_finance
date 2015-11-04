@@ -760,7 +760,7 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('vec_loc_munca')
-			->caption('<b>Vechime la locul de muncă actual/anterior</b>') 
+			->caption('<b>Vechime la locul de muncă actual</b>') 
 			->class('form-control  data-source')
 			//->placeholder('Nume')
 			->controlsource('vec_loc_munca')
@@ -773,7 +773,6 @@ class PrimaCasaForm extends \Processing\Form\Form
 			->name('vec_tot_munca')
 			->caption('<b>Vechime totală în muncă</b>') 
 			->class('form-control  data-source')
-			//->placeholder('Nume')
 			->controlsource('vec_tot_munca')
 			->controltype('textbox')
 			->maxlength(255)
@@ -807,12 +806,242 @@ class PrimaCasaForm extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('tip_client')
-				->caption('<b>Tip client</b>')
 				->class('form-control data-source input-group form-select init-on-update-delete')
 				->controlsource('tip_client')
 				->controltype('combobox')
 				->enabled('false')
 				->options(\Credite\PersoaneFizice::getTipClient())
+		)
+		// 62
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('istoric_tip_credit')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('istoric_tip_credit')
+				->controltype('combobox')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getBanca())
+		)// 63
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('istoric_tip_codebitor')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('istoric_tip_codebitor')
+				->controltype('combobox')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getBanca())
+		)// 64
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('istoric_descoperit_de_cont')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('istoric_descoperit_de_cont')
+				->controltype('combobox')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getBanca())
+		)// 65
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('istoric_card_credit')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('istoric_card_credit')
+				->controltype('combobox')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getBanca())
+		)// 66
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('istoric_tip_credit_insitutie')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('bnc_virare_salar')
+				->controltype('istoric_tip_credit_insitutie')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getBanca())
+		)// 67
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('istoric_tip_codebitor_insitutie')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('bnc_virare_salar')
+				->controltype('istoric_tip_codebitor_insitutie')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getBanca())
+		)// 68
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('istoric_descoperit_de_cont_insitutie')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('bnc_virare_salar')
+				->controltype('istoric_descoperit_de_cont_insitutie')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getBanca())
+		)// 69
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('istoric_card_credit_insitutie')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('bnc_virare_salar')
+				->controltype('istoric_card_credit_insitutie')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getBanca())
+		) 
+		// 70
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+				->name('istoric_tip_credit_data_acordarii')
+				->class('form-control data-source datepicker')->readonly(1)
+				->controlsource('istoric_tip_credit_data_acordarii')->controltype('textbox')
+				->addon(['before' => '<i class="fa fa-calendar"></i>', 'after' => NULL])
+		)
+		// 71
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+				->name('istoric_tip_codebitor_data_acordarii')
+				->class('form-control data-source datepicker')->readonly(1)
+				->controlsource('istoric_tip_codebitor_data_acordarii')->controltype('textbox')
+				->addon(['before' => '<i class="fa fa-calendar"></i>', 'after' => NULL])
+		)
+		// 72
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+				->name('istoric_descoperit_de_cont_data_acordarii')
+				->class('form-control data-source datepicker')->readonly(1)
+				->controlsource('istoric_descoperit_de_cont_data_acordarii')->controltype('textbox')
+				->addon(['before' => '<i class="fa fa-calendar"></i>', 'after' => NULL])
+		)
+		// 73
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+				->name('istoric_card_credit_data_acordarii')
+				->class('form-control data-source datepicker')->readonly(1)
+				->controlsource('istoric_card_credit_data_acordarii')->controltype('textbox')
+				->addon(['before' => '<i class="fa fa-calendar"></i>', 'after' => NULL])
+		)
+		// 74
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('istoric_tip_credit_rata_lunara')
+			->class('form-control  data-source')
+			->controlsource('istoric_tip_credit_rata_lunara')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 75
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('istoric_tip_codebitor_rata_lunara')
+			->class('form-control  data-source')
+			->controlsource('istoric_tip_codebitor_rata_lunara')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 76
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('istoric_descoperit_de_cont_rata_lunara')
+			->class('form-control  data-source')
+			->controlsource('istoric_descoperit_de_cont_rata_lunara')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 77
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('istoric_card_credit_rata_lunara')
+			->class('form-control  data-source')
+			->controlsource('istoric_card_credit_rata_lunara')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 78
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('istoric_tip_credit_sold')
+			->class('form-control  data-source')
+			->controlsource('istoric_tip_credit_sold')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 79
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('istoric_tip_codebitor_sold')
+			->class('form-control  data-source')
+			->controlsource('istoric_tip_codebitor_sold')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 80
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('istoric_descoperit_de_cont_sold')
+			->class('form-control  data-source')
+			->controlsource('istoric_descoperit_de_cont_sold')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 81
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('istoric_card_credit_sold')
+			->class('form-control  data-source')
+			->controlsource('istoric_card_credit_sold')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 82
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('tip')
+			->class('form-control  data-source')
+			->controlsource('tip')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 83
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('an_constructie')
+			->class('form-control  data-source')
+			->controlsource('an_constructie')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 84
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('localizare')
+			->class('form-control  data-source')
+			->controlsource('localizare')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 85
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('marime')
+			->class('form-control  data-source')
+			->controlsource('marime')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 86
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('regim_juridic')
+			->class('form-control  data-source')
+			->controlsource('regim_juridic')
+			->controltype('textbox')
+			->maxlength(255)
+		)
+		// 87
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+			->name('valoare_estimata')
+			->class('form-control  data-source')
+			->controlsource('valoare_estimata')
+			->controltype('textbox')
+			->maxlength(255)
 		)
 		; 
 

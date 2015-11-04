@@ -4,6 +4,12 @@
 		@include('persoane_fizice.prima_casa.forms.tab_2')
 		@include('persoane_fizice.prima_casa.forms.tab_3')
 		@include('persoane_fizice.prima_casa.forms.tab_4')
+		<div class="istoric" style="display: none;">
+			@include('persoane_fizice.prima_casa.forms.tab_6_istoric')
+		</div>
+		<div class="garantie" style="display: block;">
+			@include('persoane_fizice.prima_casa.forms.tab_7_garantie')
+		</div>
 	</div>
  </div>                                                             
 {{

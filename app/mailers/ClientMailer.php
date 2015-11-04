@@ -10,7 +10,7 @@ class ClientMailer extends Mailer
 	public function confirmareFormular($client, $admin = NULL)
 	{
 		return $this->sendTo(
-			'ioana.biris@creditfin.ro', 
+			'lupacescueduard@yahoo.com', 
 			'Clientul - ' . $client->nume . ' ' . $client->prenume, 
 			'emails.client.confirmare', 
 			[

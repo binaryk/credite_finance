@@ -10,8 +10,6 @@
 			</a> 
 			<a href="" class="fullscreen" data-original-title="" title="">
 			</a>
-			<a href="" class="remove" data-original-title="" title="">
-			</a>
 		</div>
 	</div> 
 

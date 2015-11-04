@@ -8,7 +8,15 @@ class PersoaneFizice extends \Eloquent
 {
     use SoftDeletingTrait;
     protected $table = 'persoane_fizice';
-    protected $guarded = ['client_extern', 'client_id'];
+    protected $guarded = ['client_extern', 
+    'client_id',
+    'tip',
+    'an_constructie',
+    'localizare',
+    'marime',
+    'regim_juridic',
+    'valoare_estimata',
+    ];
 
     public static function getRecord( $id )
     {
@@ -126,6 +134,7 @@ class PersoaneFizice extends \Eloquent
 
     public static function getBanca(){
         return[
+            '0' => '-- Alege banca --',
             '1' => 'Alpha Bank',                          
             '2' => 'Banca Comercială Carpatică',  
             '3' => 'Veneto Bank',

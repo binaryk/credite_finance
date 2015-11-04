@@ -6,20 +6,18 @@
 			<span class="caption-helper">Aici completati datele despre veniturile clientului</span>
 		</div>
 		<div class="tools">
-			<a href="" class="expand" data-original-title="" title="">
+			<a href="" class="collapse" data-original-title="" title="">
 			</a> 
 			<a href="" class="fullscreen" data-original-title="" title="">
 			</a>
-			<a href="" class="remove" data-original-title="" title="">
-			</a>
 		</div>
 	</div> 
-	<div class="portlet-body" style="display: none;"> 
+	<div class="portlet-body" > 
 		<div id="context" data-toggle="context" data-target="#context-menu">
 			<div class="row">
 				<!-- Salariu net -->
 			</div> 
-				<div class="col-md-6">{{ $controls[6]->out() }}</div>
+				<div class="col-md-4">{{ $controls[6]->out() }}</div>
 			<div class="row">
 				<div class="col-md-12 caption"><b>Venit obtinut din:</b></div>
 				<!-- Salariu -->
@@ -55,19 +53,17 @@
 			</div>
 			<div class="row">
 				<!-- Bonuri de masa -->
-				<div class="col-md-6">{{ $controls[22]->out() }}</div>
+				<div class="col-md-4">{{ $controls[22]->out() }}</div>
 				<!-- No Bonuri de masa -->
-				<div class="col-md-6">{{ $controls[23]->out() }}</div>
-			</div>
-			<div class="row">
+				<div class="col-md-4">{{ $controls[23]->out() }}</div>
 				<!-- Perioada -->
-				<div class="col-md-6">	{{ $controls[24]->out() }}</div>
+				<div class="col-md-4">	{{ $controls[24]->out() }}</div>
 			</div>
 			<div class="row">
 				<!-- Alte venituri -->
-				<div class="col-md-6">{{ $controls[25]->out() }}</div>
+				<div class="col-md-4">{{ $controls[25]->out() }}</div>
 				<!-- Perioada alte venituri -->
-				<div class="col-md-6">{{ $controls[26]->out() }}</div>
+				<div class="col-md-4">{{ $controls[26]->out() }}</div>
 			</div>
 			<div class="row">
 			<div class="col-md-12 caption"><b>Alte venituri obtinute din:</b></div>
@@ -104,7 +100,7 @@
 			</div>
 			<div class="row">
 				<!-- Total venit net -->
-				<div class="col-md-6">
+				<div class="col-md-4">
 					{{ $controls[42]->out() }}
 				</div>
 			</div>

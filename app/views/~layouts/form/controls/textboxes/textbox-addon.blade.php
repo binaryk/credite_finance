@@ -1,4 +1,4 @@
-@if(@caption)
+@if($caption)
 	<label for="{{$name}}">{{$caption}}</label>
 @endif
 <div class="input-group{{$feedback ? ' has-' . $feedback : ''}}">
