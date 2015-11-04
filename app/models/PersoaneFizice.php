@@ -59,9 +59,21 @@ class PersoaneFizice extends \Eloquent
         /**
          * Declansez evenimentul de trimitere email
          **/
-        \Event::fire('client.send-confirm-email', [
+        $mailler = new \Mailers\Mailer();
+        $mailler->sendTo(
+            'ioana.biris@creditfin.ro', 
+            'Clientul - ' . $client->nume . ' ' . $client->prenume, 
+            'emails.client.confirmare', 
+            [
+                'body' => \View::make('extern.email-content')->with([
+                        'client'          => $client,
+                    ])->render(),
+                'client'  => $client,
+            ]
+        );
+       /* \Event::fire('client.send-confirm-email', [
             'client'          => $client,
-        ]);
+        ]);*/
 
         return ['success' => true];
     } 
