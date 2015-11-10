@@ -87,6 +87,7 @@ class PersoaneFizice extends \Eloquent
 
     public static function getTipAngajator(){
         return [
+            '0' => '-- Alege --',
             '1'   => 'Instituție financiară',
             '2' => 'Corporație multinațională',
             '3' => 'Sector public',
@@ -105,6 +106,7 @@ class PersoaneFizice extends \Eloquent
 
     public static function getNrAngajati(){
         return[
+            '0' => '-- Alege --',
             '1' => 'Între 0 și 10',
             '2' => 'Între 11 și 20',
             '3' => 'Între 21 și 50',
@@ -116,6 +118,7 @@ class PersoaneFizice extends \Eloquent
 
     public static function getUltimStudii(){
         return[
+            '0' => '-- Alege --',
             '1' => 'Gimnaziu',
             '2' => 'Liceu',
             '3' => 'Postuniversitare',
@@ -127,6 +130,7 @@ class PersoaneFizice extends \Eloquent
 
     public static function getStareCivila(){
         return[
+            '0' => '-- Alege --',
             '1' => 'Necăsătorit/ă',
             '2' => 'Căsătorit/ă',  
             '3' => 'Divorțat/ă',
@@ -136,6 +140,7 @@ class PersoaneFizice extends \Eloquent
 
     public static function getSitLocativa(){
         return[
+            '0' => '-- Alege --',
             '1' => 'Chirie',
             '2' => 'Locuiește cu părinții',
             '3' => 'Proprietar cu ipotecă',
@@ -145,39 +150,41 @@ class PersoaneFizice extends \Eloquent
     }
 
     public static function getBanca(){
-        return[
+        return[ 
             '0' => '-- Alege banca --',
-            '1' => 'Alpha Bank',                          
-            '2' => 'Banca Comercială Carpatică',  
-            '3' => 'Veneto Bank',
-            '4' => 'Banca Romanească',
-            '5' => 'Banca Transilvania',   
-            '6' => 'Bancpost',   
-            '7' => 'BCR',
-            '8' => 'BRD', 
-            '9' => 'Emporiki Bank',
-            '10' => 'CEC',
-            '11' => 'CreditEurope Bank',
-            '12' => 'GarantiBank',
-            '13' => 'ING Bank',
-            '14' => 'Idea Bank',
-            '15' => 'Intesa Sanpaolo Bank',
-            '16'  => 'Leumi Bank',
-            '17' => 'Libra Bank',
-            '18' => 'Marfin Bank',
-            '19' => 'Millennium Bank',
-            '20' => 'MKB Romexterra Bank',
-            '21' => 'OTP Bank',
-            '22' => 'Piraeus Bank',
-            '23' => 'ProCredit Bank',
-            '24' => 'Raiffeisen Bank',
-            '25' => 'RBS',
-            '26' => 'UniCredit Bank',
+            '1' => 'Nu incasez banii in cont',                          
+            '2' => 'Alpha Bank',                          
+            '3' => 'Banca Comercială Carpatică',  
+            '4' => 'Veneto Bank',
+            '5' => 'Banca Romanească',
+            '6' => 'Banca Transilvania',   
+            '7' => 'Bancpost',   
+            '8' => 'BCR',
+            '9' => 'BRD', 
+            '10' => 'Emporiki Bank',
+            '11' => 'CEC',
+            '12' => 'CreditEurope Bank',
+            '13' => 'GarantiBank',
+            '14' => 'ING Bank',
+            '15' => 'Idea Bank',
+            '16' => 'Intesa Sanpaolo Bank',
+            '17'  => 'Leumi Bank',
+            '18' => 'Libra Bank',
+            '19' => 'Marfin Bank',
+            '20' => 'Millennium Bank',
+            '21' => 'MKB Romexterra Bank',
+            '22' => 'OTP Bank',
+            '23' => 'Piraeus Bank',
+            '24' => 'ProCredit Bank',
+            '25' => 'Raiffeisen Bank',
+            '26' => 'RBS',
+            '27' => 'UniCredit Bank',
         ];
     }
 
     public static function getTipClient(){
         return[
+            '0' => '-- Alege --',
             '1' => 'Prima casă',
             '2' => 'Credit de achiziție',
             '3' => 'Credit de nevoi personale cu ipotecă',

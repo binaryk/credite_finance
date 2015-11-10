@@ -70,7 +70,7 @@ assets/global/css/plugins.css
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Nume persoană fizică', 'style'   => 'width:22%',],
+                'header'    => ['caption' => 'Nume client', 'style'   => 'width:22%',],
                 'type'      => 'field',
                 'source'    => 'nume',//numele coloanei din tabelul din BD
             ], 
@@ -79,11 +79,20 @@ assets/global/css/plugins.css
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Prenume persoană fizică', 'style'   => 'width:22%',],
+                'header'    => ['caption' => 'Prenume client', 'style'   => 'width:22%',],
                 'type'      => 'field',
                 'source'    => 'prenume',//numele coloanei din tabelul din BD
-            ], 
+            ],
             '4' => [
+                'id'        => 'cnp',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'CNP', 'style'   => 'width:22%',],
+                'type'      => 'field',
+                'source'    => 'cnp',//numele coloanei din tabelul din BD
+            ], 
+            '5' => [
                 'id'        => 'email',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
@@ -92,7 +101,7 @@ assets/global/css/plugins.css
                 'type'      => 'field',
                 'source'    => 'email',//numele coloanei din tabelul din BD
             ], 
-            '5' => [
+            '6' => [
                 'id'        => 'telefon',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
@@ -101,7 +110,7 @@ assets/global/css/plugins.css
                 'type'      => 'field',
                 'source'    => 'telefon',//numele coloanei din tabelul din BD
             ], 
-            '6' => [
+            '7' => [
                 'id'        => 'action',
                 'orderable' => 'no',
                 'class'     => 'td-align-left td-actions',
@@ -113,7 +122,7 @@ assets/global/css/plugins.css
         ];
         $this->fields = [
             'fields'      => '',
-            'searchables' => 'id, nume',
+            'searchables' => 'id, nume, prenume, cnp, telefon',
             'orderables'  => [],//[1 => "id"],
         ];
         $this->filters = [

@@ -97,13 +97,7 @@
 				<div class="col-md-4">{{ $controls[40]->out() }}</div>
 				<!-- Alt norma de hrana -->
 				<div class="col-md-4">{{ $controls[41]->out() }}</div>
-			</div>
-			<div class="row">
-				<!-- Total venit net -->
-				<div class="col-md-4">
-					{{ $controls[42]->out() }}
-				</div>
-			</div>
+			</div> 
 		</div>  
 	</div>
 </div>

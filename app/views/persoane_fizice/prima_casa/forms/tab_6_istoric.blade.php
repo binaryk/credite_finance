@@ -41,9 +41,6 @@
 							<div class="success">
 							</div>
 							 <div class="col-md-4">Credit:</div>
-							 <div class="col-md-6">
-							 	{{ $controls['62']->out() }}
-							 </div>
 						</td>
 						<td class="hidden-xs">
 								{{ $controls['65']->out() }}
@@ -62,10 +59,45 @@
 						<td class="highlight">
 							<div class="success">
 							</div>
-							 <div class="col-md-4">Co-debitor</div>
-							 <div class="col-md-6">
-							 	{{ $controls['63']->out() }}
-							 </div>
+							 <div class="col-md-4">Credit:</div>
+						</td>
+						<td class="hidden-xs">
+								{{ $controls['65']->out() }}
+						</td>
+						<td>
+							 	{{ $controls['70']->out() }}
+						</td>
+						<td>
+								{{ $controls['74']->out() }}
+						</td>
+						<td>
+								{{ $controls['78']->out() }}
+						</td>
+					</tr>
+					<tr>
+						<td class="highlight">
+							<div class="success">
+							</div>
+							 <div class="col-md-4">Credit:</div>
+						</td>
+						<td class="hidden-xs">
+								{{ $controls['65']->out() }}
+						</td>
+						<td>
+							 	{{ $controls['70']->out() }}
+						</td>
+						<td>
+								{{ $controls['74']->out() }}
+						</td>
+						<td>
+								{{ $controls['78']->out() }}
+						</td>
+					</tr>
+					<tr>
+						<td class="highlight">
+							<div class="success">
+							</div>
+							 <div class="col-md-4">Co-debitor</div> 
 						</td>
 						<td class="hidden-xs">
 								{{ $controls['66']->out() }}
@@ -84,10 +116,7 @@
 						<td class="highlight">
 							<div class="success">
 							</div>
-							 <div class="col-md-4">Descoperit de cont</div>
-							 <div class="col-md-6">
-							 	{{ $controls['64']->out() }}
-							 </div>
+							 <div class="col-md-4">Descoperit de cont</div> 
 						</td>
 						<td class="hidden-xs">
 								{{ $controls['67']->out() }}
@@ -106,10 +135,7 @@
 						<td class="highlight">
 							<div class="success">
 							</div>
-							 <div class="col-md-4">Card de credit</div>
-							 <div class="col-md-6">
-							 	{{ $controls['65']->out() }}
-							 </div>
+							 <div class="col-md-4">Card de credit</div> 
 						</td>
 						<td class="hidden-xs">
 								{{ $controls['68']->out() }}
