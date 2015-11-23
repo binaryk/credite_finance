@@ -9,7 +9,7 @@ class OrganizationSeeder extends Seeder {
      */
     public function run()
     {
-        DB::table('organizatii')->delete();
+        DB::table('organizatii')->truncate();
 
         \Credite\Organizatie::createRecord([
             'denumire' => 'CreditFin',
