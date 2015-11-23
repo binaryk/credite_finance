@@ -369,13 +369,31 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt, endpoint)
         	data     : {'action' : action, 'model' : self.model, 'data' : self.datasource(), 'record_id' : self.record_id, 'code' :  self.formid.replace('#form-', '')},
         	success  : function(result)
         	{
-        		console.log(result);
-        		// self.showActionMessage(result);
-        		swal('Success!', 'Datele au fost salvate cu succes! Va rugăm să adăugați documente.', 'success');
-        		$('#client_id').val(result.model.id);
-        		self.upload(result.model);
-        		$('.data-tabs').hide();
-        		$('.photo-tabs').show();
+				self.showActionMessage(result);
+				if( ! result.success)
+				{
+					self.showFieldsErrors(result.fieldserrors);
+					$(self.classDoButtonExtern).removeClass('disabled');
+				}
+				else
+				{
+					swal('Success!', 'Datele au fost salvate cu succes! Va rugăm să adăugați documente.', 'success');
+					$('#client_id').val(result.model.id);
+					self.upload(result.model);
+					$('.data-tabs').hide();
+					$('.photo-tabs').show();
+					/*if( self.refresh == 1)
+					{
+						self.hideform();
+						self.dt.draw( false );
+					}
+					else
+					if( self.refresh == 2)
+					{
+						location.reload();
+					}*/
+				}
+
         	}
 		});
 	};

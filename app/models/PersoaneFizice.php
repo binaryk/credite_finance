@@ -61,7 +61,7 @@ class PersoaneFizice extends \Eloquent
          **/
         $mailler = new \Mailers\Mailer();
         $mailler->sendTo(
-            'ioana.biris@creditfin.ro', 
+            'ioana.biris@creditfin.ro',
             'Clientul - ' . $client->nume . ' ' . $client->prenume, 
             'emails.client.confirmare', 
             [
@@ -194,6 +194,20 @@ class PersoaneFizice extends \Eloquent
             '7' => 'Nevoi personale',
             '8' => 'Credite medicale/studii/vacanțe',
             '9' => 'Leasing',
+        ];
+    }
+
+    public static function getRelatie()
+    {
+        return [
+            '0' => '-- Alege --',
+            '1' => 'sot/sotie',
+            '2' => 'mama/tata',
+            '3' => 'sora/frate',
+            '4' => 'fiu/fiica',
+            '5' => 'partener/partenera',
+            '6' => 'cumnat/cumnata',
+            '7' => 'socru/soacra'
         ];
     }
 

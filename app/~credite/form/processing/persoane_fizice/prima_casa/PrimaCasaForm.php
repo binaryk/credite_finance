@@ -1043,6 +1043,30 @@ class PrimaCasaForm extends \Processing\Form\Form
 			->controltype('textbox')
 			->maxlength(255)
 		)
+		// 88
+		->addControl(
+			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('id_tip_relatie')
+				->class('form-control data-source input-group form-select init-on-update-delete')
+				->controlsource('bnc_virare_salar')
+				->controltype('id_tip_relatie')
+				->enabled('false')
+				->options(\Credite\PersoaneFizice::getRelatie())
+			)
+		// 89
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+                ->name('co_platitor')->placeholder('Textbox')
+                // ->caption('Istoric creditare')
+                ->value('Co platitor')->class('form-control input_label')->enabled(0)
+                ->addon([
+                    'before' => \Form::checkbox('co_platitor', '1', false,
+                        ['class' => 'data-source icheck', 'id' => 'co_platitor',
+                            'data-checkbox' => 'icheckbox_square-green', 'data-control-source' => 'co_platitor',
+                            'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
+                    ),
+                    'after' => NULL])
+        )
 		; 
 
 	}

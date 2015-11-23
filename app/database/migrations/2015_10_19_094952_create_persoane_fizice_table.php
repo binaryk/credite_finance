@@ -16,8 +16,7 @@ class CreatePersoaneFiziceTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('id_organizatie');
-			$table->text('tip_client',50);
-
+			$table->integer('tip_client');
 			//Sectiunea 1: Date de identificare
 			$table->text('nume',50);
 			$table->text('prenume',50);
@@ -25,7 +24,6 @@ class CreatePersoaneFiziceTable extends Migration {
 			$table->text('email',50);
 			$table->text('telefon',50);
 			$table->text('nume_mama',50);
-
 			//Sectiunea 2: Venituri
 			$table->double('salariu_net');
 			$table->tinyinteger('salariu');
@@ -64,14 +62,12 @@ class CreatePersoaneFiziceTable extends Migration {
 			$table->tinyinteger('alt_ven_cntrct_de_mandat');
 			$table->tinyinteger('alt_ven_nrm_de_hrana');
 			$table->double('tot_ven_net',50);
-
 			//Sectiune 3: Date angajator
 			$table->text('denum_angajator',50);
 			$table->text('tip_angajator',50);
 			$table->text('cui',50);
 			$table->text('nr_angajati',20);
 			$table->text('dom_de_actvte',50);
-
 			//Sectiunea 4: Chestionar
 			$table->text('ultim_stud_abs',20);
 			$table->text('st_civila',20);

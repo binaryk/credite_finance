@@ -38,9 +38,10 @@ Route::group(['before' => 'auth|standardUser'], function()
 {
 	Route::get('userProtected', 'StandardUserController@getUserProtected');
 	Route::resource('profiles', 'UsersController', ['only' => ['show', 'edit', 'update']]);
-	Imobile\Route::make()->define();
-	
+	Sys\Route::make()->define();
+
 });
+Sys\RouteBefore::make()->define();
 # Admin Routes
 Route::group(['before' => 'auth|admin'], function()
 {
@@ -57,6 +58,5 @@ Route::post('upload-client-document/{id_client?}',[ 'as' => 'upload-client-docum
 Route::post('delete-client-document',[ 'as' => 'delete-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@delete']);
 Route::get('download-client-documents/{document_id}', [ 'as' => 'download-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@download']);
 
-include 'macros.php'; // ??? Calin> Ce cauta asta aici la rute
 Route::get('test', 'HomeController@showWelcome2');
 include app_path() . '/~credite/routes/user.route.php';

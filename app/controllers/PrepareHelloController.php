@@ -8,7 +8,7 @@ class PrepareHelloController extends BaseController {
 	} 
 	
 	public function prepare_clients() {
-		$rows = [];
+		$rows 	 = [];
 		$clienti = PersoaneFizice::where('id_organizatie', $this->current_org->id)->orderBy('id', 'DESC')->get();
 		$tips    = PersoaneFizice::getTipClient();
 		$out_tip = [];

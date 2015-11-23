@@ -37,6 +37,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4">{{ $controls[60]->out() }}</div>
+					<div class="col-md-4">{{ $controls[89]->out() }}</div>
 				</div>
 			</div>  
 		</div>
