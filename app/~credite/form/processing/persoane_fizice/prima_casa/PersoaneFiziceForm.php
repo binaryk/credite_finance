@@ -1,12 +1,11 @@
 <?php
-
 namespace Credite\PersoaneFizice\Form;
 
-class PrimaCasaForm extends \Processing\Form\Form
+class PersoaneFiziceForm extends \Processing\Form\Form
 {
 
     /**
-     * @return PrimaCasaForm, obiect cu toate textbox-urile, cu blade-ul formularului, modelul, buttons (adauga, salveaza, sterge)
+     * @return PersoaneFiziceForm, obiect cu toate textbox-urile, cu blade-ul formularului, modelul, buttons (adauga, salveaza, sterge)
      */
     public static function make()
 	{
@@ -16,7 +15,7 @@ class PrimaCasaForm extends \Processing\Form\Form
         $this->setView();
         $this->setModel();
         $this->setProperties(); */
-		return self::$instance = new PrimaCasaForm();
+		return self::$instance = new PersoaneFiziceForm();
 	}
 
 	protected function setView()

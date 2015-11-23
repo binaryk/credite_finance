@@ -15,7 +15,7 @@ class PersoaneFiziceGrid extends \Credite\GridsRecord
         $this->display_start  = 0;
         $this->display_length = 10;
         $this->default_order  = "1,'asc'";
-        $this->form           = 'Credite\PersoaneFizice\Form\PrimaCasaForm';
+        $this->form           = 'Credite\PersoaneFizice\Form\PersoaneFiziceForm';
         $this->css            = 'packages/datatables/css/1.10.4/datatable.css,
                                         packages/datatables/css/1.10.4/dataTables.bootstrap.css,
                                       admin/css/dt/dt.css,
