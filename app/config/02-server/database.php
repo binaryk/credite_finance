@@ -14,7 +14,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'imobile',
+			'database'  => 'credite',
 			'username'  => 'root',
 			'password'  => 'traiesc1993',
 			'charset'   => 'utf8',

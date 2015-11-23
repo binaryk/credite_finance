@@ -5,16 +5,11 @@ return array(
 	'default' => 'mysql',
 	'connections' => array(
 
-		'sqlite' => array(
-			'driver'   => 'sqlite',
-			'database' => __DIR__.'/../database/production.sqlite',
-			'prefix'   => '',
-		),
 
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'leed_imobile',
+			'database'  => 'leed_credite',
 			'username'  => 'leed_root',
 			'password'  => 'root_leed_2015',
 			'charset'   => 'utf8',
