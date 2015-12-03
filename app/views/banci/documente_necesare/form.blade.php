@@ -1,0 +1,1 @@
+<input id="file-document" multiple type="file" />

@@ -11,6 +11,10 @@ class Forms
 	protected $maps = [
 		'prima-casa'        => '\Credite\PersoaneFizice\Form\PersoaneFiziceRecord', 
 		'client-documents'	=> '\Credite\PersoaneFizice\Form\ClientDocumentsRecord',
+		'documente_necesare'=> '\Credite\Banci\Form\DocumenteNecesareRecord',
+		'grid_banci'		=> '\Credite\Banci\Form\BanciRecord',
+		'conditii_eligibilitate' => '\Credite\Banci\Form\ConditiiEligibilitateRecord',
+		'dobanzi_comisioane'	 => '\Credite\Banci\Form\DobanziComisioaneRecord',
 	];
 
 	public function __construct($id)

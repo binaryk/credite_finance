@@ -29,4 +29,32 @@ return [
 		'path' => str_replace('\\', '/', storage_path()) . '/uploads/cladiri/apartamente/{{id_apartament}}/',
 		'id_name' => 'id_apartament',
 	],
+	'id_document_necesar' => [
+		'file-name-pattern' => '{{original}}-{{id_filter}}-{{date}}.{{extension}}',
+		'max-size' => 5 * 1024,
+		'allowed-extensions' => 'bmp,gif,jpeg,jpg,png,pdf,doc,docx',
+		'path' => str_replace('\\', '/', public_path()) . '/uploads/banci/{{id_filter}}/documente_necesare',
+		'id_name' => 'id_filter',
+	],
+	'id_manual' => [
+		'file-name-pattern' => '{{original}}-{{id_filter}}-{{date}}.{{extension}}',
+		'max-size' => 5 * 1024,
+		'allowed-extensions' => 'bmp,gif,jpeg,jpg,png,pdf,doc,docx',
+		'path' => str_replace('\\', '/', public_path()) . '/uploads/banci/{{id_filter}}/manuale',
+		'id_name' => 'id_filter',
+	],
+	'id_instructiuni' => [
+		'file-name-pattern' => '{{original}}-{{id_filter}}-{{date}}.{{extension}}',
+		'max-size' => 5 * 1024,
+		'allowed-extensions' => 'bmp,gif,jpeg,jpg,png,pdf,doc,docx',
+		'path' => str_replace('\\', '/', public_path()) . '/uploads/banci/{{id_filter}}/instructiuni',
+		'id_name' => 'id_filter',
+	],
+	'id_acte_produse' => [
+		'file-name-pattern' => '{{original}}-{{id_filter}}-{{date}}.{{extension}}',
+		'max-size' => 5 * 1024,
+		'allowed-extensions' => 'bmp,gif,jpeg,jpg,png,pdf,doc,docx',
+		'path' => str_replace('\\', '/', public_path()) . '/uploads/banci/produse/{{id_filter}}/acte_necesare',
+		'id_name' => 'id_filter',
+	],
 ];

@@ -83,12 +83,15 @@
 	</li>
 	<li class="start">
 		<a href="javascript:;"><i class="icon-user"></i>
-			<span class="title">Utilizatori</span>
+			<span class="title">Date de bază</span>
 			<span class="arrow"></span>
 		</a>
 		<ul class="sub-menu">
 			<li>
 				<a href="{{ URL::route('grid-utilizatori') }}"><i class="icon-users"></i>Listă utilizatori</a>
+			</li>
+			<li>
+				<a href="{{ URL::route('grid_banci') }}"><i class="icon-users"></i>Bănci</a>
 			</li>
 		</ul>
 	</li>

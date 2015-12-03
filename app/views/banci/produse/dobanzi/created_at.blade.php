@@ -1,0 +1,1 @@
+{{ _toDate($record->created_at) }}

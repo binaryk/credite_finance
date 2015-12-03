@@ -17,6 +17,11 @@ class Grids {
 		 */
 		'prima-casa' 		=> '\Credite\PersoaneFizice\Grid\PersoaneFiziceGrid', 
 		'client-documents' 	=> '\Credite\PersoaneFizice\Grid\ClientDocumentsGrid', 
+		'documente_necesare'=> '\Credite\Banci\Grid\DocumenteNecesareGrid',
+		'grid_banci' 		=> '\Credite\Banci\Grid\BanciGrid',
+		'banca_produse' 	=> '\Credite\Banci\Grid\ProduseGrid',
+		'conditii_eligibilitate' 	=> '\Credite\Banci\Grid\ConditiiEligibilitateGrid',
+		'dobanzi_comisioane' 		=> '\Credite\Banci\Grid\DobanziComisioaneGrid',
 
 	];
 

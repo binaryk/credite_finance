@@ -50,13 +50,13 @@ Route::group(['before' => 'auth|admin'], function()
 });
 
 
-Route::get('clienti/{type?}/{edit?}', [ 'as' => 'clienti-index', 'uses' => 'Credite\Datatable\PrimaCasaController@index']);
-Route::get('persoane-fizice/{id}/{type?}', [ 'as' => 'persoane-fizice-row-source', 'uses' => 'Credite\Datatable\PrimaCasaController@rows']);
-Route::get('client-document/{id}/{id_client}', [ 'as' => 'client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@index']);
+Route::get('clienti/{type?}/{edit?}', [ 'as' 					 => 'clienti-index', 'uses' => 'Credite\Datatable\PrimaCasaController@index']);
+Route::get('persoane-fizice/{id}/{type?}', [ 'as' 				 => 'persoane-fizice-row-source', 'uses' => 'Credite\Datatable\PrimaCasaController@rows']);
+Route::get('client-document/{id}/{id_client}', [ 'as' 			 => 'client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@index']);
 Route::get('client_document/row-source/{id}/{id_client}', [ 'as' => 'client-documents-row-source', 'uses' => 'Credite\Datatable\ClientDocumentsController@rows']);
-Route::post('upload-client-document/{id_client?}',[ 'as' => 'upload-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@upload']);
+Route::post('upload-client-document/{id_client?}',[ 'as' 		 => 'upload-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@upload']);
 Route::post('delete-client-document',[ 'as' => 'delete-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@delete']);
-Route::get('download-client-documents/{document_id}', [ 'as' => 'download-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@download']);
+Route::get('download-client-documents/{document_id}', [ 'as' 	 => 'download-client-documents', 'uses' => 'Credite\Datatable\ClientDocumentsController@download']);
 
 Route::get('test', 'HomeController@showWelcome2');
 include app_path() . '/~credite/routes/user.route.php';

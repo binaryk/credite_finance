@@ -151,35 +151,11 @@ class PersoaneFizice extends \Eloquent
 
     public static function getBanca(){
         return[ 
-            '0' => '-- Alege banca --',
-            '1' => 'Nu incasez banii in cont',                          
-            '2' => 'Alpha Bank',                          
-            '3' => 'Banca Comercială Carpatică',  
-            '4' => 'Veneto Bank',
-            '5' => 'Banca Romanească',
-            '6' => 'Banca Transilvania',   
-            '7' => 'Bancpost',   
-            '8' => 'BCR',
-            '9' => 'BRD', 
-            '10' => 'Emporiki Bank',
-            '11' => 'CEC',
-            '12' => 'CreditEurope Bank',
-            '13' => 'GarantiBank',
-            '14' => 'ING Bank',
-            '15' => 'Idea Bank',
-            '16' => 'Intesa Sanpaolo Bank',
-            '17'  => 'Leumi Bank',
-            '18' => 'Libra Bank',
-            '19' => 'Marfin Bank',
-            '20' => 'Millennium Bank',
-            '21' => 'MKB Romexterra Bank',
-            '22' => 'OTP Bank',
-            '23' => 'Piraeus Bank',
-            '24' => 'ProCredit Bank',
-            '25' => 'Raiffeisen Bank',
-            '26' => 'RBS',
-            '27' => 'UniCredit Bank',
-        ];
+            '-1' => '-- Alege banca --',
+            '0' => 'Nu incasez banii in cont',
+        ] + \Credite\Banca::orderBy('nume')->lists('nume', 'id')
+
+            ;
     }
 
     public static function getTipClient(){
