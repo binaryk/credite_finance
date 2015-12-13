@@ -31,8 +31,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt, endpoint)
 		var controls = $(this.classSourceControls);
 		controls.prop('disabled', action == 'delete');
 		controls.css({'background-color' : (action == 'delete' ? '#eee' : '#fff') });
-	}
-
+	} 
 	this.fillfields = function(record, action)
 	{
 		for(field in record)
@@ -327,6 +326,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt, endpoint)
         	data     : {'action' : action, 'model' : self.model, 'data' : self.datasource(), 'record_id' : self.record_id, 'code' :  self.formid.replace('#form-', '')},
         	success  : function(result)
         	{
+        		console.log(result);
         		self.showActionMessage(result);
         		if( ! result.success)
         		{

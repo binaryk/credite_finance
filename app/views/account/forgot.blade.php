@@ -6,7 +6,7 @@
 	   
 	         <!-- BEGIN LOGO -->
 	    <div class="logo">
-	        <span class="label"> <img src="{{  asset('assets/admin/layout/img/logo_creditfin.png') }}"> </span>
+	        <span class="label"> <img src="{{  asset('assets/admin/layout/img/logo_creditfin.png') }}" height="60" width="100"> </span>
 	    </div>
 	    <!-- END LOGO -->
 	       <h3>Ai uitat parola ?</h3>

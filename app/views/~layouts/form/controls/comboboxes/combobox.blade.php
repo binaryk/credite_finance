@@ -2,5 +2,5 @@
 	@if($caption)
 		<label>{{$caption}}</label>
 	@endif
-	{{ Form::select($name, $options, $value, $attributes) }}
+	{{ Form::select($name, $options, $value, $attributes + $angular) }}
 </div>

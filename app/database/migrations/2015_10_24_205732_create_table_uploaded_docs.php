@@ -18,7 +18,6 @@ class CreateTableUploadedDocs extends Migration {
 			$t->text('file_url')->nullable();
 			$t->string('file_extension', 8);
 			$t->integer('file_size');  
-
 			$t->timestamps();
 			$t->softDeletes();
 		});

@@ -32,11 +32,14 @@ class Route {
 			->add('get', 'grid_banci_source', 'banci/{id}', 'BanciController@rows', 'Banci')
 
 
+
 			->add('get', 'documente_necesare_index', 'banca/{id}/documente-necesare/{id_banca}/{type}', 'DocumenteNecesareController@index', 'Credite\Datatable')
 			->add('get', 'documente_necesare_row_source', 'banca_documente_necesare/row-source/{id}/{id_filter}/{type}','DocumenteNecesareController@rows', 'Credite\Datatable')
 			->add('post','documente_necesare_upload', 'upload-banca-document-necesar/{id_filter}/{type}','DocumenteNecesareController@upload', 'Credite\Datatable')
 			->add('post','documente_necesare', 'delete-client-document','documente_necesare@delete', 'Credite\Datatable')
 			->add('get', 'documente_necesare', 'download-client-documents/{document_id}','DocumenteNecesareController@download', 'Credite\Datatable')
+
+			->add('get', 'ofertare', 'ofertare', 'OfertaController@index', 'Oferta')
 		;
 	}
 

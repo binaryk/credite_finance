@@ -93,6 +93,9 @@
 			<li>
 				<a href="{{ URL::route('grid_banci') }}"><i class="icon-users"></i>Bănci</a>
 			</li>
+			<li>
+				<a href="{{ URL::route('ofertare') }}"><i class="icon-users"></i>Ofertare</a>
+			</li>
 		</ul>
 	</li>
 		

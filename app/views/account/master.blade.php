@@ -42,6 +42,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <link id="style_color" href="{{ asset('assets/admin/layout/css/themes/darkblue.css') }}" rel="stylesheet" type="text/css"/>
 <link href="{{ asset('assets/admin/layout/css/custom.css') }}" rel="stylesheet" />
 <link href="{{ asset('custom/css/login/main.css') }}" rel="stylesheet" />
+<link href="{{ asset('custom/css/main.css') }}" rel="stylesheet" />
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
 

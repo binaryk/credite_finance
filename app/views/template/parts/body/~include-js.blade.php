@@ -11,10 +11,15 @@
 {{ HTML::script('packages/numeral/languages/ro.js')}}
 {{ HTML::script('packages/moment/moment.js')}}
 {{ HTML::script('sweetalert/dist/sweetalert.min.js')}}
+
+{{ HTML::script('components/angular/angular.min.js')}}
+{{ HTML::script('custom/js/angular/~config.js')}}
+{{ HTML::script('custom/js/angular/controllers/MainCtrl.js')}}
 <script>
 	numeral.language('ro');
 	numeral.defaultFormat('(0,0.0000)');
 	moment.locale('ro');
+	var _config = {};
 </script>
 @yield('custom-scripts')
 <script>

@@ -32,6 +32,7 @@
 {{HTML::style("sweetalert/dist/sweetalert.css") }}
 {{HTML::style("custom/css/grids_actions.css") }}
 {{HTML::style("admin/css/dt/dtform.css") }}  
+{{HTML::style("custom/css/main.css") }}  
 
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN PAGE STYLES -->
