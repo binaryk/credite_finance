@@ -39,7 +39,9 @@
 
 <!-- END PAGE STYLES -->
 <!-- BEGIN THEME STYLES -->
-
+    <script>
+        var _config = {};
+    </script>
 @yield('custom-styles')  
 @yield('custom-styles-1')  
 </head>

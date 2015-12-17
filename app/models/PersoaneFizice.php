@@ -187,6 +187,36 @@ class PersoaneFizice extends \Eloquent
         ];
     }
 
+    public static function tipCredit()
+    {
+        return [
+          '1' => 'prima casa',    
+          '2' => 'ipotecar',
+            '3' => 'constructie',
+            '4' => 'consum cu garantie',
+            '5' => 'consum fara garantie',
+            '6' => 'refinantare',
+        ];
+    }
+
+    public static function valuta()
+    {
+        return[
+            'RON' => 'RON',
+            'EUR' => 'EUR',
+        ];
+    }
+
+    public static function indice_referinta()
+    {
+        return [
+            '1' => 'Indice de referinta Robor calculat la 3 luni',
+            '2' => 'Indice de referinta Robor calculat la 6 luni',
+            '3' => 'Indice de referinta EURIBOR calculat la 3 luni',
+            '4' => 'Indice de referinta EURIBOR calculat la 6 luni',
+        ];
+    }
+
     public static function toCombobox()
     {
         return [0 => ' -- Selectaţi persoana --'] + self::orderBy('nume')->lists('nume', 'id');

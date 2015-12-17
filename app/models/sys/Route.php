@@ -40,6 +40,8 @@ class Route {
 			->add('get', 'documente_necesare', 'download-client-documents/{document_id}','DocumenteNecesareController@download', 'Credite\Datatable')
 
 			->add('get', 'ofertare', 'ofertare', 'OfertaController@index', 'Oferta')
+
+			->add('post', 'r_post_oferte_template', 'r_post_oferte_template', 'OfertaController@template', 'Oferta')
 		;
 	}
 
