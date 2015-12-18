@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\View;
 
 class OfertaController  extends \BaseController{
     protected $layout = 'template.layout';
-
+    use PdfPrepareData;
     public function index(){
         $form = OfertaForm::make();
         $this->layout->content = \View::make('oferta.index')->with([

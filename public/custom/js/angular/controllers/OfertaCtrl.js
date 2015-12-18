@@ -12,9 +12,23 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
                     $('a[href=#tab_2]').click();
                     $('a[href=#tab_1]').click();
                 }
+                FORMAT.init();
             });
             
         }
-        
+
+        $scope.pdf = function(){
+            var data = [];
+            for(var i = 1; i <= $scope.nr_oferte; i++){
+                data.push( JSON.stringify( $('form#oferta_'+i).serialize() ) );
+            }
+            console.log(JSON.stringify(data));
+            oferta.pdf(data).then(function(data){
+                console.log(data);
+            });
+        }
+
+
+        FORMAT.init();
         
 }]);

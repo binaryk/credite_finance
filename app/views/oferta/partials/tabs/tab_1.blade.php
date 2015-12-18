@@ -1,5 +1,5 @@
 <div class="tab-pane active" id="tab_{{$count}}">
-
+    <form action="" id="oferta_{{$count}}">
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-6">
@@ -117,5 +117,5 @@
             </div>
         </div>
     </div>
-
+    </form>
 </div>

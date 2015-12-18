@@ -25,5 +25,14 @@
 
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" ng-click="pdf()" class="btn blue">Generaza pdf</button>
+            </div>
+        </div>
+    </div>
+    <div class="portlet-footer">
+        Datele au fost completate cu succes.
     </div>
 </div>

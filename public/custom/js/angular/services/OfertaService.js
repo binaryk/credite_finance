@@ -4,12 +4,17 @@ app.factory('oferta', ['$rootScope','$http','$timeout', function($rootScope, $ht
     mixin.revenues = [];
 
     mixin.create = function(nr_oferte){
-
         var promise = $http.post($rootScope.config.r_post_oferte_template, { nr_oferte: nr_oferte }).then(function(response){
             return response.data;
         });
         return promise;
+    }
 
+    mixin.pdf = function(data){
+        var promise = $http.post($rootScope.config.r_post_oferte_pdf, { data: data }).then(function(response){
+            return response.data;
+        });
+        return promise;
     }
 
     return mixin;

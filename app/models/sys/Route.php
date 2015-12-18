@@ -42,6 +42,7 @@ class Route {
 			->add('get', 'ofertare', 'ofertare', 'OfertaController@index', 'Oferta')
 
 			->add('post', 'r_post_oferte_template', 'r_post_oferte_template', 'OfertaController@template', 'Oferta')
+			->add('post', 'r_post_oferte_pdf', 'r_post_oferte_pdf', 'OfertaController@pdf', 'Oferta')
 		;
 	}
 
