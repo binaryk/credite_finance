@@ -38,13 +38,13 @@ class OfertaForm extends \Processing\Form\Form
                     ->name('nr_oferte')
                     ->caption('Numarul de oferte')
                     ->ng_model('nr_oferte')
-                    ->ng_init('nr_oferte="1"')
+                    ->ng_init('nr_oferte="0"')
                     ->ng_change('changeNrOferte()')
                     ->class('form-control data-source input-group form-select init-on-update-delete')
                     ->controlsource('nr_oferte')
                     ->controltype('combobox')
                     ->enabled('false')
-                    ->options(['1' => '1','2' => '2','3' => '3','4' => '4','5' => '5'])
+                    ->options(['0' => '-- Alege --','1' => '1','2' => '2','3' => '3','4' => '4','5' => '5'])
             )
         ;
     }

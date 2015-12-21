@@ -94,13 +94,32 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
                  $scope.valoare_estimata_rambursare_1 = Number.parseFloat($scope.rata_luanara_inclusiv_comision_gestionare_1) * Number.parseFloat($scope.perioada_finantare_luata_in_calcul_1) * 12;   //Number.parseFloat($scope.valoare_comision_acordare_1) + Number.parseFloat($scope.valoare_comision_analiza_1) + Number.parseFloat($scope.rata_luanara_inclusiv_comision_gestionare_1) * Number.parseFloat($scope.perioada_finantare_luata_in_calcul_1) * 12;
         }, true);
 
+        $scope.$watch('[prima_asigurare_imobil_anuala_1,valoare_totala_investitiei_1]', function () {
+                 $scope.valoare_prima_asigurare_imobil_1 = Number.parseFloat($scope.prima_asigurare_imobil_anuala_1) * Number.parseFloat($scope.valoare_totala_investitiei_1);
+        }, true);
+
         $scope.changeProdus = function(oferta_id){
            /*trebuie sa iau toate regulile de la dobanzi si comisioane*/
             oferta.dobanzi($scope['tip_credit_'+oferta_id]).then(function(data){
                 console.log(data);
+                if(!data.data){
+                    /*nu exista dobanda*/
+                    swal('Info', 'Nu exista dobanzi setate pentru acest produs','info');
+                    return false;
+                }
                 $scope.dobanzi_com = data.data;
                 $scope.avans_minim_1 = $scope.dobanzi_com.procent_avans_minim_solicitat;
                 $scope.valoare_comision_analiza_1 = $scope.dobanzi_com.valoare_comision_analiza;
+                $scope.dae_1 = $scope.dobanzi_com.dae;
+                $scope.taxa_evaluare_imobil_1 = $scope.dobanzi_com.evaluare;
+                $scope.taxa_inscriere_arhiva_1 = $scope.dobanzi_com.taxa_inscriere_arhiva;
+                $scope.prima_asigurare_imobil_anuala_1 = $scope.dobanzi_com.prima_asigurare_imobil;
+                $scope.prima_asigurare_imobil_pad_1 = $scope.dobanzi_com.prima_asigurare_pad;
+                $scope.prima_asigurare_viata_anuala_1 = $scope.dobanzi_com.asigurare_viata;
+                $scope.comision_administrare_fond_national_anuala_1 = $scope.dobanzi_com.comision_administrare_platibil;
+                $scope.comision_servicii_bancarea_1 = $scope.dobanzi_com.comision_prestari_servicii_bancare;
+                $scope.comision_rambursare_anticipata_1 = $scope.dobanzi_com.comision_rambursare_anticipata;
+                $scope.alte_comisioane_banca_1 = $scope.dobanzi_com.precizari_suplimentare;
 
                 if($scope.dobanzi_com.comision_administrare_months == "luna" && $scope.dobanzi_com.comision_administrare_units== "procent"){
                     $scope.comision_administrare_1 = $scope.dobanzi_com.comision_administrare;

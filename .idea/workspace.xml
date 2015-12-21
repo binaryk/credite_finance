@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26c9510f-5f92-4c73-b7fa-d4737bffee45" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2015_12_02_192415_create_table_dobanzi_comisioane.php" afterPath="$PROJECT_DIR$/app/database/migrations/2015_12_02_192415_create_table_dobanzi_comisioane.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/~credite/form/processing/banci/DobanziComisioaneForm.php" afterPath="$PROJECT_DIR$/app/~credite/form/processing/banci/DobanziComisioaneForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/oferta/OfertaController.php" afterPath="$PROJECT_DIR$/app/controllers/oferta/OfertaController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js" afterPath="$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/custom/js/angular/services/OfertaService.js" afterPath="$PROJECT_DIR$/public/custom/js/angular/services/OfertaService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/oferta/PdfPrepareData.php" afterPath="$PROJECT_DIR$/app/controllers/oferta/PdfPrepareData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/PersoaneFizice.php" afterPath="$PROJECT_DIR$/app/models/PersoaneFizice.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Produse.php" afterPath="$PROJECT_DIR$/app/models/Produse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sys/Route.php" afterPath="$PROJECT_DIR$/app/models/sys/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/js/libraries/form/combobox.js" afterPath="$PROJECT_DIR$/public/admin/js/libraries/form/combobox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/banci/produse/dobanzi/form.blade.php" afterPath="$PROJECT_DIR$/app/views/banci/produse/dobanzi/form.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/oferta/index.blade.php" afterPath="$PROJECT_DIR$/app/views/oferta/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php" afterPath="$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php" afterPath="$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="imobile.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +30,8 @@
       <file leaf-file-name="OfertaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.296297">
-              <caret line="211" column="60" selection-start-line="211" selection-start-column="60" selection-end-line="211" selection-end-column="60" />
+            <state vertical-scroll-proportion="-19.37037">
+              <caret line="42" column="103" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
               <folding>
                 <element signature="e#25#43#0#PHP" expanded="true" />
               </folding>
@@ -49,41 +39,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab_1.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OfertaForm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.296297">
+              <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tab_1.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29901424">
-              <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+            <state vertical-scroll-proportion="-10.185185">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PdfPrepareData.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/oferta/PdfPrepareData.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.111111">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersoaneFizice.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/PersoaneFizice.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.222221">
-              <caret line="211" column="16" selection-start-line="211" selection-start-column="16" selection-end-line="211" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OfertaCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OfertaCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3723404">
+              <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="~include-js.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/template/parts/body/~include-js.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.111111">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -104,16 +94,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="combobox.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/admin/js/libraries/form/combobox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -182,7 +162,6 @@
         <option value="$PROJECT_DIR$/app/views/oferta/partials/tabs/header.blade.php" />
         <option value="$PROJECT_DIR$/app/~libs/form/processing/Form.php" />
         <option value="$PROJECT_DIR$/app/views/oferta/partials/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php" />
         <option value="$PROJECT_DIR$/app/views/oferta/partials/tabs/index.blade.php" />
         <option value="$PROJECT_DIR$/app/views/oferta/form.blade.php" />
         <option value="$PROJECT_DIR$/public/custom/js/utils/Format.js" />
@@ -202,9 +181,10 @@
         <option value="$PROJECT_DIR$/app/~credite/form/processing/banci/DobanziComisioaneForm.php" />
         <option value="$PROJECT_DIR$/app/views/banci/produse/dobanzi/form.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2015_12_21_170639_alter_table_dobanzi_comisioane_add_drop_downs.php" />
+        <option value="$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php" />
         <option value="$PROJECT_DIR$/app/controllers/oferta/OfertaController.php" />
         <option value="$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js" />
-        <option value="$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php" />
       </list>
     </option>
   </component>
@@ -495,84 +475,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oferta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="credite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oferta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="credite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oferta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="credite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="banci" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -833,13 +735,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/custom/js/angular/controllers/MainCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/template/parts/~head.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7782705">
@@ -1015,25 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/template/parts/body/~include-js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.740741">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/~credite/grid/persoane_fizice/prima_casa/PersoaneFiziceGrid.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="50.0">
           <caret line="17" column="69" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.851852">
-          <caret line="46" column="85" selection-start-line="46" selection-start-column="85" selection-end-line="46" selection-end-column="85" />
           <folding />
         </state>
       </provider>
@@ -1180,11 +1060,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js">
+    <entry file="file://$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.185185">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.37037">
+          <caret line="42" column="103" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
+          <folding>
+            <element signature="e#25#43#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1196,20 +1086,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaController.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.296297">
-          <caret line="211" column="60" selection-start-line="211" selection-start-column="60" selection-end-line="211" selection-end-column="60" />
-          <folding>
-            <element signature="e#25#43#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-16.296297">
+          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/global/plugins/bootstrap-toastr/toastr.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29901424">
-          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.026595745">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/parts/body/~include-js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.111111">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3723404">
+          <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
           <folding />
         </state>
       </provider>

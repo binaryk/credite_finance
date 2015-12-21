@@ -32,12 +32,15 @@ class OfertaController  extends \BaseController{
 
     public function produse()
     {
+        if(Banca::where('id', Input::get('id'))->count() == 0){
+            return ['options' => ['0' => '-- Nu are produse --'] ];
+        }
         $banca = Banca::where('id', Input::get('id'))->with('produse')->first()->toArray();
         $out = [];
         foreach($banca['produse'] as $k => $produs){
             $out[$produs['id']] = $produs['nume'];
         }
-        return ['options' => ['0' => '-- Selectati produs --',] + $out];
+        return ['options' => ['0' => count($out) > 0 ? '-- Selectati produs --' : '-- Nu are produse --' ,] + $out];
     }
 
     public function template()
@@ -84,7 +87,7 @@ class OfertaController  extends \BaseController{
                     ->controlsource('tip_credit_'.$i)
                     ->controltype('combobox')
                     ->enabled('false')
-                    ->options(PersoaneFizice::tipCredit())
+                    ->options([])
                     ->out(),
             'perioada_max_finantare' =>
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')

@@ -9,7 +9,7 @@
                 {{ $control['tip_credit']  }}
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" ng-show="tip_credit_{{$count}} != ''">
             <div class="col-md-6">
                 {{ $control['perioada_max_finantare'] }}
             </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="col-md-6">
                 {{ $control['valoare_totala_dobanda'] }}
-            </div> 
+            </div>
             <div class="col-md-6">
                 {{ $control['avans_minim'] }}
             </div>
