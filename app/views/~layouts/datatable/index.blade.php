@@ -1,7 +1,7 @@
 @extends('template.layout')
 
 @section('content')
-@yield('before-table-row')		
+@yield('before-table-row')
 <div class="row">
 	<div class="col-xs-12"> 
 		<div class="box box-solid box-default box-dt" id="box-{{$dt->id()}}"> 

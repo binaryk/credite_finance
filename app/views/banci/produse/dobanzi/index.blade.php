@@ -8,4 +8,5 @@
 		}
 	}
  	FormiCheck.init();
+	FORMAT.init();
 @stop 

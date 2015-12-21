@@ -15,6 +15,9 @@
 {{ HTML::script('components/angular/angular.min.js')}}
 {{ HTML::script('custom/js/angular/~config.js')}}
 {{ HTML::script('custom/js/angular/controllers/MainCtrl.js')}}
+<script type="text/javascript" src ="{{asset( 'packages/inputmask/js/jquery.inputmask.js') }}"></script>
+<script type="text/javascript" src ="{{asset( 'packages/inputmask/js/jquery.inputmask.numeric.extensions.js') }}"></script>
+<script src="{{ asset('custom/js/utils/Format.js')  }}"></script>
 <script>
 	numeral.language('ro');
 	numeral.defaultFormat('(0,0.0000)');
