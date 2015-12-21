@@ -33,18 +33,18 @@ precizari suplimentare-sa se poata completa
 
 		*/
 		Schema::table('dobanzi_comisioane', function(Blueprint $t){
-			$t->float('dobanda_fixa_std');
-			$t->tinyInteger('dobanda_fixa_std_switch');
-			$t->float('dobanda_fixa_preferentiala');
-			$t->tinyInteger('dobanda_fixa_preferentiala_switch');
-			$t->float('marja_fixa_std');
-			$t->tinyInteger('marja_fixa_std_switch');
-			$t->float('marja_fixa_preferentiala');
-			$t->tinyInteger('marja_fixa_preferentiala_switch');
-			$t->float('indice_referinta_robor');
-			$t->tinyInteger('indice_referinta_robor_months');
-			$t->float('indice_referinta_robor_euribor');
-			$t->tinyInteger('indice_referinta_robor_euribor_months');
+			$t->float('dobanda_fixa_std_lei');
+			$t->float('dobanda_fixa_std_eur');
+			$t->float('dobanda_fixa_preferentiala_lei');
+			$t->float('dobanda_fixa_preferentiala_eur');
+			$t->float('marja_fixa_std_lei');
+			$t->float('marja_fixa_std_eur');
+			$t->float('marja_fixa_preferentiala_lei');
+			$t->float('marja_fixa_preferentiala_eur');
+			$t->float('indice_referinta_robor_3');
+			$t->float('indice_referinta_robor_months_6');
+			$t->float('indice_referinta_robor_euribor_3');
+			$t->float('indice_referinta_robor_euribor_6');
 			$t->float('procent_avans_minim_solicitat');
 			$t->float('comision_administrare_platibil');
 			$t->text('alte_comisione_banca');
@@ -62,18 +62,18 @@ precizari suplimentare-sa se poata completa
 		Schema::table('dobanzi_comisioane', function(Blueprint $t){
 			$t->dropColumn(
 				[
-					'dobanda_fixa_std',
-					'dobanda_fixa_std_switch',
-					'dobanda_fixa_preferentiala',
-					'dobanda_fixa_preferentiala_switch',
-					'marja_fixa_std',
-					'marja_fixa_std_switch',
-					'marja_fixa_preferentiala',
-					'marja_fixa_preferentiala_switch',
-					'indice_referinta_robor',
-					'indice_referinta_robor_months',
-					'indice_referinta_robor_euribor',
-					'indice_referinta_robor_euribor_months',
+					'dobanda_fixa_std_lei',
+					'dobanda_fixa_std_eur',
+					'dobanda_fixa_preferentiala_lei',
+					'dobanda_fixa_preferentiala_eur',
+					'marja_fixa_std_lei',
+					'marja_fixa_std_eur',
+					'marja_fixa_preferentiala_lei',
+					'marja_fixa_preferentiala_eur',
+					'indice_referinta_robor_3',
+					'indice_referinta_robor_months_6',
+					'indice_referinta_robor_euribor_3',
+					'indice_referinta_robor_euribor_6',
 					'procent_avans_minim_solicitat',
 					'comision_administrare_platibil',
 					'alte_comisione_banca',

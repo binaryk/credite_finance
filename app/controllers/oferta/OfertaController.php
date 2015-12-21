@@ -48,6 +48,7 @@ class OfertaController  extends \BaseController{
                     ->name('banca_'.$i)
                     ->caption('Banca')
                     ->ng_model('banca_'.$i)
+                    ->ng_change('changeBanca('.$i.')')
                     ->class('form-control data-source input-group form-select init-on-update-delete')
                     ->controlsource('banca_'.$i)
                     ->controltype('combobox')

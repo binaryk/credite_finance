@@ -221,145 +221,127 @@ class DobanziComisioaneForm extends \Processing\Form\Form
                     ->controltype('textbox')
                     ->maxlength(255)
             )
-
-//20
+            //20
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-                    ->name('dobanda_fixa_std')
-                    ->caption('Dobanda fixa standard')
+                    ->name('dobanda_fixa_std_lei')
+                    ->caption('Dobanda fixa standard lei')
                     ->class('form-control  data-source decimal')
-                    ->controlsource('dobanda_fixa_std')
+                    ->controlsource('dobanda_fixa_std_lei')
                     ->controltype('textbox')
                     ->maxlength(255)
             )
 
 //21
             ->addControl(
-                \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
-                    ->name('dobanda_fixa_std_switch')
-                    ->caption('Moneda')
-                    ->class('form-control data-source input-group form-select init-on-update-delete')
-                    ->controlsource('dobanda_fixa_std_switch')
-                    ->controltype('combobox')
-                    ->enabled('false')
-                    ->options(['1' => 'LEI', '2' => 'RON'])
+                \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                    ->name('dobanda_fixa_std_eur')
+                    ->caption('Dobanda fixa standard euro')
+                    ->class('form-control  data-source decimal')
+                    ->controlsource('dobanda_fixa_std_eur')
+                    ->controltype('textbox')
+                    ->maxlength(255)
             )
-
 //22
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-                    ->name('dobanda_fixa_preferentiala')
-                    ->caption('Dobanda fixa preferentiala ')
+                    ->name('dobanda_fixa_preferentiala_lei')
+                    ->caption('Dobanda fixa preferentiala lei')
                     ->class('form-control  data-source decimal')
-                    ->controlsource('dobanda_fixa_preferentiala')
+                    ->controlsource('dobanda_fixa_preferentiala_lei')
                     ->controltype('textbox')
                     ->maxlength(255)
             )
-
 //23
             ->addControl(
-                \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
-                    ->name('dobanda_fixa_preferentiala_switch')
-                    ->caption('Moneda ')
-                    ->class('form-control data-source input-group form-select init-on-update-delete')
-                    ->controlsource('dobanda_fixa_preferentiala_switch')
-                    ->controltype('combobox')
-                    ->enabled('false')
-                    ->options(['1' => 'LEI', '2' => 'RON'])
+                \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                    ->name('dobanda_fixa_preferentiala_eur')
+                    ->caption('Dobanda fixa preferentiala euro')
+                    ->class('form-control  data-source decimal')
+                    ->controlsource('dobanda_fixa_preferentiala_eur')
+                    ->controltype('textbox')
+                    ->maxlength(255)
             )
-
 //24
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-                    ->name('marja_fixa_std')
-                    ->caption('Marja fixa standard ')
+                    ->name('marja_fixa_std_lei')
+                    ->caption('Marja fixa standard lei')
                     ->class('form-control  data-source decimal')
-                    ->controlsource('marja_fixa_std')
+                    ->controlsource('marja_fixa_std_lei')
                     ->controltype('textbox')
                     ->maxlength(255)
             )
-
 //25
             ->addControl(
-                \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
-                    ->name('marja_fixa_std_switch')
-                    ->caption('Moneda')
-                    ->class('form-control data-source input-group form-select init-on-update-delete')
-                    ->controlsource('marja_fixa_std_switch')
-                    ->controltype('combobox')
-                    ->enabled('false')
-                    ->options(['1' => 'LEI', '2' => 'RON'])
+                \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                    ->name('marja_fixa_std_eur')
+                    ->caption('Marja fixa standard euro')
+                    ->class('form-control  data-source decimal')
+                    ->controlsource('marja_fixa_std_eur')
+                    ->controltype('textbox')
+                    ->maxlength(255)
             )
-
 //26
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-                    ->name('marja_fixa_preferentiala')
-                    ->caption('Marja fixa preferentiala ')
+                    ->name('marja_fixa_preferentiala_lei')
+                    ->caption('Marja fixa preferentiala lei')
                     ->class('form-control  data-source decimal')
-                    ->controlsource('marja_fixa_preferentiala')
+                    ->controlsource('marja_fixa_preferentiala_lei')
                     ->controltype('textbox')
                     ->maxlength(255)
             )
-
 //27
             ->addControl(
-                \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
-                    ->name('marja_fixa_preferentiala_switch')
-                    ->caption('Moneda')
-                    ->class('form-control data-source input-group form-select init-on-update-delete')
-                    ->controlsource('marja_fixa_preferentiala_switch')
-                    ->controltype('combobox')
-                    ->enabled('false')
-                    ->options(['1' => 'LEI', '2' => 'RON'])
+                \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                    ->name('marja_fixa_preferentiala_eur')
+                    ->caption('Marja fixa preferentiala euro')
+                    ->class('form-control  data-source decimal')
+                    ->controlsource('marja_fixa_preferentiala_eur')
+                    ->controltype('textbox')
+                    ->maxlength(255)
             )
-
 //28
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-                    ->name('indice_referinta_robor')
-                    ->caption('Indice de referinta Robor calculat la:')
+                    ->name('indice_referinta_robor_3')
+                    ->caption('Indice de referinta Robor calculat la 3 luni')
                     ->class('form-control  data-source decimal')
-                    ->controlsource('indice_referinta_robor')
+                    ->controlsource('indice_referinta_robor_3')
                     ->controltype('textbox')
                     ->maxlength(255)
             )
-
 //29
             ->addControl(
-                \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
-                    ->name('indice_referinta_robor_months')
-                    ->caption('Perioada:')
-                    ->class('form-control data-source input-group form-select init-on-update-delete')
-                    ->controlsource('indice_referinta_robor_months')
-                    ->controltype('combobox')
-                    ->enabled('false')
-                    ->options(['1' => '3 Luni', '2' => '6 Luni'])
+                \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                    ->name('indice_referinta_robor_months_6')
+                    ->caption('Indice de referinta Robor calculat la 6 luni')
+                    ->class('form-control  data-source decimal')
+                    ->controlsource('indice_referinta_robor_months_6')
+                    ->controltype('textbox')
+                    ->maxlength(255)
             )
-
 //30
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-                    ->name('indice_referinta_robor_euribor')
-                    ->caption('Indice de referinta Euribor calculat la:')
+                    ->name('indice_referinta_robor_euribor_3')
+                    ->caption('Indice de referinta Euribor calculat la 3 luni')
                     ->class('form-control  data-source decimal')
-                    ->controlsource('indice_referinta_robor_euribor')
+                    ->controlsource('indice_referinta_robor_euribor_3')
                     ->controltype('textbox')
                     ->maxlength(255)
             )
-
 //31
             ->addControl(
-                \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
-                    ->name('indice_referinta_robor_euribor_months')
-                    ->caption('Perioada:')
-                    ->class('form-control data-source input-group form-select init-on-update-delete')
-                    ->controlsource('indice_referinta_robor_euribor_months')
-                    ->controltype('combobox')
-                    ->enabled('false')
-                    ->options(['1' => '3 Luni', '2' => '6 Luni'])
+                \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                    ->name('indice_referinta_robor_euribor_6')
+                    ->caption('Indice de referinta Euribor calculat la 6 luni')
+                    ->class('form-control  data-source decimal')
+                    ->controlsource('indice_referinta_robor_euribor_6')
+                    ->controltype('textbox')
+                    ->maxlength(255)
             )
-
 //32
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
@@ -370,7 +352,6 @@ class DobanziComisioaneForm extends \Processing\Form\Form
                     ->controltype('textbox')
                     ->maxlength(255)
             )
-
 //33
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
@@ -381,24 +362,21 @@ class DobanziComisioaneForm extends \Processing\Form\Form
                     ->controltype('textbox')
                     ->maxlength(255)
             )
-
 //34
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
                     ->name('alte_comisione_banca')
-                    ->caption('Alte  comisioane ale bancii- sa se poata completa text')
+                    ->caption('Alte  comisioane ale bancii')
                     ->class('form-control  data-source')
                     ->controlsource('alte_comisione_banca')
                     ->controltype('textbox')
                     ->maxlength(255)
             )
-
-
 //35
             ->addControl(
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
                     ->name('precizari_suplimentare')
-                    ->caption('Precizari suplimentare-sa se poata completa')
+                    ->caption('Precizari suplimentar')
                     ->class('form-control  data-source')
                     ->controlsource('precizari_suplimentare')
                     ->controltype('textbox')

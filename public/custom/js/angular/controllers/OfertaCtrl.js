@@ -16,6 +16,12 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
             });
             
         }
+        
+        $scope.changeBanca = function(oferta){
+            console.log($scope['banca_'+oferta]);
+            $scope.dobanzi = oferta.dobanzi($scope['banca_'+oferta])
+            
+        }
 
         $scope.pdf = function(){
             var data = [];
