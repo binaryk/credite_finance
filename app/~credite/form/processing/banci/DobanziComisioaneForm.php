@@ -383,6 +383,63 @@ class DobanziComisioaneForm extends \Processing\Form\Form
                     ->maxlength(255)
             )
 
+//36
+            ->addControl(
+                \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                    ->name('comision_administrare')
+                    ->caption('Comision de administrare')
+                    ->class('form-control  data-source')
+                    ->controlsource('comision_administrare')
+                    ->controltype('textbox')
+                    ->maxlength(255)
+            )
+//            37
+            ->addControl(
+                \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                    ->name('comision_administrare_months')
+                    ->caption('Perioada')
+                    ->ng_model('comision_administrare_months')
+                    ->class('form-control data-source input-group form-select init-on-update-delete')
+                    ->controlsource('comision_administrare_months')
+                    ->controltype('combobox')
+                    ->enabled('false')
+                    ->options(['luna' => 'Lunar','an' => 'Anual'])
+            )
+//            38
+            ->addControl(
+                \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                    ->name('comision_administrare_units')
+                    ->caption('Unitate')
+                    ->ng_model('comision_administrare_units')
+                    ->class('form-control data-source input-group form-select init-on-update-delete')
+                    ->controlsource('comision_administrare_units')
+                    ->controltype('combobox')
+                    ->enabled('false')
+                    ->options(['procent' => '%','lei' => 'Lei'])
+            )
+//39
+            ->addControl(
+                \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                    ->name('comision_acordare')
+                    ->caption('Cosmision de acordare')
+                    ->class('form-control  data-source')
+                    ->controlsource('comision_acordare')
+                    ->controltype('textbox')
+                    ->maxlength(255)
+            )
+//            40
+            ->addControl(
+                \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                    ->name('comision_acordare_units')
+                    ->caption('Unitate')
+                    ->ng_model('comision_acordare_units')
+                    ->class('form-control data-source input-group form-select init-on-update-delete')
+                    ->controlsource('comision_acordare_units')
+                    ->controltype('combobox')
+                    ->enabled('false')
+                    ->options(['procent' => '%','lei' => 'Lei'])
+            )
+
 
         ;
     }

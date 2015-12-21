@@ -33,7 +33,6 @@ class CreateTableDobanziComisioane extends Migration {
 			Evaluare (lei)
 			Prima Asigurare imobil (%)
 			Prima de asigurare a imobilului obligatorie (PAD) (Lei)"
-
 			*/
 			$t->integer('id_produs');
 			$t->float('dobanda_fixa');

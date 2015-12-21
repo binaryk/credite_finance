@@ -43,11 +43,11 @@
 	</div>
 
 	<div class="col-md-3">
-		{{ $controls[7]->out() }}
+		{{ $controls[39]->out() }}
 	</div>
 
 	<div class="col-md-3">
-		{{ $controls[8]->out() }}
+		{{ $controls[40]->out() }}
 	</div>
 
 	<div class="col-md-3">
@@ -63,19 +63,15 @@
 	</div>
 
 	<div class="col-md-3">
-		{{ $controls[12]->out() }}
+		{{ $controls[36]->out() }}
 	</div>
 
 	<div class="col-md-3">
-		{{ $controls[13]->out() }}
+		{{ $controls[37]->out() }}
 	</div>
 
 	<div class="col-md-3">
-		{{ $controls[14]->out() }}
-	</div>
-
-	<div class="col-md-3">
-		{{ $controls[15]->out() }}
+		{{ $controls[38]->out() }}
 	</div>
 
 	<div class="col-md-3">

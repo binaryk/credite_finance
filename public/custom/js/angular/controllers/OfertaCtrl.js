@@ -1,6 +1,7 @@
 app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout','oferta',
     function OfertaCtrl($scope, $http, $rootScope, $compile, $timeout,oferta){
         console.log("OfertaCtrl");
+        $scope.dobanzi_com;
         
         $scope.changeNrOferte = function(){
 
@@ -17,11 +18,116 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
             
         }
         
-        $scope.changeBanca = function(oferta){
-            console.log($scope['banca_'+oferta]);
-            $scope.dobanzi = oferta.dobanzi($scope['banca_'+oferta])
-            
+        $scope.changeBanca = function(oferta_id){
+            console.log($scope['banca_'+oferta_id]);
+            /*1 ==> trebuie sa iau produsele bancii*/
+                var combobox = new COMBOBOX({
+                    'url'     : $rootScope.config.r_post_produse_by_banca,
+                    'id'      : $scope['banca_'+oferta_id],
+                    'control' : '#tip_credit_'+oferta_id,
+                    'model'   : '\\Credite\\Produs',
+                    'field'   : 'name'
+                });
+                combobox.populate(0);
+                $compile($('#tip_credit_'+oferta_id).contents())($scope);
         }
+
+        $scope.$watch('[valuta_creditului_1,dobanda_preferentiala_1,tipul_de_dobanda_1,tip_indice_referinta_1]', function () {
+            console.log($scope.dobanda_preferentiala_1);
+            console.log($scope.tipul_de_dobanda_1);
+            if( $scope.valuta_creditului_1 == "RON" && $scope.dobanda_preferentiala_1 == "Da" && $scope.tipul_de_dobanda_1 == "fixa" )
+            {
+                $scope.valoare_totala_dobanda_1 = $scope.dobanzi_com.dobanda_fixa_preferentiala_lei;
+            }
+            if( $scope.valuta_creditului_1 == "EUR" && $scope.dobanda_preferentiala_1 == "Da" && $scope.tipul_de_dobanda_1 == "fixa" )
+            {
+                $scope.valoare_totala_dobanda_1 = $scope.dobanzi_com.dobanda_fixa_preferentiala_eur;
+            }
+            if( $scope.valuta_creditului_1 == "RON" && $scope.dobanda_preferentiala_1 == "NU" && $scope.tipul_de_dobanda_1 == "fixa" )
+            {
+                $scope.valoare_totala_dobanda_1 = $scope.dobanzi_com.dobanda_fixa_std_lei;
+            }
+            if( $scope.valuta_creditului_1 == "EUR" && $scope.dobanda_preferentiala_1 == "NU" && $scope.tipul_de_dobanda_1 == "fixa" )
+            {
+                $scope.valoare_totala_dobanda_1 = $scope.dobanzi_com.dobanda_fixa_std_eur;
+            }
+            if( $scope.valuta_creditului_1 == "RON" && $scope.dobanda_preferentiala_1 == "Da" && $scope.tipul_de_dobanda_1 == "variabila" )
+            {
+                $scope.marja_fixa_practicata_banca_1 = $scope.dobanzi_com.marja_fixa_preferentiala_lei;
+                $scope.valoare_indice_zi_referinta_1 = $scope.dobanzi_com[$scope.tip_indice_referinta_1];
+                $scope.valoare_totala_dobanda_1 = $scope.valoare_indice_zi_referinta_1 + $scope.marja_fixa_practicata_banca_1;
+
+            }
+            if( $scope.valuta_creditului_1 == "RON" && $scope.dobanda_preferentiala_1 == "NU" && $scope.tipul_de_dobanda_1 == "variabila" )
+            {
+                $scope.marja_fixa_practicata_banca_1 = $scope.dobanzi_com.marja_fixa_std_lei;
+                $scope.valoare_indice_zi_referinta_1 = $scope.dobanzi_com[$scope.tip_indice_referinta_1];
+                $scope.valoare_totala_dobanda_1 = $scope.valoare_indice_zi_referinta_1 + $scope.marja_fixa_practicata_banca_1;
+
+            }
+            if( $scope.valuta_creditului_1 == "EUR" && $scope.dobanda_preferentiala_1 == "NU" && $scope.tipul_de_dobanda_1 == "variabila" )
+            {
+                $scope.marja_fixa_practicata_banca_1 = $scope.dobanzi_com.marja_fixa_std_eur;
+                $scope.valoare_indice_zi_referinta_1 = $scope.dobanzi_com[$scope.tip_indice_referinta_1];
+                $scope.valoare_totala_dobanda_1 = $scope.valoare_indice_zi_referinta_1 + $scope.marja_fixa_practicata_banca_1;
+
+            }
+            if( $scope.valuta_creditului_1 == "EUR" && $scope.dobanda_preferentiala_1 == "Da" && $scope.tipul_de_dobanda_1 == "variabila" )
+            {
+                $scope.marja_fixa_practicata_banca_1 = $scope.dobanzi_com.marja_fixa_preferentiala_eur;
+                $scope.valoare_indice_zi_referinta_1 = $scope.dobanzi_com[$scope.tip_indice_referinta_1];
+                $scope.valoare_totala_dobanda_1 = $scope.valoare_indice_zi_referinta_1 + $scope.marja_fixa_practicata_banca_1;
+
+            }
+        }, true);
+
+        $scope.$watch('[suma_solicitata_1,avans_minim_1]', function () {
+            $scope.valoare_avans_minim_1 = ( $scope.avans_minim_1 / 100 ) * $scope.suma_solicitata_1 / ( ( 100 - $scope.avans_minim_1 ) / 100);
+            $scope.valoare_totala_investitiei_1 = $scope.valoare_avans_minim_1 + $scope.suma_solicitata_1;
+        }, true);
+
+        $scope.$watch('[comision_acordare_1,suma_solicitata_1]', function () {
+             $scope.valoare_comision_acordare_1 = $scope.comision_acordare_1 * $scope.suma_solicitata_1;
+        }, true);
+
+        $scope.$watch('[perioada_finantare_luata_in_calcul_1,tip_anuitati_capital_1,rata_luanara_inclusiv_comision_gestionare_1,valoare_comision_analiza_1,valoare_comision_acordare_1 ]', function () {
+                 $scope.valoare_estimata_rambursare_1 = Number.parseFloat($scope.rata_luanara_inclusiv_comision_gestionare_1) * Number.parseFloat($scope.perioada_finantare_luata_in_calcul_1) * 12;   //Number.parseFloat($scope.valoare_comision_acordare_1) + Number.parseFloat($scope.valoare_comision_analiza_1) + Number.parseFloat($scope.rata_luanara_inclusiv_comision_gestionare_1) * Number.parseFloat($scope.perioada_finantare_luata_in_calcul_1) * 12;
+        }, true);
+
+        $scope.changeProdus = function(oferta_id){
+           /*trebuie sa iau toate regulile de la dobanzi si comisioane*/
+            oferta.dobanzi($scope['tip_credit_'+oferta_id]).then(function(data){
+                console.log(data);
+                $scope.dobanzi_com = data.data;
+                $scope.avans_minim_1 = $scope.dobanzi_com.procent_avans_minim_solicitat;
+                $scope.valoare_comision_analiza_1 = $scope.dobanzi_com.valoare_comision_analiza;
+
+                if($scope.dobanzi_com.comision_administrare_months == "luna" && $scope.dobanzi_com.comision_administrare_units== "procent"){
+                    $scope.comision_administrare_1 = $scope.dobanzi_com.comision_administrare;
+                }
+                if($scope.dobanzi_com.comision_administrare_months == "luna" && $scope.dobanzi_com.comision_administrare_units == "lei"){
+                    $scope.comision_administrare_1 = $scope.dobanzi_com.comision_administrare;
+                }
+                if($scope.dobanzi_com.comision_administrare_months == "an" && $scope.dobanzi_com.comision_administrare_units == "procent"){
+                    $scope.comision_administrare_1 = $scope.dobanzi_com.comision_administrare / 12;
+                }
+                if($scope.dobanzi_com.comision_administrare_months == "an" && $scope.dobanzi_com.comision_administrare_units == "lei"){
+                    $scope.comision_administrare_1 = $scope.dobanzi_com.comision_administrare / 12;
+                }
+
+                if($scope.dobanzi_com.comision_acordare_units == "procent"){
+                    $scope.comision_acordare_1 = $scope.dobanzi_com.comision_acordare;
+                }else{
+                    $scope.comision_acordare_1 = $scope.dobanzi_com.comision_acordare;
+                }
+            });
+
+
+        }
+
+
+
+
 
         $scope.pdf = function(){
             var data = [];

@@ -43,6 +43,8 @@ class Route {
 
 			->add('post', 'r_post_oferte_template', 'r_post_oferte_template', 'OfertaController@template', 'Oferta')
 			->add('post', 'r_post_oferte_pdf', 'r_post_oferte_pdf', 'OfertaController@pdf', 'Oferta')
+			->add('post', 'r_post_banca_dobanzi', 'r_post_banca_dobanzi', 'OfertaController@dobanzi', 'Oferta')
+			->add('post', 'r_post_produse_by_banca', 'r_post_produse_by_banca', 'OfertaController@produse', 'Oferta')
 		;
 	}
 

@@ -42,10 +42,7 @@
             </div>
             <div class="col-md-6">
                 {{ $control['valoare_totala_dobanda'] }}
-            </div>
-            <div class="col-md-6">
-                {{ $control['tip_anuitati_capital'] }}
-            </div>
+            </div> 
             <div class="col-md-6">
                 {{ $control['avans_minim'] }}
             </div>

@@ -210,10 +210,10 @@ class PersoaneFizice extends \Eloquent
     public static function indice_referinta()
     {
         return [
-            '1' => 'Indice de referinta Robor calculat la 3 luni',
-            '2' => 'Indice de referinta Robor calculat la 6 luni',
-            '3' => 'Indice de referinta EURIBOR calculat la 3 luni',
-            '4' => 'Indice de referinta EURIBOR calculat la 6 luni',
+            'indice_referinta_robor_3' => 'Indice de referinta Robor calculat la 3 luni',
+            'indice_referinta_robor_months_6' => 'Indice de referinta Robor calculat la 6 luni',
+            'indice_referinta_robor_euribor_3' => 'Indice de referinta EURIBOR calculat la 3 luni',
+            'indice_referinta_robor_euribor_6' => 'Indice de referinta EURIBOR calculat la 6 luni',
         ];
     }
 

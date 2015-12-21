@@ -45,9 +45,12 @@ class Produs extends \Eloquent
         return $record->delete();
     }
 
-    public static function toCombobox()
+    public static function toCombobox($filter = null)
     {
-        return [0 => ' -- Selectaţi banca --'] + self::orderBy('nume')->lists('nume', 'id');
+        if($filter){
+            return [0 => ' -- Selectaţi produsul --'] + self::where('banca_id')->orderBy('nume')->lists('nume', 'id');
+        }
+        return [0 => ' -- Selectaţi produsul --'] + self::orderBy('nume')->lists('nume', 'id');
     }
 
 }

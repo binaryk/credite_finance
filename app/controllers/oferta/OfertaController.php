@@ -1,6 +1,8 @@
 <?php
 namespace Oferta;
 
+use Credite\Banca;
+use Credite\Dobanzi;
 use Credite\PersoaneFizice;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
@@ -19,6 +21,23 @@ class OfertaController  extends \BaseController{
 
     public function rows(){
 
+    }
+
+    public function dobanzi()
+    {
+        $produs_id= Input::get('produs_id');
+        $dobanzi  = Dobanzi::where('id_produs', $produs_id)->orderBy('id','DESC')->first();
+        return Response::json(['data' => $dobanzi]);
+    }
+
+    public function produse()
+    {
+        $banca = Banca::where('id', Input::get('id'))->with('produse')->first()->toArray();
+        $out = [];
+        foreach($banca['produse'] as $k => $produs){
+            $out[$produs['id']] = $produs['nume'];
+        }
+        return ['options' => ['0' => '-- Selectati produs --',] + $out];
     }
 
     public function template()
@@ -60,6 +79,7 @@ class OfertaController  extends \BaseController{
                     ->name('tip_credit_'.$i)
                     ->caption('Tipul Creditului')
                     ->ng_model('tip_credit_'.$i)
+                    ->ng_change('changeProdus('.$i.')')
                     ->class('form-control data-source input-group form-select init-on-update-delete')
                     ->controlsource('tip_credit_'.$i)
                     ->controltype('combobox')
@@ -189,7 +209,7 @@ class OfertaController  extends \BaseController{
                     ->controlsource('tip_anuitati_capital_'.$i)
                     ->controltype('combobox')
                     ->enabled('false')
-                    ->options(['anuitati egale' => 'anuitati egale','anuitati descrescatoare' => 'anuitati descrescatoare'])
+                    ->options(['egale' => 'anuitati egale','descrescatoare' => 'anuitati descrescatoare'])
                     ->out(),
             'avans_minim' =>
                 \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')

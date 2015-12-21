@@ -12,4 +12,6 @@ trait PdfPrepareData
     {
         dd( Input::get('data')[0] );
     }
+
+
 }
