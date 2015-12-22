@@ -37,7 +37,7 @@ class RegistrationController extends \BaseController {
 
 		$input = Input::only('email', 'password', 'prenume', 'nume');
 		// !!!!!!!! Temporar pentru logarea pe app
-		 $id_organizatie = \Imobiliare\Organizatie::createRecord(['denumire' => 'Organizatia lui: ' . $input['nume']])->id;
+		 $id_organizatie = \Credite\Organizatie::createRecord(['denumire' => 'Organizatia lui: ' . $input['nume']])->id;
 		 $input['id_organizatie'] = $id_organizatie;
 		$input = array_add($input, 'activated', true);
 
@@ -56,9 +56,6 @@ class RegistrationController extends \BaseController {
 
 	public function postLogin()
 	{
-		dd(4);
-		
-
 		$credentials = array(
 	        'email' => Input::get('email'),
 	        'password' => Input::get('password')

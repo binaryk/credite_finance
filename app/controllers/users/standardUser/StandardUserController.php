@@ -18,3 +18,4 @@ class StandardUserController extends \BaseController {
 	{
 		return View::make('protected.standardUser.user_page_1');
 	}
+}
