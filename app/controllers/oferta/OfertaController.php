@@ -439,7 +439,7 @@ class OfertaController  extends \BaseController{
                     ->name('alte_comisioane_banca_'.$i)
                     ->caption('Alte comisioane ale bancii')
                     ->ng_model('alte_comisioane_banca_'.$i)
-                    ->class('form-control  data-source decimal')
+                    ->class('form-control  data-source')
                     ->controlsource('alte_comisioane_banca_'.$i)
                     ->controltype('textbox')
                     ->maxlength(255)

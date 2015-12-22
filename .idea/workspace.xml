@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="26c9510f-5f92-4c73-b7fa-d4737bffee45" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/oferta/OfertaController.php" afterPath="$PROJECT_DIR$/app/controllers/oferta/OfertaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js" afterPath="$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php" afterPath="$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php" afterPath="$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/leed_server/app.php" afterPath="$PROJECT_DIR$/app/config/leed_server/app.php" />
     </list>
     <ignored path="imobile.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="OfertaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.37037">
-              <caret line="42" column="103" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
+            <state vertical-scroll-proportion="-18.074074">
+              <caret line="439" column="31" selection-start-line="439" selection-start-column="31" selection-end-line="439" selection-end-column="31" />
               <folding>
                 <element signature="e#25#43#0#PHP" expanded="true" />
               </folding>
@@ -39,10 +37,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/leed_server/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.08214677">
+              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="OfertaForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.296297">
+            <state vertical-scroll-proportion="-32.962963">
               <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
               <folding />
             </state>
@@ -59,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OfertaCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OfertaCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3723404">
-              <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+            <state vertical-scroll-proportion="-10.448276">
+              <caret line="121" column="90" selection-start-line="121" selection-start-column="68" selection-end-line="121" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -134,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/~credite/grid/banci/DobanziComisioaneGrid.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2015_12_02_143637_alter_upload_docs_add_cols_banci_doc.php" />
         <option value="$PROJECT_DIR$/app/controllers/banci/DocumenteNecesareController.php" />
         <option value="$PROJECT_DIR$/app/views/banci/produse/~actions.blade.php" />
@@ -183,8 +190,9 @@
         <option value="$PROJECT_DIR$/app/database/migrations/2015_12_21_170639_alter_table_dobanzi_comisioane_add_drop_downs.php" />
         <option value="$PROJECT_DIR$/app/views/oferta/partials/tabs/tab_1.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php" />
-        <option value="$PROJECT_DIR$/app/controllers/oferta/OfertaController.php" />
         <option value="$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js" />
+        <option value="$PROJECT_DIR$/app/controllers/oferta/OfertaController.php" />
+        <option value="$PROJECT_DIR$/app/config/leed_server/app.php" />
       </list>
     </option>
   </component>
@@ -735,13 +743,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/template/parts/~head.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7782705">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/storage/views/582bd110c68c3edbe7d57d5eac6c4ad5">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3508772">
@@ -1068,28 +1069,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.37037">
-          <caret line="42" column="103" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
-          <folding>
-            <element signature="e#25#43#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/oferta/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.296297">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1112,8 +1095,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/custom/js/angular/controllers/OfertaCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3723404">
-          <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+        <state vertical-scroll-proportion="-10.448276">
+          <caret line="121" column="90" selection-start-line="121" selection-start-column="68" selection-end-line="121" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.962963">
+          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/oferta/OfertaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.074074">
+          <caret line="439" column="31" selection-start-line="439" selection-start-column="31" selection-end-line="439" selection-end-column="31" />
+          <folding>
+            <element signature="e#25#43#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/leed_server/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08214677">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding />
         </state>
       </provider>
