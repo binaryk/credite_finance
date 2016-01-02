@@ -4,7 +4,7 @@
 		General </a>
 	</li>
 	<li>
-		<a href="#tab_1_3" data-toggle="tab">
+		<a href="{{ URL('/user/profile')  }}">
 		Contul </a>
 	</li>
 	<li>
