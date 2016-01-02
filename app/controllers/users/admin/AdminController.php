@@ -11,7 +11,7 @@ class AdminController extends \HomeController {
 	public function getHome()
 	{
 		return $this->showWelcome();
-		// return View::make('protected.admin.admin_dashboard');
+		 return View::make('protected.admin.admin_dashboard');
 	}
 
 

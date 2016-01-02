@@ -13,7 +13,7 @@ class BaseController extends Controller {
 	protected $current_org  = NULL; 
 	
     public function __construct()
-    { 
+    {
         $this->beforeFilter('csrf', array('on' => 'post'));
 	   	$this->current_user = Sentry::getUser();
 	   	$this->current_org = $this->current_user ? Credite\Organizatie::find($this->current_user->id_organizatie) : NULL;

@@ -29,7 +29,6 @@ class SessionsController extends \BaseController {
 	 */
 	public function store()
 	{
-
 		try {
 			$this->loginForm->validate($input = Input::only('email', 'password'));
 		} catch (Exception $e)

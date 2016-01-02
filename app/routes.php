@@ -43,10 +43,11 @@ Route::group(['before' => 'auth|standardUser'], function()
 });
 Sys\RouteBefore::make()->define();
 # Admin Routes
+
 Route::group(['before' => 'auth|admin'], function()
 {
-	Route::get('/admin', ['as' => 'admin_dashboard', 'uses' => 'HomeController@showWelcome']);
-    Route::resource('admin/profiles', 'AdminUsersController', ['only' => ['index', 'show', 'edit', 'update', 'destroy']]);
+	Route::get('/administration', ['as' => 'admin_dashboard', 'uses' => 'HomeController@showWelcome']);
+	Route::resource('admin/profiles', 'AdminUsersController', ['only' => ['index', 'show', 'edit', 'update', 'destroy']]);
 });
 
 

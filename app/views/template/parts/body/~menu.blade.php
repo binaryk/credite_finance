@@ -88,7 +88,9 @@
 		</a>
 		<ul class="sub-menu">
 			<li>
-				<a href="{{ URL::route('grid-utilizatori') }}"><i class="icon-users"></i>Listă utilizatori</a>
+				@if(Sentry::getUser()->inGroup(Sentry::findGroupByName('Admins')))
+					<a href="{{ URL::route('grid-utilizatori') }}"><i class="icon-users"></i>Listă utilizatori</a>
+				@endif
 			</li>
 			<li>
 				<a href="{{ URL::route('grid_banci') }}"><i class="icon-users"></i>Bănci</a>

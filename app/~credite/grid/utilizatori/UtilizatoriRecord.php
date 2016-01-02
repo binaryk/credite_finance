@@ -68,6 +68,15 @@ class UtilizatoriRecord extends \Credite\GridsRecord
                 'source'    => 'email',
             ],
             '4' => [
+                'id'        => 'telefon',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Telefon', 'style'   => 'width:15%;text-align:left',],
+                'type'      => 'field',
+                'source'    => 'telefon',
+            ],
+            '5' => [
                 'id'        => 'organizatie',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
@@ -75,7 +84,16 @@ class UtilizatoriRecord extends \Credite\GridsRecord
                 'header'    => ['caption' => 'Organizatie', 'style'   => 'width:50%;text-align:left',],
                 'type'      => 'view',
                 'source'    => 'users.lista.~organizatie',
-            ], 
+            ],
+            '6' => [
+                'id'        => 'actions',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Organizatie', 'style'   => 'width:50%;text-align:left',],
+                'type'      => 'view',
+                'source'    => 'users.lista.~actions',
+            ],
        ];  
         $this->fields = [
             'fields'      => '',
