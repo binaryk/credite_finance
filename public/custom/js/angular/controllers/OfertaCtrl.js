@@ -159,7 +159,7 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
             console.log(send);
             
             oferta.pdf(send).then(function(data){
-                //location.href = data;
+                location.href = data;
             });
         }
 

@@ -37,6 +37,7 @@ class Base extends \Easy\HTML\HTML
 			'style'            => '',
 			'tabindex'         => '',
 			'value'            => NULL,
+			'originalname' 	   => '' ,
 		];
 	
 	public static function make($view, $data = [])
@@ -78,6 +79,10 @@ class Base extends \Easy\HTML\HTML
 		if($this->name)
 		{
 			$result['id'] = $this->name;
+		}
+		if($this->originalname)
+		{
+			$result['id'] = $this->originalname;
 		}
 		if($this->rows)
 		{
