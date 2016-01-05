@@ -1,5 +1,5 @@
-app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout','oferta',
-    function OfertaCtrl($scope, $http, $rootScope, $compile, $timeout,oferta){
+app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout','oferta','FormService',
+    function OfertaCtrl($scope, $http, $rootScope, $compile, $timeout,oferta,FormService){
         console.log("OfertaCtrl");
         $scope.dobanzi_com;
         
@@ -149,13 +149,11 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
 
 
         $scope.pdf = function(){
-            var data = [];
-            for(var i = 1; i <= $scope.nr_oferte; i++){
-                data.push( JSON.stringify( $('form#oferta_'+i).serialize() ) );
-            }
-            console.log(JSON.stringify(data));
+            var data = FormService.allDataSource($scope.nr_oferte);
+            console.log(data);
+            
             oferta.pdf(data).then(function(data){
-                console.log(data);
+                location.href = data;
             });
         }
 

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - credite@localhost" uuid="80fe0de9-0415-4e0a-9929-4dbda877ab02">
+    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="credite"/>
+    <table name="banca_produs" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_banca" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id_produs" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="banci" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nume" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="id_organizatie" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="conditii_eligibilitate" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_produs" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="vechime_munca_actual" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="vechime_munca_total" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="venit_minim" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="perioada_contractului_munca" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="varsta_minima" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="varsta_maxima" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="salariu" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="diurne" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="pensie" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="dividende" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="indemniz_copil" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="activitati_indep" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="profesii_liberale" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="drepturi_de_autor" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="chirii" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="rente_viagere" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="comisioane" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="ore_suplimentare" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="contracte_de_management" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="contracte_de_mandat" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="norma_de_hrana" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="co_platitor" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="dobanzi_comisioane" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_produs" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="dobanda_fixa" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="dobanda_variabila" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="marja" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="indice_referinta" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="dae" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="valoare_comision_analiza" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_acordare_procent" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_acordare_lei" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="taxa_inscriere_arhiva" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_rambursare_anticipata" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_prestari_servicii_bancare" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_administrare_lunar_procent" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_administrare_lunar_lei" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_administrare_anual_procent" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_administrare_anual_lei" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="asigurare_viata" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="evaluare" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="prima_asigurare_imobil" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="prima_asigurare_pad" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="dobanda_fixa_std_lei" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="dobanda_fixa_std_eur" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="dobanda_fixa_preferentiala_lei" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="dobanda_fixa_preferentiala_eur" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="marja_fixa_std_lei" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="marja_fixa_std_eur" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="marja_fixa_preferentiala_lei" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="marja_fixa_preferentiala_eur" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="indice_referinta_robor_3" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="indice_referinta_robor_months_6" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="indice_referinta_robor_euribor_3" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="indice_referinta_robor_euribor_6" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="procent_avans_minim_solicitat" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_administrare_platibil" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="alte_comisione_banca" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="precizari_suplimentare" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="comision_administrare" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_acordare" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="comision_administrare_months" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="comision_administrare_units" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="comision_acordare_units" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="groups" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="permissions" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="groups_name_unique" unique="true" columns="name"/>
+    </table>
+    <table name="imobile_garantie" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tip" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="an_constructie" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="localizare" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="marime" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="regim_juridic" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="valoare_estimata" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="istoric_creditare" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_client" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="tip" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="MS1jcmVkaXQsIDItPmNvLWRlYml0b3IsIDMtPmRlc2NvcGVyaXQgZGUgY29udCwgNC0+Q2FyZCBkZSBjcmVkaXQ="/>
+      <column name="id_institutie" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="data_acordarii" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="rata_lunara" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="sold" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="migrations" schema="" catalog="credite" type="TABLE">
+      <column name="migration" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="batch" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+    </table>
+    <table name="organizatii" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="created_by" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="updated_by" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="deleted_by" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="id_localitate" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="denumire" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="telefon" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="fax" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="adresa" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12"/>
+      <column name="anul_infiintarii" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="password_reminders" schema="" catalog="credite" type="TABLE">
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="token" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <index name="password_reminders_email_index" unique="false" columns="email"/>
+      <index name="password_reminders_token_index" unique="false" columns="token"/>
+    </table>
+    <table name="persoane_fizice" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_organizatie" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="tip_client" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="nume" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="prenume" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="cnp" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="email" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="telefon" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="nume_mama" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="salariu_net" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="salariu" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="diurne" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="pensie" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="dividende" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="indemniz_copil" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="activitati_indep" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="profesii_liberale" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="drepturi_de_autor" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="chirii" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="rente_viagere" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="comisioane" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="ore_suplimentare" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="contracte_de_management" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="contracte_de_mandat" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="norma_de_hrana" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="bonuri_de_masa" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="no_bonuri_de_masa" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="per_contract" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="alte_venituri" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="per_alte_ven" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="alt_ven_salar" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_diurne" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_pensie" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_divid" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_indemn_copil" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_activ_indep" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_prfs_lbrl" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_drept_de_autor" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_chirii" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_rente_viagere" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_cmsne" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_ore_suplim" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_cntrct_de_mngmnt" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_cntrct_de_mandat" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="alt_ven_nrm_de_hrana" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="tot_ven_net" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="denum_angajator" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="tip_angajator" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="cui" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="nr_angajati" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="dom_de_actvte" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="ultim_stud_abs" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="st_civila" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="functie" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="profesie" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="nr_membri_fam" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="pers_intrtnr" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="propr_auto" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="sit_locativa" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="vec_adr_curenta" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="vec_loc_munca" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="vec_tot_munca" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="bnc_virare_salar" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="istoric_credit" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="istoric_tip_credit" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="istoric_tip_codebitor" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="istoric_descoperit_de_cont" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="istoric_card_credit" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="istoric_tip_credit_insitutie" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="istoric_tip_codebitor_insitutie" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="istoric_descoperit_de_cont_insitutie" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="istoric_card_credit_insitutie" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="istoric_tip_credit_data_acordarii" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="istoric_tip_codebitor_data_acordarii" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="istoric_descoperit_de_cont_data_acordarii" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="istoric_card_credit_data_acordarii" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="istoric_tip_credit_rata_lunara" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="istoric_tip_codebitor_rata_lunara" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="istoric_descoperit_de_cont_rata_lunara" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="istoric_card_credit_rata_lunara" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="istoric_tip_credit_sold" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="istoric_tip_codebitor_sold" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="istoric_descoperit_de_cont_sold" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="istoric_card_credit_sold" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="co_platitor" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="produse" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nume" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="id_organizatie" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sends_invitation" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="code" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="send_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="confirmed" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="throttle" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ip_address" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="attempts" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="suspended" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="banned" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="last_attempt_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="suspended_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="banned_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="throttle_user_id_index" unique="false" columns="user_id"/>
+    </table>
+    <table name="uploaded_docs" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_client" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="file_name" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="file_url" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="file_extension" sqlType="VARCHAR" precision="8" scale="0" nullable="false" jdbcType="12"/>
+      <column name="file_size" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="deleted_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="id_document_necesar" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id_manual" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id_instructiuni" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id_acte_produse" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="credite" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="permissions" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="activated" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="activation_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="activated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="last_login" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="persist_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="reset_password_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_organizatie" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="prenume" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="nume" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="telefon" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="users_email_unique" unique="true" columns="email"/>
+      <index name="users_activation_code_index" unique="false" columns="activation_code"/>
+      <index name="users_reset_password_code_index" unique="false" columns="reset_password_code"/>
+    </table>
+    <table name="users_groups" schema="" catalog="credite" type="TABLE">
+      <column name="user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="group_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="user_id,group_id"/>
+    </table>
+  </data-source>
+</component>

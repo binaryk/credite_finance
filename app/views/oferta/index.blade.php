@@ -7,6 +7,7 @@
 @stop
 @section('custom-scripts')
     <script src="{{ asset('custom/js/angular/services/OfertaService.js')  }}"></script>
+    <script src="{{ asset('custom/js/angular/services/FormService.js')  }}"></script>
     <script src="{{ asset('custom/js/angular/controllers/OfertaCtrl.js')  }}"></script>
     <script src="{{ asset('admin/js/libraries/form/combobox.js')  }}"></script>
     <script>
