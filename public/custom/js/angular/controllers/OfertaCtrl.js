@@ -150,10 +150,16 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
 
         $scope.pdf = function(){
             var data = FormService.allDataSource($scope.nr_oferte);
-            console.log(data);
+            var send = {};
+            send['general'] = {
+                'nume_client' : $('#nume_client').val(),
+                'nr_oferte'   : $('#nr_oferte').val()
+            }
+            send['data'] = data;
+            console.log(send);
             
-            oferta.pdf(data).then(function(data){
-                location.href = data;
+            oferta.pdf(send).then(function(data){
+                //location.href = data;
             });
         }
 

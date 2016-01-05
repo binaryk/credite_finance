@@ -11,8 +11,9 @@ trait PdfPrepareData
 {
     public function pdf()
     {
-        $data = Input::all();
-        $pdf = new CreateOfertaPdf('P', 'A4', 'F', $data, true);
+        $data = (array) Input::get('data');
+
+        $pdf = new CreateOfertaPdf('L', 'A4', 'F', $data, true);
         $pdf->Output();
         return URL::to("app/oferte/" . $pdf->getName(false));
     }
