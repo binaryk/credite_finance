@@ -98,6 +98,9 @@
 			<li>
 				<a href="{{ URL::route('ofertare') }}"><i class="icon-users"></i>Ofertare</a>
 			</li>
+			<li>
+				<a href="{{ URL::route('oferte_generate',['id' => 'oferte_generate']) }}"><i class="icon-users"></i>Oferte generate</a>
+			</li>
 		</ul>
 	</li>
 		

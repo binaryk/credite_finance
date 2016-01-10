@@ -15,6 +15,8 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
                 }
                 FORMAT.init();
             });
+
+            $scope.initShowHide();
             
         }
         
@@ -144,10 +146,6 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
 
         }
 
-
-
-
-
         $scope.pdf = function(){
             var data = FormService.allDataSource($scope.nr_oferte);
             var send = {};
@@ -159,10 +157,27 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
             console.log(send);
             
             oferta.pdf(send).then(function(data){
-                location.href = data;
+                window.open(
+                    data,
+                    '_blank' // <- This is what makes it open in a new window.
+                );
             });
         }
 
+        $scope.initShowHide = function(){
+            $(document).on('click','label', function(){
+                var selector = $(this).attr('for'),
+                    control  = $('#'+selector);
+                if(control.is(':visible')){
+                    control.attr('data-val',control.val());
+                    control.val(-1).hide(100);
+                }else{
+                    control.show(100);
+                    control.val( control.data('val') );
+                }
+
+            });
+        }
 
         FORMAT.init();
         

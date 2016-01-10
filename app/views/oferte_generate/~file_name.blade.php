@@ -1,0 +1,1 @@
+<a class="text-black" href="{{URL::to( 'app/oferte/' . $record->file_name ) }}"><i class="fa fa-download"></i> <span>{{  basename($record->file_name)  }}</span></a>

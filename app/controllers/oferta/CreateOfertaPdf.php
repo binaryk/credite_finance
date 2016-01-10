@@ -25,7 +25,6 @@ class CreateOfertaPdf
         $this->pagesize     = $pagesize;
         $this->destionation = $destionation;
         $this->data   = $data;
-
         $this->redus        = $redus;
         $this->pdf          = new \ToPDF\topdf();
         $this->pdf->newpage($this->orientation, $this->pagesize);
@@ -44,7 +43,7 @@ class CreateOfertaPdf
     }
     protected function fileName($save = false)
     {
-        $file_name = str_replace('\\', '/', public_path() . '/app/oferte/oferta-export-' .\Carbon\Carbon::now()->format('d.m.Y').'.pdf');
+        $file_name = str_replace('\\', '/', public_path() . '/app/oferte/oferta-export-' .\Carbon\Carbon::now()->format('d.m.Y H.i.s').'.pdf');
         $file_name = str_replace(' ', '_', $file_name);
         if($save){
             return $file_name;
@@ -131,15 +130,21 @@ class CreateOfertaPdf
         ];
         foreach($captions as $i => $row)
         {
-            $this->pdf->Pdf()->ln();
-            $this->pdf->Pdf()->SetFont('freeserif', 'N', 9, '', false);
-            $this->pdf->Cell()->text( $row['caption'] )->width(130)->border('1')->halign('L')->linefeed(0)->out();
-            $this->pdf->Pdf()->SetFont('freeserif', '', 9, '', false);
-            if(array_key_exists('source', $row)){
-                $this->pdf->Cell()->text( $this->{$row['source']}() )->width(140)->border('1')->halign('L')->linefeed(0)->out();
-            }else{
-                $this->pdf->Cell()->text( '--' )->width(140)->border('1')->halign('L')->linefeed(0)->out();
+            /*verificam mai intai daca este afisabil acel camp*/
+            $visible = $this->{$row['source']}();
+            if( $visible !== null &&  $visible != '-1' ){
+                $this->pdf->Pdf()->ln();
+                $this->pdf->Pdf()->SetFont('freeserif', 'N', 9, '', false);
+                $this->pdf->Cell()->text( $row['caption'] )->width(130)->border('1')->halign('L')->linefeed(0)->out();
+                $this->pdf->Pdf()->SetFont('freeserif', '', 9, '', false);
+                if(array_key_exists('source', $row)){
+                    $this->pdf->Cell()->text( $visible )->width(140)->border('1')->halign('L')->linefeed(0)->out();
+                }else{
+                    $this->pdf->Cell()->text( '--' )->width(140)->border('1')->halign('L')->linefeed(0)->out();
+                }
             }
+
+
         }
     }
 
@@ -154,7 +159,6 @@ class CreateOfertaPdf
     public function banca()
     {
 //        dd($this->data['data']);
-
         return $this->comboval($this->data['data'][0]['banca_1'], PersoaneFizice::getBanca());
     }
 
@@ -179,15 +183,16 @@ class CreateOfertaPdf
     }
 
     public function valuta_creditului(){
-        return $this->comboval($this->data['data'][0]['valuta_creditului_1']);
+
+        return $this->comboval('valuta_creditului_1',$this->data['data'][0]);
     }
 
     public function dobanda_preferentiala(){
-        return $this->comboval($this->data['data'][0]['dobanda_preferentiala_1']);
+        return $this->comboval('dobanda_preferentiala_1',$this->data['data'][0]);
     }
 
     public function tipul_de_dobanda(){
-        return $this->comboval($this->data['data'][0]['tipul_de_dobanda_1']);
+        return $this->comboval('tipul_de_dobanda_1',$this->data['data'][0]);
     }
 
     public function marja_fixa_practicata_banca(){
@@ -198,7 +203,7 @@ class CreateOfertaPdf
     {
         if($k == "? undefined:undefined ?")
             return '--';
-        if( array_key_exists($k,$a)){
+        if( array_key_exists($k,$a) && $a[$k] != "? undefined:undefined ?"){
             return $a[$k];
         }else{
             return '--';

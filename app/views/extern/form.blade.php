@@ -21,6 +21,9 @@
 		Form::hidden('client_extern', 1, ['id' => 'client_extern', 'class' => 'data-source', 'data-control-source' => 'client_extern', 'data-control-type' => 'persistent'])
 	}}
 	{{
+		Form::hidden('id_organizatie', 1, ['id' => 'id_organizatie', 'class' => 'data-source', 'data-control-source' => 'id_organizatie', 'data-control-type' => 'persistent'])
+	}}
+	{{
 		Form::hidden('client_id', -1, ['id' => 'client_id', 'class' => 'data-source', 'data-control-source' => 'client_id', 'data-control-type' => 'persistent'])
 	}}
 	<div class="form-actions col-md-12 data-tabs">

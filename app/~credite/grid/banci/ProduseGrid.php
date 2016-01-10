@@ -38,12 +38,10 @@ class ProduseGrid extends \Credite\GridsRecord
                                assets/admin/pages/scripts/portlet-draggable.js';
         $this->row_source     = 'banca_produse_row_source';
         $this->rows_source_sql 				= 'SELECT
-                                                *
-                                                FROM produse
-                                                LEFT JOIN
-                                                banca_produs
-                                                ON banca_produs.id_produs = produse.id
-                                                :where: :order:';
+                                              produse.id as id,
+                                              produse.nume
+                                              FROM produse LEFT JOIN banca_produs ON banca_produs.id_produs = produse.id
+                                              :where: :order:';
         $this->count_filtered_records_sql 	= 'SELECT COUNT(*) as cnt FROM produse LEFT JOIN banca_produs ON banca_produs.id_produs = produse.id :where:';
         $this->count_total_records_sql     	= 'SELECT COUNT(*) AS cnt FROM produse';
         $this->columns        = [

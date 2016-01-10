@@ -3,9 +3,9 @@
 
     var decimal  = function(suffix){
         $('.decimal').css({'text-align':'right'}).inputmask('decimal', {
-            radixPoint     : '.',
-            digits         : 2,
-            // groupSeparator : '.',
+            radixPoint     : ',',
+            digits         : 3,
+             groupSeparator : '.',
             // autoGroup      : true,
             // suffix         : suffix,
             // max            : 10000
@@ -15,7 +15,7 @@
     var currency  = function(suffix){
         $('.currency').css({'text-align':'right'}).inputmask('decimal', {
             radixPoint     : '.',
-            digits         : 2,
+            digits         : 3,
             // min            : 0,
             // max            : 10000,
             // groupSeparator : '.',

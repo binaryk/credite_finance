@@ -104,10 +104,10 @@ app.factory('FormService', ['$rootScope','$http','$timeout', function($rootScope
 
     mixin.tofloat = function(value)
     {
-        return numeral().unformat(value);
+        //return numeral().unformat(value);
         // return numeral().unformat(value);
-        /* value = value.replace('.','');
-         return value.replace(',','.');*/
+        value = value.replace('.','');
+        return value.replace(',','.');
     }
 
     mixin.showFieldsErrors = function(fieldserrors)

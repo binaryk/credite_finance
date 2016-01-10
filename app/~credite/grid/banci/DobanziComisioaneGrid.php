@@ -63,81 +63,81 @@ class DobanziComisioaneGrid extends \Credite\GridsRecord
                 'source'    => 'banci.produse.dobanzi.created_at',//numele coloanei din tabelul din BD
             ],
             '3' => [
-                'id'        => 'dobanda_fixa',
+                'id'        => 'dobanda_fixa_std_lei',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Dobanda fixa (%)', 'style'   => 'width:12%',],
+                'header'    => ['caption' => 'Dobanda fixa (lei)', 'style'   => 'width:12%',],
                 'type'      => 'field',
-                'source'    => 'dobanda_fixa',//numele coloanei din tabelul din BD
+                'source'    => 'dobanda_fixa_std_lei',//numele coloanei din tabelul din BD
             ],
             '4' => [
-                'id'        => 'dobanda_variabila',
+                'id'        => 'dobanda_fixa_std_eur',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Dobanda variabila (%)', 'style'   => 'width:12%',],
+                'header'    => ['caption' => 'Dobanda fixa (euro)', 'style'   => 'width:12%',],
                 'type'      => 'field',
-                'source'    => 'dobanda_variabila',//numele coloanei din tabelul din BD
+                'source'    => 'dobanda_fixa_std_eur',//numele coloanei din tabelul din BD
             ],
             '5' => [
-                'id'        => 'marja',
+                'id'        => 'dobanda_fixa_preferentiala_lei',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Marja (%)', 'style'   => 'width:12%',],
+                'header'    => ['caption' => 'Dobanda fixa pref (lei)', 'style'   => 'width:12%',],
                 'type'      => 'field',
-                'source'    => 'marja',//numele coloanei din tabelul din BD
+                'source'    => 'dobanda_fixa_preferentiala_lei',//numele coloanei din tabelul din BD
             ],
 
             '6' => [
-                'id'        => 'indice_referinta',
+                'id'        => 'dobanda_fixa_preferentiala_eur',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Indice de referinta (%)', 'style'   => 'width:12%',],
+                'header'    => ['caption' => 'obanda fixa pref (eur)', 'style'   => 'width:12%',],
                 'type'      => 'field',
-                'source'    => 'indice_referinta',//numele coloanei din tabelul din BD
+                'source'    => 'dobanda_fixa_preferentiala_eur',//numele coloanei din tabelul din BD
             ],
 
             '7' => [
-                'id'        => 'dae',
+                'id'        => 'marja_fixa_std_lei',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'DAE (%)', 'style'   => 'width:12%',],
+                'header'    => ['caption' => 'Marja fixa std (lei)', 'style'   => 'width:12%',],
                 'type'      => 'field',
-                'source'    => 'dae',//numele coloanei din tabelul din BD
+                'source'    => 'marja_fixa_std_lei',//numele coloanei din tabelul din BD
             ],
 
             '8' => [
-                'id'        => 'valoare_comision_analiza',
+                'id'        => 'marja_fixa_std_eur',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Valoare comision de analiza (lei)', 'style'   => 'width:12%',],
+                'header'    => ['caption' => 'Marja fixa std (eur)', 'style'   => 'width:12%',],
                 'type'      => 'field',
-                'source'    => 'valoare_comision_analiza',//numele coloanei din tabelul din BD
+                'source'    => 'marja_fixa_std_eur',//numele coloanei din tabelul din BD
             ],
 
             '9' => [
-                'id'        => 'comision_acordare_procent',
+                'id'        => 'marja_fixa_preferentiala_lei',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Comision de acordare  (%)', 'style'   => 'width:12%',],
+                'header'    => ['caption' => 'Marja fixa pref (lei)', 'style'   => 'width:12%',],
                 'type'      => 'field',
-                'source'    => 'comision_acordare_procent',//numele coloanei din tabelul din BD
+                'source'    => 'marja_fixa_preferentiala_lei',//numele coloanei din tabelul din BD
             ],
 
             '10' => [
-                'id'        => 'comision_acordare_lei',
+                'id'        => 'marja_fixa_preferentiala_eur',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Cosmision de acordare (lei)', 'style'   => 'width:12%',],
+                'header'    => ['caption' => 'Marja fixa pref (eur)', 'style'   => 'width:12%',],
                 'type'      => 'field',
-                'source'    => 'comision_acordare_lei',//numele coloanei din tabelul din BD
+                'source'    => 'marja_fixa_preferentiala_eur',//numele coloanei din tabelul din BD
             ],
             '11' => [
                 'id'        => 'action',

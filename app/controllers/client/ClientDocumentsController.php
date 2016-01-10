@@ -55,7 +55,7 @@ class ClientDocumentsController extends \Datatable\DatatableController
 		$rez =	
 		\Database\Actions::make()
 			->model('\Credite\Nomenclatoare\ClientDocuments')
-			->data(['id_client' => $id_client, 'id_user' => $this->current_user->id ])
+			->data(['id_client' => $id_client, 'id_user' => @$this->current_user->id ])
 			->upload($input['file_data'], \Config::get('uploads.client-documents') );
 		return $rez;// \Response::json(['message' => "uraa"]);
 	}

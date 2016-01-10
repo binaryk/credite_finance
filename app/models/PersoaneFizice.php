@@ -80,6 +80,7 @@ class PersoaneFizice extends \Eloquent
 
     public static function getPerioada(){
         return [
+            '0' => '-- Alege --',
             'Determinată'   => 'Determinată',
             'Nedeterminată' => 'Nedeterminată',
             ];
@@ -190,6 +191,7 @@ class PersoaneFizice extends \Eloquent
     public static function tipCredit()
     {
         return [
+            '0' => '-- Alege --',
           '1' => 'prima casa',    
           '2' => 'ipotecar',
             '3' => 'constructie',

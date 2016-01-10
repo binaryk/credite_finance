@@ -23,6 +23,7 @@ class Grids {
 		'conditii_eligibilitate' 	=> '\Credite\Banci\Grid\ConditiiEligibilitateGrid',
 		'dobanzi_comisioane' 		=> '\Credite\Banci\Grid\DobanziComisioaneGrid',
 		'utilizatori' 				=> 'Utilizatori\Grid\UtilizatoriRecord',
+		'oferte_generate'		    => '\Credite\Oferte\Grid\OferteGenerateGrid',
 
 	];
 

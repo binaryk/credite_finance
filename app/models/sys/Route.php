@@ -36,7 +36,7 @@ class Route {
 			->add('get', 'documente_necesare_index', 'banca/{id}/documente-necesare/{id_banca}/{type}', 'DocumenteNecesareController@index', 'Credite\Datatable')
 			->add('get', 'documente_necesare_row_source', 'banca_documente_necesare/row-source/{id}/{id_filter}/{type}','DocumenteNecesareController@rows', 'Credite\Datatable')
 			->add('post','documente_necesare_upload', 'upload-banca-document-necesar/{id_filter}/{type}','DocumenteNecesareController@upload', 'Credite\Datatable')
-			->add('post','documente_necesare', 'delete-client-document','documente_necesare@delete', 'Credite\Datatable')
+			->add('post','documente_necesare', 'delete-client-document','DocumenteNecesareController@delete', 'Credite\Datatable')
 			->add('get', 'documente_necesare', 'download-client-documents/{document_id}','DocumenteNecesareController@download', 'Credite\Datatable')
 
 			->add('get', 'ofertare', 'ofertare', 'OfertaController@index', 'Oferta')
@@ -45,6 +45,11 @@ class Route {
 			->add('post', 'r_post_oferte_pdf', 'r_post_oferte_pdf', 'OfertaController@pdf', 'Oferta')
 			->add('post', 'r_post_banca_dobanzi', 'r_post_banca_dobanzi', 'OfertaController@dobanzi', 'Oferta')
 			->add('post', 'r_post_produse_by_banca', 'r_post_produse_by_banca', 'OfertaController@produse', 'Oferta')
+
+			->add('get', 'oferte_generate', 'oferte-generate/{id}', 'OferteGenerateController@index', 'Credite\Datatable')
+			->add('get', 'oferte_generate_row_source', 'oferte_generate_row_source/row-source/{id}','OferteGenerateController@rows', 'Credite\Datatable')
+			->add('get', 'download_oferta_generata', 'download_oferta_generata/{id}','OferteGenerateController@download', 'Credite\Datatable')
+			->add('post','delete_oferta_generata', 'delete_oferta_generata','OferteGenerateController@delete', 'Credite\Datatable')
 		;
 	}
 
