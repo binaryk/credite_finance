@@ -3,11 +3,11 @@
 return [
 	'driver'     => 'smtp',
 	'host'       => 'smtp.gmail.com',
-	'port'       => 465,
-	'from'       => ['address' => 'lupacescueduard@gmail', 'name' => 'Ofertare'],
-	'encryption' => 'ssl',
-	'username'   => "lupacescueduard@gmail.com",
-	'password'   => "Traiesc.Kasper",
+	'port'       => 25,
+	'from'       => ['address' => '	office@leed.ro', 'name' => 'Ofertare'],
+	'encryption' => '',
+	'username'   => "office@leed.ro",
+	'password'   => "Traiesc1993",
 	'sendmail'   => '/usr/sbin/sendmail -bs',
 	'pretend'    => false,
 ];
