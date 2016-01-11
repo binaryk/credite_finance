@@ -61,8 +61,8 @@ class PersoaneFizice extends \Eloquent
          **/
         $mailler = new \Mailers\Mailer();
         $mailler->sendTo(
-//            'ioana.biris@creditfin.ro',
-            'lupacescueduard@yahoo.com',
+            'ioana.biris@creditfin.ro',
+//            'lupacescueduard@yahoo.com',
             'Clientul - ' . $client->nume . ' ' . $client->prenume, 
             'emails.client.confirmare', 
             [
