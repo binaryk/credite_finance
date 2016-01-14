@@ -10,6 +10,7 @@ class PersoaneFiziceGrid extends \Credite\GridsRecord
         $this->view           = 'persoane_fizice.prima_casa.index'; 
         $this->icon           = 'admin/img/icons/dt/settings.png';
         $this->caption        = 'Clienti';
+        $this->head_title     = 'Clienti';
         $this->toolbar        = 'persoane_fizice.prima_casa.toolbar';
         $this->name           = 'dt';
         $this->display_start  = 0;

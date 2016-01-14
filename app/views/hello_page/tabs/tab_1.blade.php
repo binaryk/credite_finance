@@ -73,7 +73,13 @@
                                     <tr>
                                         <td>
                                             <a href="{{ URL::to('ofertare')  }}">
-                                            Oferte </a>
+                                            Genereaza oferta </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="{{ URL::route('oferte_generate',['id' => 'oferte_generate']) }}">
+                                            Oferte generate </a>
                                         </td>
                                     </tr>
                                 </tbody>

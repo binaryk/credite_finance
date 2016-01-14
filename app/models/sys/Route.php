@@ -50,6 +50,9 @@ class Route {
 			->add('get', 'oferte_generate_row_source', 'oferte_generate_row_source/row-source/{id}','OferteGenerateController@rows', 'Credite\Datatable')
 			->add('get', 'download_oferta_generata', 'download_oferta_generata/{id}','OferteGenerateController@download', 'Credite\Datatable')
 			->add('post','delete_oferta_generata', 'delete_oferta_generata','OferteGenerateController@delete', 'Credite\Datatable')
+
+
+			->add('post','simulation', 'simulation','DataScadenteiMailler@send', 'Credite')
 		;
 	}
 

@@ -21,7 +21,7 @@
 				<tr>
 					<td style="text-align:left; padding-right:4px">Telefon client: <td>
 					<td style="text-align:left; padding-left:4px"><b>{{ $client->telefon }}</b><td>
-				<tr> 
+				<tr>
 			</table>
 		</td>
 	</tr>

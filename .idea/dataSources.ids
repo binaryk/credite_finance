@@ -256,6 +256,10 @@
       <column name="istoric_descoperit_de_cont_sold" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
       <column name="istoric_card_credit_sold" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
       <column name="co_platitor" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="data_scadentei" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="rata_lunara" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="euribor_procent" sqlType="FLOAT" precision="8" scale="2" nullable="false" jdbcType="7"/>
+      <column name="has_data_scadentei" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="produse" schema="" catalog="credite" type="TABLE">

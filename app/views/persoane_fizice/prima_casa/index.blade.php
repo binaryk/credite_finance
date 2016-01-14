@@ -4,8 +4,17 @@
  @section('custom-styles')
  	<link rel="stylesheet" type="text/css" href="{{ asset('custom/css/fisa-informatii.css') }}">
  @stop
+ @section('custom-scripts')
+	 @parent
+	 <script src="{{ asset('custom/js/utils/HelperAjax.js') }}"></script>
+	 <script src="{{ asset('custom/js/Scadenta.js') }}"></script>
+ @stop
 
 @section('datatable-specific-page-jquery-initializations')
+	_config['simulation'] = "{{ route('simulation') }}";
+	var scadenta = new Scadenta(_config['simulation']);
+	scadenta.handle();
+	console.log(scadenta);
 	form.aftershow = function(record,action){
 		if (action == 'insert')
 		{

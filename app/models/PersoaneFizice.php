@@ -8,15 +8,15 @@ class PersoaneFizice extends \Eloquent
 {
     use SoftDeletingTrait;
     protected $table = 'persoane_fizice';
-    protected $guarded = ['client_extern', 
-    'client_id',
-    'tip',
-    'an_constructie',
-    'localizare',
-    'marime',
-    'regim_juridic',
-    'valoare_estimata',
-    ];
+    protected $guarded = [  'client_extern',
+                            'client_id',
+                            'tip',
+                            'an_constructie',
+                            'localizare',
+                            'marime',
+                            'regim_juridic',
+                            'valoare_estimata',
+                            ];
 
     public static function getRecord( $id )
     {
@@ -24,8 +24,7 @@ class PersoaneFizice extends \Eloquent
     }
 
     public static function createRecord($data )
-    {  
-        
+    {
         if($data['client_extern'] == 1){
             /*trimite email*/
             $client = self::create($data);   

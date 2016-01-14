@@ -3,7 +3,7 @@
 	<li class="sidebar-search-wrapper">@include('template.parts.body.~search-form')</li>
 	<li>
 		<a href="javascript:;">
-			<i class="icon-folder"></i>
+			<i class="icon-users"></i>
 			<span class="title">Persoane Fizice</span>
 			<span class="arrow "></span>
 		</a>
@@ -77,13 +77,40 @@
 	<li>
 		<a href="javascript:;">
 			<i class="icon-briefcase"></i>
-			<span class="title">Persoane Juridice</span>
+			<span class="title">Persoane Juridice - [in dezvoltare]</span>
 			<span class="arrow "></span>
 		</a>
 	</li>
+	<li>
+		<a href="javascript:;">
+			<i class="icon-calculator"></i>
+			<span class="title">Ofertarea</span>
+			<span class="arrow "></span>
+		</a>
+		<ul class="sub-menu">
+			<li>
+				<a href="{{ URL::route('ofertare') }}"><i class="icon-users"></i>Genereaza oferta</a>
+			</li>
+			<li>
+				<a href="{{ URL::route('oferte_generate',['id' => 'oferte_generate']) }}"><i class="icon-users"></i>Oferte generate</a>
+			</li>
+		</ul>
+	</li>
 	<li class="start">
-		<a href="javascript:;"><i class="icon-user"></i>
-			<span class="title">Date de bază</span>
+		<a href="javascript:;"><i class="icon-calendar"></i>
+			<span class="title">Scadenta</span>
+			<span class="arrow"></span>
+		</a>
+		<ul class="sub-menu">
+			<li>
+				<a href="{{ URL::route('clienti-index', ['type' => 'scadenta']) }}">
+					<i class="icon-users"></i>Listă clienti</a>
+			</li>
+		</ul>
+	</li>
+	<li class="start">
+		<a href="javascript:;"><i class="icon-layers"></i>
+			<span class="title">Baza de date</span>
 			<span class="arrow"></span>
 		</a>
 		<ul class="sub-menu">
@@ -93,13 +120,7 @@
 				@endif
 			</li>
 			<li>
-				<a href="{{ URL::route('grid_banci') }}"><i class="icon-users"></i>Bănci</a>
-			</li>
-			<li>
-				<a href="{{ URL::route('ofertare') }}"><i class="icon-users"></i>Ofertare</a>
-			</li>
-			<li>
-				<a href="{{ URL::route('oferte_generate',['id' => 'oferte_generate']) }}"><i class="icon-users"></i>Oferte generate</a>
+				<a href="{{ URL::route('grid_banci') }}"><i class="icon-wallet"></i>Bănci</a>
 			</li>
 		</ul>
 	</li>

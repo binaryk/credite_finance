@@ -1066,6 +1066,39 @@ class PersoaneFiziceForm extends \Processing\Form\Form
                     ),
                     'after' => NULL])
         )
+		// 90
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+				->name('data_scadentei')
+				->caption('Data scadentei')
+				->class('form-control data-source datepicker')->readonly(1)
+				->controlsource('data_scadentei')->controltype('textbox')
+				->addon(['before' => '<i class="fa fa-calendar"></i>', 'after' => NULL])
+		)
+		// 91
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+				->name('rata_lunara')
+				->caption('Rata lunara')
+				->class('form-control  data-source decimal')
+				//->placeholder('Telefon')
+				->controlsource('rata_lunara')
+				->controltype('textbox')
+				->maxlength(255)
+		)
+		// 92
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+				->name('euribor_procent')
+				->caption('Euribor (%)')
+				->class('form-control  data-source decimal')
+				//->placeholder('Telefon')
+				->controlsource('euribor_procent')
+				->controltype('textbox')
+				->maxlength(255)
+		)
+
+
 		; 
 
 	}
