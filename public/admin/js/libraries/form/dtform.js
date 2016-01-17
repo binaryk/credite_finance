@@ -177,7 +177,8 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt, endpoint)
 
 	this.tofloat = function(value)
 	{
-		return numeral().unformat(value);
+		value = value.replace('.','');
+		return value.replace(',','.');
 	}
 
 	this.controlvalue = function( control )
@@ -190,8 +191,8 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt, endpoint)
 			case 'combobox'   :
 			case 'select2'    :
 			case 'editbox'    :
-				result = control.val(); 
-				if( control.hasClass('to-float') )
+				result = control.val();
+				if( control.hasClass('currency') || control.hasClass('decimal') )
 				{
 					result = this.tofloat(result);
 				}

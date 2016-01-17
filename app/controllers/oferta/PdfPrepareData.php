@@ -13,7 +13,6 @@ trait PdfPrepareData
     public function pdf()
     {
         $data = (array) Input::get('data');
-
         $pdf = new CreateOfertaPdf('L', 'A4', 'F', $data, true);
         $pdf->Output();
 

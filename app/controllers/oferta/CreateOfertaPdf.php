@@ -28,11 +28,11 @@ class CreateOfertaPdf
         $this->redus        = $redus;
         $this->pdf          = new \ToPDF\topdf();
         $this->pdf->newpage($this->orientation, $this->pagesize);
-         $this->pdf->Pdf()->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+        $this->pdf->Pdf()->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 
     }
 
-    public function __call($method, $args)
+    /*public function __call($method, $args)
     {
         $method = strtolower($method);
         if( array_key_exists($method, $attributes = $this->apartament->getAttributes()) )
@@ -40,7 +40,7 @@ class CreateOfertaPdf
             return $attributes[$method];
         }
         throw new \Exception("Datele nu au proprietatea [$method]");
-    }
+    }*/
     protected function fileName($save = false)
     {
         $file_name = str_replace('\\', '/', public_path() . '/app/oferte/oferta-export-' .\Carbon\Carbon::now()->format('d.m.Y H.i.s').'.pdf');
@@ -128,24 +128,102 @@ class CreateOfertaPdf
             '36' => [ 'caption' => 'Comision de rambursare anticipata', 'source' => 'comision_rambursare_anticipata'],
             /*'37' => [ 'caption' => 'Alte comisioane ale bancii', 'source' => 'alte_comisioane_banca'],*/
         ];
+
+        $this->pdf->pdf()->SetFillColor(80, 191, 78);
+        $this->pdf->pdf()->SetTextColor(255);
+        $this->pdf->pdf()->SetDrawColor(80, 191, 78);
+        $this->pdf->pdf()->SetLineWidth(0.3);
+        $this->pdf->pdf()->SetFont('', 'B');
+        $header = ['Denumire indicator'];
+        /*TOTAL WIDTH ==> 260*/
+        $w      = [60];
+        for($i = 1; $i <= $this->data['general']['nr_oferte']; $i++){
+            $header[] = "Oferta ".$i;
+            $w[] = 200 / $this->data['general']['nr_oferte'];
+        }
+
+        $num_headers = count($header);
+        for($i = 0; $i < $num_headers; ++$i) {
+            $this->pdf->Pdf()->Cell($w[$i], 6, $header[$i], 1, 0, 'C', 1);
+        }
+
+        $this->pdf->Pdf()->Ln();
+        // Color and font restoration
+        $this->pdf->Pdf()->SetFillColor(224, 235, 255);
+        $this->pdf->Pdf()->SetTextColor(0);
+        $this->pdf->Pdf()->SetFont('');
+        // Data
+        $fill = 0;
+        $data = [ [
+            'edi','1','2'
+        ] ];
+
         foreach($captions as $i => $row)
         {
-            /*verificam mai intai daca este afisabil acel camp*/
-            $visible = $this->{$row['source']}();
-            if( $visible !== null &&  $visible != '-1' ){
-                $this->pdf->Pdf()->ln();
-                $this->pdf->Pdf()->SetFont('freeserif', 'N', 9, '', false);
-                $this->pdf->Cell()->text( $row['caption'] )->width(130)->border('1')->halign('L')->linefeed(0)->out();
-                $this->pdf->Pdf()->SetFont('freeserif', '', 9, '', false);
-                if(array_key_exists('source', $row)){
-                    $this->pdf->Cell()->text( $visible )->width(140)->border('1')->halign('L')->linefeed(0)->out();
-                }else{
-                    $this->pdf->Cell()->text( '--' )->width(140)->border('1')->halign('L')->linefeed(0)->out();
+            $this->pdf->Pdf()->Cell($w[0], 6, $row['caption'], 'LR', 0, 'L', $fill);
+            for($i = 1; $i <= $this->data['general']['nr_oferte']; $i++){
+                $visible = $this->{$row['source']}($i);
+                if( $visible !== null &&  $visible != '-1' ){
+
+                    $this->pdf->Pdf()->Cell($w[$i], 6, $visible, 'LR', 0, 'R', $fill);
+
+
+                    /*   $this->pdf->Pdf()->Cell($w[0], 6, $row[0], 'LR', 0, 'L', $fill);
+                       $this->pdf->Pdf()->ln();
+                       $this->pdf->Pdf()->SetFont('freeserif', 'N', 9, '', false);
+                       $this->pdf->Cell()->text( $row['caption'] )->width(130)->border('1')->halign('L')->linefeed(0)->out();
+                       $this->pdf->Pdf()->SetFont('freeserif', '', 9, '', false);
+                       if(array_key_exists('source', $row)){
+                           $this->pdf->Cell()->text( $visible )->width(140)->border('1')->halign('L')->linefeed(0)->out();
+                       }else{
+                           $this->pdf->Cell()->text( '--' )->width(140)->border('1')->halign('L')->linefeed(0)->out();
+                       }*/
+
                 }
+
             }
-
-
+            $fill=!$fill;
+            $this->pdf->Pdf()->Ln();
         }
+
+        /*       foreach($data as $row) {
+                    $this->pdf->Pdf()->Cell($w[0], 6, $row[0], 'LR', 0, 'L', $fill);
+                    $this->pdf->Pdf()->Cell($w[1], 6, $row[1], 'LR', 0, 'L', $fill);
+                    $this->pdf->Pdf()->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R', $fill);
+                    $this->pdf->Pdf()->Ln();
+                    $fill=!$fill;
+               }*/
+    }
+
+    public function ColoredTable($header,$data) {
+        // Colors, line width and bold font
+        $this->SetFillColor(255, 0, 0);
+        $this->SetTextColor(255);
+        $this->SetDrawColor(128, 0, 0);
+        $this->SetLineWidth(0.3);
+        $this->SetFont('', 'B');
+        // Header
+        $w = array(40, 35, 40, 45);
+        $num_headers = count($header);
+        for($i = 0; $i < $num_headers; ++$i) {
+            $this->Cell($w[$i], 7, $header[$i], 1, 0, 'C', 1);
+        }
+        $this->Ln();
+        // Color and font restoration
+        $this->SetFillColor(224, 235, 255);
+        $this->SetTextColor(0);
+        $this->SetFont('');
+        // Data
+        $fill = 0;
+        foreach($data as $row) {
+            $this->Cell($w[0], 6, $row[0], 'LR', 0, 'L', $fill);
+            $this->Cell($w[1], 6, $row[1], 'LR', 0, 'L', $fill);
+            $this->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R', $fill);
+            $this->Cell($w[3], 6, number_format($row[3]), 'LR', 0, 'R', $fill);
+            $this->Ln();
+            $fill=!$fill;
+        }
+        $this->Cell(array_sum($w), 0, '', 'T');
     }
 
     protected function outfooter()
@@ -156,47 +234,47 @@ class CreateOfertaPdf
 //        $this->pdf->Cell()->text('Pentru informaţii suplimentare sau alte oferte imobiliare mă puteţi contacta la telefon ' . $this->apartament->current_user->telefon . ', pe email ' . $this->apartament->current_user->email . ' sau la sediul nostru pe ' . str_replace([chr(13) . chr(10), chr(10) . chr(13), chr(10), chr(13)], ' ', $this->apartament->current_org->adresa) )->width(190)->border('T')->halign('C')->out()->reset('border')->reset('width')->reset('halign');
     }
 
-    public function banca()
+    public function banca($i)
     {
 //        dd($this->data['data']);
-        return $this->comboval($this->data['data'][0]['banca_1'], PersoaneFizice::getBanca());
+        return $this->comboval($this->data['data'][$i-1]['banca_'.$i], PersoaneFizice::getBanca());
     }
 
-    public function tip_credit(){
-        return         @Produs::find($this->data['data'][0]['tip_credit_1'])->nume;
+    public function tip_credit($i){
+        return         @Produs::find($this->data['data'][$i-1]['tip_credit_'.$i])->nume;
     }
 
-    public function perioada_max_finantare(){
-        return $this->data['data'][0]['perioada_max_finantare_1'];
+    public function perioada_max_finantare($i){
+        return $this->data['data'][$i-1]['perioada_max_finantare_'.$i];
     }
 
-    public function perioada_finantare_luata_in_calcul(){
-        return $this->data['data'][0]['perioada_finantare_luata_in_calcul_1'];
+    public function perioada_finantare_luata_in_calcul($i){
+        return $this->data['data'][$i-1]['perioada_finantare_luata_in_calcul_'.$i];
     }
 
-    public function suma_solicitata(){
-        return $this->data['data'][0]['suma_solicitata_1'];
+    public function suma_solicitata($i){
+        return $this->data['data'][$i-1]['suma_solicitata_'.$i];
     }
 
-    public function suma_maxima_incadrare(){
-        return $this->data['data'][0]['suma_maxima_incadrare_1'];
+    public function suma_maxima_incadrare($i){
+        return $this->data['data'][$i-1]['suma_maxima_incadrare_'.$i];
     }
 
-    public function valuta_creditului(){
+    public function valuta_creditului($i){
 
-        return $this->comboval('valuta_creditului_1',$this->data['data'][0]);
+        return $this->comboval('valuta_creditului_'.$i,$this->data['data'][$i-1]);
     }
 
-    public function dobanda_preferentiala(){
-        return $this->comboval('dobanda_preferentiala_1',$this->data['data'][0]);
+    public function dobanda_preferentiala($i){
+        return $this->comboval('dobanda_preferentiala_'.$i,$this->data['data'][$i-1]);
     }
 
-    public function tipul_de_dobanda(){
-        return $this->comboval('tipul_de_dobanda_1',$this->data['data'][0]);
+    public function tipul_de_dobanda($i){
+        return $this->comboval('tipul_de_dobanda_'.$i,$this->data['data'][$i-1]);
     }
 
-    public function marja_fixa_practicata_banca(){
-        return $this->data['data'][0]['marja_fixa_practicata_banca_1'];
+    public function marja_fixa_practicata_banca($i){
+        return $this->data['data'][$i-1]['marja_fixa_practicata_banca_'.$i];
     }
 
     public function comboval($k, $a = [])
@@ -210,108 +288,108 @@ class CreateOfertaPdf
         }
     }
 
-    public function tip_indice_referinta(){
-        return $this->comboval($this->data['data'][0]['tip_indice_referinta_1'], PersoaneFizice::indice_referinta());
+    public function tip_indice_referinta($i){
+        return $this->comboval($this->data['data'][$i-1]['tip_indice_referinta_'.$i], PersoaneFizice::indice_referinta());
     }
 
-    public function valoare_indice_zi_referinta(){
-        return $this->data['data'][0]['valoare_indice_zi_referinta_1'];
+    public function valoare_indice_zi_referinta($i){
+        return $this->data['data'][$i-1]['valoare_indice_zi_referinta_'.$i];
     }
 
-    public function valoare_totala_dobanda(){
-        return $this->data['data'][0]['valoare_totala_dobanda_1'];
+    public function valoare_totala_dobanda($i){
+        return $this->data['data'][$i-1]['valoare_totala_dobanda_'.$i];
     }
 
-    public function avans_minim(){
-        return $this->data['data'][0]['avans_minim_1'];
+    public function avans_minim($i){
+        return $this->data['data'][$i-1]['avans_minim_'.$i];
     }
 
-    public function valoare_avans_minim(){
-        return $this->data['data'][0]['valoare_avans_minim_1'];
+    public function valoare_avans_minim($i){
+        return $this->data['data'][$i-1]['valoare_avans_minim_'.$i];
     }
 
-    public function valoare_totala_investitiei(){
-        return $this->data['data'][0]['valoare_totala_investitiei_1'];
+    public function valoare_totala_investitiei($i){
+        return $this->data['data'][$i-1]['valoare_totala_investitiei_'.$i];
     }
 
-    public function comision_administrare(){
-        return $this->data['data'][0]['comision_administrare_1'];
+    public function comision_administrare($i){
+        return $this->data['data'][$i-1]['comision_administrare_'.$i];
     }
 
-    public function rata_luanara_inclusiv_comision_gestionare(){
-        return $this->data['data'][0]['rata_luanara_inclusiv_comision_gestionare_1'];
+    public function rata_luanara_inclusiv_comision_gestionare($i){
+        return $this->data['data'][$i-1]['rata_luanara_inclusiv_comision_gestionare_'.$i];
     }
 
-    public function valoare_comision_analiza(){
-        return $this->data['data'][0]['valoare_comision_analiza_1'];
+    public function valoare_comision_analiza($i){
+        return $this->data['data'][$i-1]['valoare_comision_analiza_'.$i];
     }
 
-    public function comision_acordare(){
-        return $this->data['data'][0]['comision_acordare_1'];
+    public function comision_acordare($i){
+        return $this->data['data'][$i-1]['comision_acordare_'.$i];
     }
 
-    public function valoare_comision_acordare(){
-        return $this->data['data'][0]['valoare_comision_acordare_1'];
+    public function valoare_comision_acordare($i){
+        return $this->data['data'][$i-1]['valoare_comision_acordare_'.$i];
     }
 
-    public function valoare_estimata_rambursare(){
-        return $this->data['data'][0]['valoare_estimata_rambursare_1'];
+    public function valoare_estimata_rambursare($i){
+        return $this->data['data'][$i-1]['valoare_estimata_rambursare_'.$i];
     }
 
-    public function dae(){
-        return $this->data['data'][0]['dae_1'];
+    public function dae($i){
+        return $this->data['data'][$i-1]['dae_'.$i];
     }
 
-    public function taxa_evaluare_imobil(){
-        return $this->data['data'][0]['taxa_evaluare_imobil_1'];
+    public function taxa_evaluare_imobil($i){
+        return $this->data['data'][$i-1]['taxa_evaluare_imobil_'.$i];
     }
 
-    public function taxa_inscriere_arhiva(){
-        return $this->data['data'][0]['taxa_inscriere_arhiva_1'];
+    public function taxa_inscriere_arhiva($i){
+        return $this->data['data'][$i-1]['taxa_inscriere_arhiva_'.$i];
     }
 
-    public function taxe_notariale_ante_contract(){
-        return $this->data['data'][0]['taxe_notariale_ante_contract_1'];
+    public function taxe_notariale_ante_contract($i){
+        return $this->data['data'][$i-1]['taxe_notariale_ante_contract_'.$i];
     }
 
-    public function depozit_colateral(){
-        return $this->data['data'][0]['depozit_colateral_1'];
+    public function depozit_colateral($i){
+        return $this->data['data'][$i-1]['depozit_colateral_'.$i];
     }
 
-    public function prima_asigurare_imobil_anuala(){
-        return $this->data['data'][0]['prima_asigurare_imobil_anuala_1'];
+    public function prima_asigurare_imobil_anuala($i){
+        return $this->data['data'][$i-1]['prima_asigurare_imobil_anuala_'.$i];
     }
 
-    public function valoare_prima_asigurare_imobil(){
-        return $this->data['data'][0]['valoare_prima_asigurare_imobil_1'];
+    public function valoare_prima_asigurare_imobil($i){
+        return $this->data['data'][$i-1]['valoare_prima_asigurare_imobil_'.$i];
     }
 
-    public function prima_asigurare_imobil_pad(){
-        return $this->data['data'][0]['prima_asigurare_imobil_pad_1'];
+    public function prima_asigurare_imobil_pad($i){
+        return $this->data['data'][$i-1]['prima_asigurare_imobil_pad_'.$i];
     }
 
-    public function prima_asigurare_viata_anuala(){
-        return $this->data['data'][0]['prima_asigurare_viata_anuala_1'];
+    public function prima_asigurare_viata_anuala($i){
+        return $this->data['data'][$i-1]['prima_asigurare_viata_anuala_'.$i];
     }
 
-    public function valoare_prima_asigurare(){
-        return $this->data['data'][0]['valoare_prima_asigurare_1'];
+    public function valoare_prima_asigurare($i){
+        return $this->data['data'][$i-1]['valoare_prima_asigurare_'.$i];
     }
 
-    public function comision_administrare_fond_national_anuala(){
-        return $this->data['data'][0]['comision_administrare_fond_national_anuala_1'];
+    public function comision_administrare_fond_national_anuala($i){
+        return $this->data['data'][$i-1]['comision_administrare_fond_national_anuala_'.$i];
     }
 
-    public function comision_servicii_bancarea(){
-        return $this->data['data'][0]['comision_servicii_bancarea_1'];
+    public function comision_servicii_bancarea($i){
+        return $this->data['data'][$i-1]['comision_servicii_bancarea_'.$i];
     }
 
-    public function comision_rambursare_anticipata(){
-        return $this->data['data'][0]['comision_rambursare_anticipata_1'];
+    public function comision_rambursare_anticipata($i){
+        return $this->data['data'][$i-1]['comision_rambursare_anticipata_'.$i];
     }
 
-    public function alte_comisioane_banca(){
-        return $this->data['data'][0]['alte_comisioane_banca_1'];
+    public function alte_comisioane_banca($i){
+        return $this->data['data'][$i-1]['alte_comisioane_banca_'.$i];
     }
 
 

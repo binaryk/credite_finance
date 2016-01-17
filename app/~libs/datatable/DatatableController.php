@@ -24,7 +24,7 @@ class DatatableController extends \BaseController
 		$this->layout->caption = $config['caption'];
 		$this->layout->breadcrumbs = $config['breadcrumbs'];
 		$this->layout->right_menu = $config['right_menu'];
-		$this->layout->head_title = $config['head_title'];
+		$this->layout->head_title = array_key_exists('head_title', $config) ? $config['head_title'] : '';
 		if( ! $config['form']  )
 		{
 			$form = NULL;
