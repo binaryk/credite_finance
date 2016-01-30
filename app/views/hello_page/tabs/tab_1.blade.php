@@ -60,6 +60,12 @@
                                 <tbody>
                                     <tr>
                                         <td>
+                                            <a href="http://www.leed.ro/imobile/public/login">
+                                            Imobiliare </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             <a href="{{ URL::to('clienti')  }}">
                                             Clienti </a>
                                         </td>
