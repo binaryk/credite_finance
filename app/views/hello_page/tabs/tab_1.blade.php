@@ -21,8 +21,8 @@
                         Cont pe organizatia: {{ Credite\Organizatie::find( Sentry::getUser()->id_organizatie )->denumire  }}
                     </p>
                     <p>
-                    <a href="http://leed.ro/credite-kes-invest/public/">
-                        credite-kes-invest/public </a>
+                    <a href="http://www.credite.leed.ro">
+                        credite.leed.ro </a>
                     </p>
                     <ul class="list-inline">
                         <li>
