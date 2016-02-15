@@ -4,7 +4,7 @@
     var decimal  = function(suffix){
         $('.decimal').css({'text-align':'right'}).inputmask('decimal', {
             radixPoint     : ',',
-            digits         : 3,
+            digits         : 5,
              groupSeparator : '.',
             // autoGroup      : true,
             // suffix         : suffix,
@@ -15,7 +15,7 @@
     var currency  = function(suffix){
         $('.currency').css({'text-align':'right'}).inputmask('decimal', {
             radixPoint     : '.',
-            digits         : 3,
+            digits         : 5,
             // min            : 0,
             // max            : 10000,
             // groupSeparator : '.',
@@ -27,7 +27,7 @@
     var percentage  = function(suffix){
         $('.percentage').css({'text-align':'right'}).inputmask('decimal', {
             radixPoint     : '.',
-            digits         : 2,
+            digits         : 5,
             // groupSeparator : '.',
             // autoGroup      : true,
             //suffix         : ' %',

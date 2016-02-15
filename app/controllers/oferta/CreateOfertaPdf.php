@@ -29,7 +29,6 @@ class CreateOfertaPdf
         $this->pdf          = new \ToPDF\topdf();
         $this->pdf->newpage($this->orientation, $this->pagesize);
         $this->pdf->Pdf()->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
     }
 
     /*public function __call($method, $args)
@@ -129,11 +128,11 @@ class CreateOfertaPdf
             /*'37' => [ 'caption' => 'Alte comisioane ale bancii', 'source' => 'alte_comisioane_banca'],*/
         ];
 
-        $this->pdf->pdf()->SetFillColor(80, 191, 78);
-        $this->pdf->pdf()->SetTextColor(255);
-        $this->pdf->pdf()->SetDrawColor(80, 191, 78);
-        $this->pdf->pdf()->SetLineWidth(0.3);
-        $this->pdf->pdf()->SetFont('', 'B');
+        $this->pdf->Pdf()->SetFillColor(80, 191, 78);
+        $this->pdf->Pdf()->SetTextColor(255);
+        $this->pdf->Pdf()->SetDrawColor(80, 191, 78);
+        $this->pdf->Pdf()->SetLineWidth(0.3);
+        $this->pdf->Pdf()->SetFont('', 'B');
         $header = ['Denumire indicator'];
         /*TOTAL WIDTH ==> 260*/
         $w      = [60];
@@ -145,6 +144,7 @@ class CreateOfertaPdf
         $num_headers = count($header);
         for($i = 0; $i < $num_headers; ++$i) {
             $this->pdf->Pdf()->Cell($w[$i], 6, $header[$i], 1, 0, 'C', 1);
+//            $this->pdf->Pdf()->Cell(55 , 6, $header[$i], 1, 0, 'C', 1);
         }
 
         $this->pdf->Pdf()->Ln();
@@ -157,42 +157,25 @@ class CreateOfertaPdf
         $data = [ [
             'edi','1','2'
         ] ];
-
+        $count =  0;
         foreach($captions as $i => $row)
         {
-            $this->pdf->Pdf()->Cell($w[0], 6, $row['caption'], 'LR', 0, 'L', $fill);
+            $count++;
+            if($count % 14 == 0){
+                $this->pdf->newpage($this->orientation, $this->pagesize);
+            }
+            $this->pdf->Pdf()->SetDrawColor(0,0,0);
+            $this->pdf->Cell()->text( $row['caption'] )->width($w[0])->height(10)->border('1')->halign('L')->linefeed(0)->out();
             for($i = 1; $i <= $this->data['general']['nr_oferte']; $i++){
                 $visible = $this->{$row['source']}($i);
                 if( $visible !== null &&  $visible != '-1' ){
-
-                    $this->pdf->Pdf()->Cell($w[$i], 6, $visible, 'LR', 0, 'R', $fill);
-
-
-                    /*   $this->pdf->Pdf()->Cell($w[0], 6, $row[0], 'LR', 0, 'L', $fill);
-                       $this->pdf->Pdf()->ln();
-                       $this->pdf->Pdf()->SetFont('freeserif', 'N', 9, '', false);
-                       $this->pdf->Cell()->text( $row['caption'] )->width(130)->border('1')->halign('L')->linefeed(0)->out();
-                       $this->pdf->Pdf()->SetFont('freeserif', '', 9, '', false);
-                       if(array_key_exists('source', $row)){
-                           $this->pdf->Cell()->text( $visible )->width(140)->border('1')->halign('L')->linefeed(0)->out();
-                       }else{
-                           $this->pdf->Cell()->text( '--' )->width(140)->border('1')->halign('L')->linefeed(0)->out();
-                       }*/
-
+                    $this->pdf->Cell()->text( $visible )->width($w[$i])->border('1')->halign('L')->linefeed(0)->out();
                 }
 
             }
             $fill=!$fill;
             $this->pdf->Pdf()->Ln();
         }
-
-        /*       foreach($data as $row) {
-                    $this->pdf->Pdf()->Cell($w[0], 6, $row[0], 'LR', 0, 'L', $fill);
-                    $this->pdf->Pdf()->Cell($w[1], 6, $row[1], 'LR', 0, 'L', $fill);
-                    $this->pdf->Pdf()->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R', $fill);
-                    $this->pdf->Pdf()->Ln();
-                    $fill=!$fill;
-               }*/
     }
 
     public function ColoredTable($header,$data) {
