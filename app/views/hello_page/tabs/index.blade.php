@@ -6,7 +6,6 @@
                 @include('hello_page.tabs.tab_1')
                 @include('hello_page.tabs.tab_2')
                 @include('hello_page.tabs.tab_3')
-                @include('hello_page.tabs.tab_4')
             </div>
         </div>
     </div>

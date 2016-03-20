@@ -21,8 +21,8 @@
                         Cont pe organizatia: {{ Credite\Organizatie::find( Sentry::getUser()->id_organizatie )->denumire  }}
                     </p>
                     <p>
-                    <a href="http://www.credite.leed.ro">
-                        credite.leed.ro </a>
+                    <a href="http://credite.finance-flow.leed.ro/public/">
+                        credite.finance-flow.leed.ro </a>
                     </p>
                     <ul class="list-inline">
                         <li>
@@ -32,7 +32,7 @@
                             <i class="fa fa-calendar"></i> {{ Easy\Form\StringHelper::Items([ Carbon\Carbon::now()->day, Carbon\Carbon::now()->month, Carbon\Carbon::now()->year ],'.')  }}
                         </li>
                         <li>
-                            <i class="fa fa-briefcase"></i> Credite
+                            <i class="fa fa-briefcase"></i> Finance Flow Credite
                         </li>
                     </ul>
                 </div>
@@ -60,8 +60,8 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <a href="http://www.leed.ro/imobile/public/login">
-                                            Imobiliare </a>
+                                            <a href="http://imobile.finance-flow.leed.ro/">
+                                            FinanceFlow Imobiliare </a>
                                         </td>
                                     </tr>
                                     <tr>

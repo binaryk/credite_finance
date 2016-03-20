@@ -9,7 +9,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'leed_credite',
+			'database'  => 'leed_finance_flow_credite',
 			'username'  => 'leed_root',
 			'password'  => 'root_leed_2015',
 			'charset'   => 'utf8',

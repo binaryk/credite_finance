@@ -11,8 +11,4 @@
 		<a href="#tab_1_4" data-toggle="tab">
 		Clienți </a>
 	</li>
-	<li>
-		<a href="#tab_1_6" data-toggle="tab">
-		Ajutor </a>
-	</li>
 </ul>

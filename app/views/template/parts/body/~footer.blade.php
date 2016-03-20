@@ -1,6 +1,6 @@
 <div class="page-footer">
 	<div class="page-footer-inner">
-		 2015 &copy; CreditFin.
+		 2015 &copy; FinanceFlow Credite
 	</div>
 	<div class="scroll-to-top">
 		<i class="icon-arrow-up"></i>
