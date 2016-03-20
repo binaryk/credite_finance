@@ -59,44 +59,6 @@
 						<td class="highlight">
 							<div class="success">
 							</div>
-							 <div class="col-md-4">Credit:</div>
-						</td>
-						<td class="hidden-xs">
-								{{ $controls['65']->out() }}
-						</td>
-						<td>
-							 	{{ $controls['70']->out() }}
-						</td>
-						<td>
-								{{ $controls['74']->out() }}
-						</td>
-						<td>
-								{{ $controls['78']->out() }}
-						</td>
-					</tr>
-					<tr>
-						<td class="highlight">
-							<div class="success">
-							</div>
-							 <div class="col-md-4">Credit:</div>
-						</td>
-						<td class="hidden-xs">
-								{{ $controls['65']->out() }}
-						</td>
-						<td>
-							 	{{ $controls['70']->out() }}
-						</td>
-						<td>
-								{{ $controls['74']->out() }}
-						</td>
-						<td>
-								{{ $controls['78']->out() }}
-						</td>
-					</tr>
-					<tr>
-						<td class="highlight">
-							<div class="success">
-							</div>
 							 <div class="col-md-4">Co-debitor</div> 
 						</td>
 						<td class="hidden-xs">

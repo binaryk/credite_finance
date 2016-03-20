@@ -20,6 +20,11 @@
 		{
 			$('input').iCheck('uncheck');
 		}
+		if($('#istoric_credit').val() == 1){
+			$('.istoric').show();
+		}else{
+			$('.istoric').hide();
+		}
 	}
 
 	@if($edit)
