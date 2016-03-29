@@ -54,7 +54,7 @@ return [
 		'file-name-pattern' => '{{original}}-{{id_filter}}-{{date}}.{{extension}}',
 		'max-size' => 5 * 1024,
 		'allowed-extensions' => 'bmp,gif,jpeg,jpg,png,pdf,doc,docx',
-		'path' => str_replace('\\', '/', public_path()) . '/uploads/banci/produse/{{id_filter}}/acte_necesare',
+		'path' => str_replace('\\', '/', public_path()) . '/uploads/banci/produse/{{id_filter}}/acte_necesare/',
 		'id_name' => 'id_filter',
 	],
 ];

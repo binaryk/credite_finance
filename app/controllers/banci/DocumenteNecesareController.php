@@ -13,27 +13,57 @@ class DocumenteNecesareController extends \Datatable\DatatableController
     ];
 
     public function index($id, $id_filter, $type){
-        if( ! ($banca = \Credite\Banca::getRecord( (int) $id_filter)) )
-        {
-            return \Redirect::route('grid_banci');
+        if($type == '4'){
+            if( ! ($node = \Credite\Produs::getRecord( (int) $id_filter)) )
+            {
+                return \Redirect::route('grid_banci');
+            }
+        }else{
+            if( ! ($node = \Credite\Banca::getRecord( (int) $id_filter)) )
+            {
+                return \Redirect::route('grid_banci');
+            }
         }
+
+
+
         $config = \Credite\Grids::make($id)->toIndexConfig($id);
-        $config['breadcrumbs'] = [
-            [
-                'name' => 'Bănci',
-                'url'  => "grid_banci",
-                'ids' => ''
-            ],
-            [
-                'name' => $this->types[$type]['caption'] . ' necesare ale băncii <b>'.$banca->nume.'</b>',
-                'url'  => "documente_necesare_index",
-                'ids' => ['id' => 'documente_necesare', 'id_filter'=>$id_filter]
-            ]
-        ];
+        if($type == "4"){
+            $config['breadcrumbs'] = [
+                [
+                    'name' => 'Bănci',
+                    'url'  => "grid_banci",
+                    'ids' => ''
+                ],
+                [
+                    'name' => 'Produse',
+                    'url'  => "grid_banci",
+                    'ids' => []
+                ],
+                [
+                    'name' => $this->types[$type]['caption'] . ' necesare ale produsului <b>'.$node->nume.'</b>',
+                    'url'  => "documente_necesare_index",
+                    'ids' => ['id' => 'documente_necesare', 'id_filter'=>$id_filter]
+                ]
+            ];
+        }else{
+            $config['breadcrumbs'] = [
+                [
+                    'name' => 'Bănci',
+                    'url'  => "grid_banci",
+                    'ids' => ''
+                ],
+                [
+                    'name' => $this->types[$type]['caption'] . ' necesare ale băncii <b>'.$node->nume.'</b>',
+                    'url'  => "documente_necesare_index",
+                    'ids' => ['id' => 'documente_necesare', 'id_filter'=>$id_filter]
+                ]
+            ];
+        }
         $config['right_menu'] = [ ['caption' => 'Adaugă document', 'class' => 'action-insert-record']];
         $config['row-source'] .= '/' . $id_filter . '/' . $type;
         $config['caption']  =   $this->types[$type]['caption'];
-        $this->show( $config + ['other-info' => ['filter' => $banca, 'type' => $type, 'current_org' => $this->current_org]]);
+        $this->show( $config + ['other-info' => ['filter' => $node, 'type' => $type, 'current_org' => $this->current_org]]);
     }
 
     public function rows($id,$id_filter, $type){

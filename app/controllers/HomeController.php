@@ -1,8 +1,8 @@
 <?php
 
 class HomeController extends PrepareHelloController {
-	protected $caption = 'Bine ați venit pe aplicația <u>Credite</u>';
-	protected $small = 'aici veți putea gestiona afacerea dumnevoastră';
+	protected $caption = 'Bine ați venit pe aplicația <u>Finance Flow Credite</u>';
+	protected $small = '';
 
 	public function __construct(){
 		parent::__construct();
