@@ -18,7 +18,7 @@
                 <br>
                 Asa cum am stabilit, in urma informatiilor furnizate de dumneavoastra,
                 echipa noastra a realizat calcule comparative la mai multe banci pentru a obtine conditii de creditare competitive.
-                Va prezentam in continuare cateva oferte ale bancilor care le-am considerat cele mai potrivite pentru dumneavoastra din punct de vedere al costurilor.
+                Va prezentam in continuare cateva oferte ale bancilor le-am considerat cele mai potrivite pentru dumneavoastra din punct de vedere al costurilor.
             </b>
         </p>
     </div>
