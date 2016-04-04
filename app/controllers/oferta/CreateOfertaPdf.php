@@ -288,15 +288,18 @@ class CreateOfertaPdf
     }
 
     public function valoare_avans_minim($i){
-        return number_format($this->data['data'][$i-1]['valoare_avans_minim_'.$i],2);
+        $fl = floatval($this->data['data'][$i-1]['valoare_avans_minim_'.$i]);
+
+        return number_format($fl,2);
     }
 
     public function valoare_totala_investitiei($i){
-        return number_format($this->data['data'][$i-1]['valoare_totala_investitiei_'.$i],2);
+        $fl =  floatval($this->data['data'][$i-1]['valoare_totala_investitiei_'.$i]);
+        return  number_format($fl,2);
     }
 
     public function comision_administrare($i){
-        return $this->data['data'][$i-1]['comision_administrare_'.$i];
+        return  $this->data['data'][$i-1]['comision_administrare_'.$i];
     }
 
     public function rata_luanara_inclusiv_comision_gestionare($i){
