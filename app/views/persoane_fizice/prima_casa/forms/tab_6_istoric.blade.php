@@ -33,6 +33,9 @@
 						<th width="20%">
 							<i class="fa fa-shopping-cart"></i> Sold:
 						</th>
+						<th width="20%">
+							<i class="fa fa-shopping-cart"></i> Scadența:
+						</th>
 					</tr>
 					</thead>
 					<tbody>
@@ -54,6 +57,9 @@
 						<td>
 								{{ $controls['78']->out() }}
 						</td>
+						<td>
+							<a href="#" class="btn btn-primary btn-sm action-recurenta">Vezi scadența</a>
+						</td>
 					</tr>
 					<tr>
 						<td class="highlight">
@@ -72,6 +78,9 @@
 						</td>
 						<td>
 								{{ $controls['79']->out() }}
+						</td>
+						<td>
+							<a href="#" class="btn btn-primary btn-sm action-recurenta">Vezi scadența</a>
 						</td>
 					</tr>
 					<tr>
@@ -92,6 +101,9 @@
 						<td>
 								{{ $controls['80']->out() }}
 						</td>
+						<td>
+							<a href="#" class="btn btn-primary btn-sm action-recurenta">Vezi scadența</a>
+						</td>
 					</tr>
 					<tr>
 						<td class="highlight">
@@ -110,6 +122,9 @@
 						</td>
 						<td>
 								{{ $controls['81']->out() }}
+						</td>
+						<td>
+							<a href="#" class="btn btn-primary btn-sm action-recurenta">Vezi scadența</a>
 						</td>
 					</tr> 
 				</tbody>

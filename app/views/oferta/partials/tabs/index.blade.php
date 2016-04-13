@@ -28,7 +28,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <button type="button" ng-click="pdf()" class="btn blue">Generaza pdf</button>
+                <button type="button" ng-click="pdf({{@$client_id}})" class="btn blue">Generaza pdf</button>
             </div>
         </div>
     </div>

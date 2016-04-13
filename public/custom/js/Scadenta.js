@@ -7,10 +7,15 @@ var Scadenta = (function () {
             $(document).on('click', '.action-simulation', function (e) {
                 var $id = $(this).data('id'), $time = $(this).data('time');
                 var _ajax = new HelperAjax();
-                _ajax.setUrl(that.route).setData('POST').setData('id', $id).setData('time', $time).setOnFinish(function (response) {
+                _ajax
+                    .setUrl(that.route)
+                    .setData('id', $id)
+                    .setData('time', $time)
+                    .setOnFinish(function (response) {
                     alert('Finis');
                     console.log(response);
-                }).Request();
+                })
+                    .Request();
             });
         };
     }

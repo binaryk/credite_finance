@@ -3,7 +3,7 @@ namespace Oferta;
 
 class OfertaForm extends \Processing\Form\Form
 {
-
+    protected $client = null;
     public static function make()
     {
         return self::$instance = new OfertaForm();

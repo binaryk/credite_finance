@@ -8,9 +8,28 @@
 	 @parent
 	 <script src="{{ asset('custom/js/utils/HelperAjax.js') }}"></script>
 	 <script src="{{ asset('custom/js/Scadenta.js') }}"></script>
+	 <script src="{{ asset('custom/js/binaryk/ui/Modal.js') }}"></script>
+	 <script src="{{ asset('custom/js/prima_casa/ModalAction.js') }}"></script>
  @stop
-
+@section('modal')
+	@parent
+	{{
+        App\Repositories\Ui\Modal\Modal::make(null,null)
+        ->id('sync_modal')
+        ->caption('Data scadenței')
+        ->closable(true)
+        ->lid('sync_modal_title')
+        ->help('Aici completati pentru stabilirea datei scadentei')
+        ->body(View::make('persoane_fizice.partials.modal')->render())
+        ->footer('
+        <button type="button" data-modal-action="sync" class="btn btn-default">Salvează</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Renunţă</button>')
+        ->render()
+    }}
+@endsection
 @section('datatable-specific-page-jquery-initializations')
+	var modalAction = new App.ModalAction();
+    modalAction.init();
 	_config['simulation'] = "{{ route('simulation') }}";
 	var scadenta = new Scadenta(_config['simulation']);
 	scadenta.handle();

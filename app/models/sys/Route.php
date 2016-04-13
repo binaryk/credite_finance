@@ -39,15 +39,15 @@ class Route {
 			->add('post','documente_necesare', 'delete-client-document','DocumenteNecesareController@delete', 'Credite\Datatable')
 			->add('get', 'documente_necesare', 'download-client-documents/{document_id}','DocumenteNecesareController@download', 'Credite\Datatable')
 
-			->add('get', 'ofertare', 'ofertare', 'OfertaController@index', 'Oferta')
+			->add('get', 'ofertare', 'ofertare/{client_id?}', 'OfertaController@index', 'Oferta')
 
 			->add('post', 'r_post_oferte_template', 'r_post_oferte_template', 'OfertaController@template', 'Oferta')
 			->add('post', 'r_post_oferte_pdf', 'r_post_oferte_pdf', 'OfertaController@pdf', 'Oferta')
 			->add('post', 'r_post_banca_dobanzi', 'r_post_banca_dobanzi', 'OfertaController@dobanzi', 'Oferta')
 			->add('post', 'r_post_produse_by_banca', 'r_post_produse_by_banca', 'OfertaController@produse', 'Oferta')
 
-			->add('get', 'oferte_generate', 'oferte-generate/{id}', 'OferteGenerateController@index', 'Credite\Datatable')
-			->add('get', 'oferte_generate_row_source', 'oferte_generate_row_source/row-source/{id}','OferteGenerateController@rows', 'Credite\Datatable')
+			->add('get', 'oferte_generate', 'oferte-generate/{id}/{client_id?}', 'OferteGenerateController@index', 'Credite\Datatable')
+			->add('get', 'oferte_generate_row_source', 'oferte_generate_row_source/row-source/{id}/{client_id?}','OferteGenerateController@rows', 'Credite\Datatable')
 			->add('get', 'download_oferta_generata', 'download_oferta_generata/{id}','OferteGenerateController@download', 'Credite\Datatable')
 			->add('post','delete_oferta_generata', 'delete_oferta_generata','OferteGenerateController@delete', 'Credite\Datatable')
 

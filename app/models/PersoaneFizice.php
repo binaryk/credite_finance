@@ -86,6 +86,26 @@ class PersoaneFizice extends \Eloquent
             ];
     }
 
+    public static function moneda(){
+        return [
+            '0' => '-- Alege --',
+            '1'     => 'EUR',
+            '2'     => 'DOLAR',
+            '3'     => 'RON',
+            ];
+    }
+
+    public static function bor(){
+        return [
+            '0' => '-- Alege --',
+            '1'     => 'Euribor',
+            '2'     => 'Robor',
+            '3'     => 'Libor',
+            ];
+    }
+
+
+
     public static function getTipAngajator(){
         return [
             '0' => '-- Alege --',

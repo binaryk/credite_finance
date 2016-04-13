@@ -1,6 +1,6 @@
 app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout','oferta','FormService',
     function OfertaCtrl($scope, $http, $rootScope, $compile, $timeout,oferta,FormService){
-        console.log("OfertaCtrl");
+        console.log("OfertaCtrl", $scope.client_id);
         $scope.dobanzi_com;
         $scope.dobanzi_com_1;
         $scope.dobanzi_com_2;
@@ -9,9 +9,8 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
         $scope.dobanzi_com_5;
         $scope.current_oferta_id = 1;
 
-        $scope.changeNrOferte = function(){
-
-            oferta.create($scope.nr_oferte).then(function(data){
+        $scope.changeNrOferte = function(client_id){
+            oferta.create($scope.nr_oferte, client_id).then(function(data){
                 console.log(data);
                 $('#tabs').html(data.html);
                 $compile($('#tabs').contents())($scope);
@@ -160,7 +159,7 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
 
         }
 
-        $scope.pdf = function(){
+        $scope.pdf = function(client_id){
             var data = FormService.allDataSource($scope.nr_oferte);
             var send = {};
             send['general'] = {
@@ -168,6 +167,7 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
                 'nr_oferte'   : $('#nr_oferte').val()
             }
             send['data'] = data;
+            send['client_id'] = client_id;
             console.log(send);
 
             oferta.pdf(send).then(function(data){

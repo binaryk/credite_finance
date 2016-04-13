@@ -2,6 +2,8 @@
 
 namespace Credite\Datatable;
 
+use Credite\PersoaneFizice;
+
 class ClientDocumentsController extends \Datatable\DatatableController
 {
 	protected $layout = 'template.layout';
@@ -55,7 +57,7 @@ class ClientDocumentsController extends \Datatable\DatatableController
 		$rez =	
 		\Database\Actions::make()
 			->model('\Credite\Nomenclatoare\ClientDocuments')
-			->data(['id_client' => $id_client, 'id_user' => @$this->current_user->id ])
+			->data(['id_client' => $id_client,'nume_client' => @PersoaneFizice::find($id_client)->nume . @PersoaneFizice::find($id_client)->prenume, 'id_user' => @$this->current_user->id ])
 			->upload($input['file_data'], \Config::get('uploads.client-documents') );
 		return $rez;// \Response::json(['message' => "uraa"]);
 	}

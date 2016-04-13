@@ -11,11 +11,18 @@ use Illuminate\Support\Facades\View;
 class OfertaController  extends \BaseController{
     protected $layout = 'template.layout';
     use PdfPrepareData;
-    public function index(){
+    public function index($client_id = null){
         $form = OfertaForm::make();
+        if($client_id){
+            $client = PersoaneFizice::find($client_id)->nume . ' '. PersoaneFizice::find($client_id)->prenume;
+            $form->getControls()[0]->value($client)->ng_init('nume_client = "'.$client.'"');
+            $form->getControls()[1]->ng_change('changeNrOferte('.$client_id.')');
+        }
+
         $this->layout->content = \View::make('oferta.index')->with([
                 'form'          => $form->other_info(['current_org' => $this->current_org]),
                 'current_org'   => $this->current_org,
+                'client_id' => $client_id,
             ]);
     }
 
@@ -46,8 +53,9 @@ class OfertaController  extends \BaseController{
     public function template()
     {
         $oferte = Input::get('nr_oferte');
+        $client_id = Input::get('client_id');
         $controls = $this->controls($oferte);
-        $html   = View::make('oferta.partials.tabs.index')->with(compact('oferte','controls'))->render();
+        $html   = View::make('oferta.partials.tabs.index')->with(compact('oferte','controls','client_id'))->render();
         return  Response::json(['html' => $html]);
     }
 

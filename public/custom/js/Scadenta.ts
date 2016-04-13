@@ -15,7 +15,6 @@ class Scadenta{
             var _ajax = new HelperAjax();
             _ajax
                 .setUrl(that.route)
-                .setData('POST')
                 .setData('id', $id)
                 .setData('time',$time)
                 .setOnFinish( function(response){

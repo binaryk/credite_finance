@@ -7,5 +7,6 @@
     @include('template.parts.body.~page')
  	@include('template.parts.body.~footer')
     @include('template.parts.body.~include-js')
+    @yield('modal')
 </body>
 </html>

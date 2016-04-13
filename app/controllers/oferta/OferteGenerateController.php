@@ -1,6 +1,7 @@
 <?php
 namespace Credite\Datatable;
 
+use Credite\PersoaneFizice;
 use Credite\UploadedDoc;
 
 class OferteGenerateController extends \Datatable\DatatableController
@@ -12,16 +13,26 @@ class OferteGenerateController extends \Datatable\DatatableController
 
     }
 
-    public function index($id){
+    public function index($id, $client_id = null){
         $config = \Credite\Grids::make($id)->toIndexConfig($id);
         $config['breadcrumbs'] = [];
-        $this->show( $config + ['other-info' => [] ]);
+        if($client_id){
+            $config['right_menu'] = [ ['caption' => 'Adaugă ofertă','class' => 'btn', 'action' => \URL::route('ofertare',['client_id' => $client_id])] ];
+            
+            $config['caption'] .= ' pentru clientul: '.PersoaneFizice::find($client_id)->nume . ' '. PersoaneFizice::find($client_id)->prenume;
+            $config['row-source'] .= "/".$client_id;
+        }
+        $this->show( $config + ['other-info' => ['client_id' => $client_id] ]);
     }
 
-    public function rows($id){
+    public function rows($id, $client_id = null){
         $config = \Credite\Grids::make($id)->toRowDatasetConfig($id);
         $filters = $config['source']->custom_filters();
-        $config['source']->custom_filters( $filters + [ 'is_oferta' => 'uploaded_docs.oferte_generate = 1'  ]);
+        $client = [];
+        if($client_id){
+            $client = ['id_client' => 'uploaded_docs.id_client = '.$client_id];
+        }
+        $config['source']->custom_filters( $filters + [ 'is_oferta' => 'uploaded_docs.oferte_generate = 1'  ] + $client);
         return $this->dataset( $config );
     }
 
