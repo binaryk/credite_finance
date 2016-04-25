@@ -19,13 +19,16 @@ trait PdfPrepareData
         /*
          * getName(true) -> sa-mi dea calea
          * */
-        $this->insertUploadDoc($pdf, $data['client_id']);
+        $this->insertUploadDoc($pdf, @$data['client_id']);
 
         return URL::to("app/oferte/" . $pdf->getName(false));
     }
 
-    public function insertUploadDoc($pdf,$client_id)
+    public function insertUploadDoc($pdf,$client_id = null)
     {
+        if(! $client_id){
+            $client_id = 0;
+        }
         $location = $pdf->getName(true);
         UploadedDoc::createRecord(
             [

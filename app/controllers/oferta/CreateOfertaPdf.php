@@ -90,41 +90,41 @@ class CreateOfertaPdf
 
     protected function outfieldcaptions(){
         $captions = [
-            '1' => [ 'caption' => 'Banca',  'source' => 'banca', 'source' => 'banca'],
-            '2' => [ 'caption' => 'Tipul Creditului', 'source' => 'tip_credit'],
-            '3' => [ 'caption' => 'Perioada maxima de finantare (ani)', 'source' => 'perioada_max_finantare'],
-            '4' => [ 'caption' => 'Perioada de finantare luata in calcul (ani)', 'source' => 'perioada_finantare_luata_in_calcul'],
-            '5' => [ 'caption' => 'Suma solicitata', 'source' => 'suma_solicitata'],
-            '6' => [ 'caption' => 'Suma maxima finantabila la care va incadrati, conform criteriilor de eligibilitate ale bancii', 'source' => 'suma_maxima_incadrare'],
-            '7' => [ 'caption' => 'Valuta creditului', 'source' => 'valuta_creditului'],
-            '8' => [ 'caption' => 'Dobanda preferentiala', 'source' => 'dobanda_preferentiala'],
-            '9' => [ 'caption' => 'Tipul de dobanda', 'source' => 'tipul_de_dobanda'],
-            '10' => [ 'caption' => 'Marja fixa practicata de banca', 'source' => 'marja_fixa_practicata_banca'],
-            '11' => [ 'caption' => 'Tipul indicelui de referinta', 'source' => 'tip_indice_referinta'],
-            '12' => [ 'caption' => 'Valoare la zi indice de referinta', 'source' => 'valoare_indice_zi_referinta'],
-            '13' => [ 'caption' => 'Valoarea totala a dobanzii', 'source' => 'valoare_totala_dobanda'],
-            '15' => [ 'caption' => 'Avans minim', 'source' => 'avans_minim'],
-            '16' => [ 'caption' => 'Valoare avans minim', 'source' => 'valoare_avans_minim'],
-            '17' => [ 'caption' => 'Valoare totala a investitiei', 'source' => 'valoare_totala_investitiei'],
-            '18' => [ 'caption' => 'Comision de administrare', 'source' => 'comision_administrare'],
-            '19' => [ 'caption' => 'Rata lunara inclusiv comisioane de gestiune/administrare', 'source' => 'rata_luanara_inclusiv_comision_gestionare'],
-            '20' => [ 'caption' => 'Valoare comision de analiza', 'source' => 'valoare_comision_analiza'],
-            '21' => [ 'caption' => 'Comision de acordare', 'source' => 'comision_acordare'],
-            '22' => [ 'caption' => 'Valoare comision de acordare', 'source' => 'valoare_comision_acordare'],
-            '23' => [ 'caption' => 'Valoarea estimata totala de rambursat', 'source' => 'valoare_estimata_rambursare'],
-            '24' => [ 'caption' => 'D.A.E', 'source' => 'dae'],
-            '25' => [ 'caption' => 'Taxa de evaluare a imobilului care se  aduce in garantie', 'source' => 'taxa_evaluare_imobil'],
-            '26' => [ 'caption' => 'Taxele de înscriere în Arhiva Electronica de Garantii  Reale Mobiliare', 'source' => 'taxa_inscriere_arhiva'],
-            '27' => [ 'caption' => 'Taxele notariale pentru: autentificarea ante-contractului', 'source' => 'taxe_notariale_ante_contract'],/*, contractului de vanzare sau de ipoteca  inclusiv taxe de intabulare*/
-            '28' => [ 'caption' => 'Depozitul colateral format din trei rate', 'source' => 'depozit_colateral'],/* de dobanda (credit prima casa)*/
-            '29' => [ 'caption' => 'Prima de asigurare a imobilului - taxa anuala', 'source' => 'prima_asigurare_imobil_anuala'],
-            '30' => [ 'caption' => 'Valoare prima de asigurare imobil', 'source' => 'valoare_prima_asigurare_imobil'],
-            '31' => [ 'caption' => 'Prima de asigurare a imobilului obligatorie PAD', 'source' => 'prima_asigurare_imobil_pad'],
-            '32' => [ 'caption' => 'Prima de asigurare de viata - taxa anuala', 'source' => 'prima_asigurare_viata_anuala'],
-            '33' => [ 'caption' => 'Valoare prima de asigurare', 'source' => 'valoare_prima_asigurare'],
-            '34' => [ 'caption' => 'Comisionul de administrare platibil catre Fondul Nataional de Garantare a Creditelor', 'source' => 'comision_administrare_fond_national_anuala'],/* (credit Prima Casa) - taxa anuala*/
-            '35' => [ 'caption' => 'Comision prestari servicii bancare', 'source' => 'comision_servicii_bancarea'],
-            '36' => [ 'caption' => 'Comision de rambursare anticipata', 'source' => 'comision_rambursare_anticipata'],
+            '1' => [ 'caption' => 'Banca',  'source' => 'banca', 'source' => 'banca', 'format' => 'text'],
+            '2' => [ 'caption' => 'Tipul Creditului', 'source' => 'tip_credit', 'format' => 'text'],
+            '3' => [ 'caption' => 'Perioada maxima de finantare (ani)', 'source' => 'perioada_max_finantare', 'format' => 'integer'],
+            '4' => [ 'caption' => 'Perioada de finantare luata in calcul (ani)', 'source' => 'perioada_finantare_luata_in_calcul', 'format' => 'integer'],
+            '5' => [ 'caption' => 'Suma solicitata', 'source' => 'suma_solicitata', 'format' => 'float'],
+//            '6' => [ 'caption' => 'Suma maxima finantabila la care va incadrati, conform criteriilor de eligibilitate ale bancii', 'source' => 'suma_maxima_incadrare'],
+            '7' => [ 'caption' => 'Valuta creditului', 'source' => 'valuta_creditului', 'format' => 'text'],
+            '8' => [ 'caption' => 'Dobanda preferentiala', 'source' => 'dobanda_preferentiala', 'format' => 'text'],
+            '9' => [ 'caption' => 'Tipul de dobanda', 'source' => 'tipul_de_dobanda', 'format' => 'text'],
+            '10' => [ 'caption' => 'Marja fixa practicata de banca(%)', 'source' => 'marja_fixa_practicata_banca', 'format' => 'float'],
+            '11' => [ 'caption' => 'Tipul indicelui de referinta', 'source' => 'tip_indice_referinta', 'format' => ''],
+            '12' => [ 'caption' => 'Valoare la zi indice de referinta(%)', 'source' => 'valoare_indice_zi_referinta', 'format' => 'float'],
+            '13' => [ 'caption' => 'Valoarea totala a dobanzii(%)', 'source' => 'valoare_totala_dobanda', 'format' => 'float'],
+            '15' => [ 'caption' => 'Avans minim(%)', 'source' => 'avans_minim', 'format' => 'float'],
+            '16' => [ 'caption' => 'Valoare avans minim', 'source' => 'valoare_avans_minim', 'format' => 'float'],
+            '17' => [ 'caption' => 'Valoare totala a investitiei', 'source' => 'valoare_totala_investitiei', 'format' => 'float'],
+            '18' => [ 'caption' => 'Comision de administrare(%)', 'source' => 'comision_administrare', 'format' => 'float'],
+            '19' => [ 'caption' => 'Rata lunara inclusiv comisioane de gestiune/administrare', 'source' => 'rata_luanara_inclusiv_comision_gestionare', 'format' => 'float'],
+            '20' => [ 'caption' => 'Valoare comision de analiza', 'source' => 'valoare_comision_analiza', 'format' => 'float'],
+            '21' => [ 'caption' => 'Comision de acordare(%)', 'source' => 'comision_acordare', 'format' => 'float'],
+            '22' => [ 'caption' => 'Valoare comision de acordare', 'source' => 'valoare_comision_acordare', 'format' => 'float'],
+            '23' => [ 'caption' => 'Valoarea estimata totala de rambursat', 'source' => 'valoare_estimata_rambursare', 'format' => 'float'],
+            '24' => [ 'caption' => 'D.A.E(%)', 'source' => 'dae', 'format' => 'float'],
+            '25' => [ 'caption' => 'Taxa de evaluare a imobilului care se  aduce in garantie', 'source' => 'taxa_evaluare_imobil', 'format' => 'float'],
+            '26' => [ 'caption' => 'Taxele de înscriere în Arhiva Electronica de Garantii  Reale', 'source' => 'taxa_inscriere_arhiva', 'format' => 'float'],
+            '27' => [ 'caption' => 'Taxele notariale pentru(autentificare contract de vanzare,contract ipoteca)', 'source' => 'taxe_notariale_ante_contract', 'format' => 'float'],/*, contractului de vanzare sau de ipoteca  inclusiv taxe de intabulare*/
+            '28' => [ 'caption' => 'Depozitul colateral format din trei rate de dobanda', 'source' => 'depozit_colateral', 'format' => 'float'],/* de dobanda (credit prima casa)*/
+            '29' => [ 'caption' => 'Prima de asigurare a imobilului - taxa anuala(%)', 'source' => 'prima_asigurare_imobil_anuala', 'format' => 'float'],
+            '30' => [ 'caption' => 'Valoare prima de asigurare imobil', 'source' => 'valoare_prima_asigurare_imobil', 'format' => 'float'],
+            '31' => [ 'caption' => 'Prima de asigurare a imobilului obligatorie PAD', 'source' => 'prima_asigurare_imobil_pad', 'format' => 'float'],
+            '32' => [ 'caption' => 'Prima de asigurare de viata - taxa anuala(%)', 'source' => 'prima_asigurare_viata_anuala', 'format' => 'float'],
+            '33' => [ 'caption' => 'Valoare prima de asigurare', 'source' => 'valoare_prima_asigurare', 'format' => 'float'],
+            '34' => [ 'caption' => 'Comisionul de admin. platibil catre Fondul National de Garantare', 'source' => 'comision_administrare_fond_national_anuala', 'format' => 'float'],/* (credit Prima Casa) - taxa anuala*/
+            '35' => [ 'caption' => 'Comision prestari servicii bancare', 'source' => 'comision_servicii_bancarea', 'format' => 'float'],
+            '36' => [ 'caption' => 'Comision de rambursare anticipata(%)', 'source' => 'comision_rambursare_anticipata', 'format' => 'float'],
             /*'37' => [ 'caption' => 'Alte comisioane ale bancii', 'source' => 'alte_comisioane_banca'],*/
         ];
 
@@ -154,9 +154,6 @@ class CreateOfertaPdf
         $this->pdf->Pdf()->SetFont('');
         // Data
         $fill = 0;
-        $data = [ [
-            'edi','1','2'
-        ] ];
         $count =  0;
         foreach($captions as $i => $row)
         {
@@ -168,14 +165,52 @@ class CreateOfertaPdf
             $this->pdf->Cell()->text( $row['caption'] )->width($w[0])->height(10)->border('1')->halign('L')->linefeed(0)->out();
             for($i = 1; $i <= $this->data['general']['nr_oferte']; $i++){
                 $visible = $this->{$row['source']}($i);
+                $visible = $this->prepare_format($visible, $row);
                 if( $visible !== null &&  $visible != '-1' ){
-                    $this->pdf->Cell()->text( $visible )->width($w[$i])->border('1')->halign('L')->linefeed(0)->out();
+                    $this->pdf->Cell()->text( $visible )->width($w[$i])->border('1')->halign('R')->linefeed(0)->out();
                 }
 
             }
             $fill=!$fill;
             $this->pdf->Pdf()->Ln();
         }
+    }
+
+    public function prepare_format($visible, $row)
+    {
+        $out = 0;
+        if($row['format'] == 'text'){
+            return $visible;
+        }
+        if(floatval($visible) != 0 && array_key_exists('format', $row) && method_exists($this, 'format_'.$row['format'])){
+
+            if($row['source'] == 'comision_administrare'){
+                $out = $this->{'format_'.$row['format']}($visible, 3);
+            }else{
+                $out = $this->{'format_'.$row['format']}($visible);
+            }
+        }
+
+        return $out;
+    }
+
+    public function format_float($val, $decimals = 2)
+    {
+        $val = floatval($val);
+        if($decimals == 3){
+        }
+        return number_format($val,$decimals,',','.');
+    }
+
+    public function format_integer($val)
+    {
+        return number_format($val);
+    }
+
+    public function format_text($val)
+    {
+        dd($val);
+        return $val;
     }
 
     public function ColoredTable($header,$data) {
@@ -224,7 +259,7 @@ class CreateOfertaPdf
     }
 
     public function tip_credit($i){
-        return         @Produs::find($this->data['data'][$i-1]['tip_credit_'.$i])->nume;
+        return @Produs::find($this->data['data'][$i-1]['tip_credit_'.$i])->nume;
     }
 
     public function perioada_max_finantare($i){
@@ -290,12 +325,13 @@ class CreateOfertaPdf
     public function valoare_avans_minim($i){
         $fl = floatval($this->data['data'][$i-1]['valoare_avans_minim_'.$i]);
 
-        return number_format($fl,2);
+        return $this->data['data'][$i-1]['valoare_avans_minim_'.$i];
     }
 
     public function valoare_totala_investitiei($i){
         $fl =  floatval($this->data['data'][$i-1]['valoare_totala_investitiei_'.$i]);
-        return  number_format($fl,2);
+//        dd(number_format($fl,2));
+        return  $this->data['data'][$i-1]['valoare_totala_investitiei_'.$i];
     }
 
     public function comision_administrare($i){
