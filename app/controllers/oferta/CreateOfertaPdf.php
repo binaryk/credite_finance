@@ -204,12 +204,11 @@ class CreateOfertaPdf
 
     public function format_integer($val)
     {
-        return number_format($val);
+        return floatval($val);
     }
 
     public function format_text($val)
     {
-        dd($val);
         return $val;
     }
 
