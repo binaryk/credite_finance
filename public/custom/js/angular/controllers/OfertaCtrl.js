@@ -107,7 +107,7 @@ app.controller('OfertaCtrl',['$scope','$http','$rootScope','$compile','$timeout'
             }, true);
 
             $scope.$watch('[prima_asigurare_imobil_anuala_'+$scope.current_oferta_id+',valoare_totala_investitiei_'+$scope.current_oferta_id+']', function () {
-                $scope['valoare_prima_asigurare_imobil_'+$scope.current_oferta_id] = /*Number.parseFloat($scope['prima_asigurare_imobil_anuala_'+$scope.current_oferta_id]) * */ 0.1 * Number.parseFloat($scope['valoare_totala_investitiei_'+$scope.current_oferta_id]);
+                $scope['valoare_prima_asigurare_imobil_'+$scope.current_oferta_id] = Number.parseFloat($scope['prima_asigurare_imobil_anuala_'+$scope.current_oferta_id]) * Number.parseFloat($scope['valoare_totala_investitiei_'+$scope.current_oferta_id]) / 100;
             }, true);
         }
 

@@ -100,7 +100,7 @@ class CreateOfertaPdf
             '8' => [ 'caption' => 'Dobanda preferentiala', 'source' => 'dobanda_preferentiala', 'format' => 'text'],
             '9' => [ 'caption' => 'Tipul de dobanda', 'source' => 'tipul_de_dobanda', 'format' => 'text'],
             '10' => [ 'caption' => 'Marja fixa practicata de banca(%)', 'source' => 'marja_fixa_practicata_banca', 'format' => 'float'],
-            '11' => [ 'caption' => 'Tipul indicelui de referinta', 'source' => 'tip_indice_referinta', 'format' => ''],
+            '11' => [ 'caption' => 'Tipul indicelui de referinta', 'source' => 'tip_indice_referinta', 'format' => 'text'],
             '12' => [ 'caption' => 'Valoare la zi indice de referinta(%)', 'source' => 'valoare_indice_zi_referinta', 'format' => 'float'],
             '13' => [ 'caption' => 'Valoarea totala a dobanzii(%)', 'source' => 'valoare_totala_dobanda', 'format' => 'float'],
             '15' => [ 'caption' => 'Avans minim(%)', 'source' => 'avans_minim', 'format' => 'float'],
