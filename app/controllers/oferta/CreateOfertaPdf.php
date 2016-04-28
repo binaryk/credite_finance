@@ -59,7 +59,8 @@ class CreateOfertaPdf
     {
         $logo_file = str_replace('\\', '/', storage_path() . '/app/apartamente/images/logo.png');
         $this->pdf->Pdf()->Image($logo_file, 10, 0, 70, 0, 'PNG', '', 'T', false, 308, '', false, false, 0, false, false, false);
-        $this->pdf->Pdf()->SetFontSize(17);
+        $this->pdf->Pdf()->SetFont('', 'N');
+        $this->pdf->Pdf()->SetFontSize(11);
         $this->pdf->cell()->text('Data ofertei: ' . \Carbon\Carbon::now()->format('d.m.Y'))->top(13)->left(220)->width(70)->halign('R')->out()->reset('top')->reset('left');
     }
 
@@ -69,14 +70,14 @@ class CreateOfertaPdf
         $this->pdf->Pdf()->ln();
         $this->pdf->Pdf()->SetXY(20, 12);
         $this->pdf->Pdf()->SetFontSize(15);
-        $this->pdf->Pdf()->SetTextColor(150, 200, 50);
-        $nume = strtoupper( 'Oferta' );
+        $this->pdf->Pdf()->SetTextColor(153, 204, 51);
+        $nume = 'Oferta Credite';
         if( ! $nume )
         {
-            $this->pdf->Pdf()->SetTextColor(255, 0, 0);
+            $this->pdf->Pdf()->SetTextColor(153, 204, 51);
             $nume = 'Numele ofertei nu este definit';
         }
-        $this->pdf->Cell()->text( $nume )->width(190)->border('')->halign('C')->out();
+        $this->pdf->Cell()->text( $nume )->width(250)->border('')->halign('C')->out();
         $this->pdf->Pdf()->SetTextColor(0, 0, 0);
         $this->pdf->Pdf()->SetFontSize($oldFontSize);
     }
@@ -91,32 +92,32 @@ class CreateOfertaPdf
     protected function outfieldcaptions(){
         $captions = [
             '1' => [ 'caption' => 'Banca',  'source' => 'banca', 'source' => 'banca', 'format' => 'text'],
-            '2' => [ 'caption' => 'Tipul Creditului', 'source' => 'tip_credit', 'format' => 'text'],
+            '2' => [ 'caption' => 'Tip credit', 'source' => 'tip_credit', 'format' => 'text'],
             '3' => [ 'caption' => 'Perioada maxima de finantare (ani)', 'source' => 'perioada_max_finantare', 'format' => 'integer'],
             '4' => [ 'caption' => 'Perioada de finantare luata in calcul (ani)', 'source' => 'perioada_finantare_luata_in_calcul', 'format' => 'integer'],
             '5' => [ 'caption' => 'Suma solicitata', 'source' => 'suma_solicitata', 'format' => 'float'],
 //            '6' => [ 'caption' => 'Suma maxima finantabila la care va incadrati, conform criteriilor de eligibilitate ale bancii', 'source' => 'suma_maxima_incadrare'],
-            '7' => [ 'caption' => 'Valuta creditului', 'source' => 'valuta_creditului', 'format' => 'text'],
+            '7' => [ 'caption' => 'Valuta credit', 'source' => 'valuta_creditului', 'format' => 'text'],
             '8' => [ 'caption' => 'Dobanda preferentiala', 'source' => 'dobanda_preferentiala', 'format' => 'text'],
             '9' => [ 'caption' => 'Tipul de dobanda', 'source' => 'tipul_de_dobanda', 'format' => 'text'],
             '10' => [ 'caption' => 'Marja fixa practicata de banca(%)', 'source' => 'marja_fixa_practicata_banca', 'format' => 'float'],
-            '11' => [ 'caption' => 'Tipul indicelui de referinta', 'source' => 'tip_indice_referinta', 'format' => 'text'],
+            '11' => [ 'caption' => 'Tip indice de referinta', 'source' => 'tip_indice_referinta', 'format' => 'text'],
             '12' => [ 'caption' => 'Valoare la zi indice de referinta(%)', 'source' => 'valoare_indice_zi_referinta', 'format' => 'float'],
-            '13' => [ 'caption' => 'Valoarea totala a dobanzii(%)', 'source' => 'valoare_totala_dobanda', 'format' => 'float'],
+            '13' => [ 'caption' => 'Valoare totala dobanda(%)', 'source' => 'valoare_totala_dobanda', 'format' => 'float'],
             '15' => [ 'caption' => 'Avans minim(%)', 'source' => 'avans_minim', 'format' => 'float'],
             '16' => [ 'caption' => 'Valoare avans minim', 'source' => 'valoare_avans_minim', 'format' => 'float'],
-            '17' => [ 'caption' => 'Valoare totala a investitiei', 'source' => 'valoare_totala_investitiei', 'format' => 'float'],
+            '17' => [ 'caption' => 'Valoare totala investitie', 'source' => 'valoare_totala_investitiei', 'format' => 'float'],
             '18' => [ 'caption' => 'Comision de administrare(%)', 'source' => 'comision_administrare', 'format' => 'float'],
             '19' => [ 'caption' => 'Rata lunara inclusiv comisioane de gestiune/administrare', 'source' => 'rata_luanara_inclusiv_comision_gestionare', 'format' => 'float'],
             '20' => [ 'caption' => 'Valoare comision de analiza', 'source' => 'valoare_comision_analiza', 'format' => 'float'],
             '21' => [ 'caption' => 'Comision de acordare(%)', 'source' => 'comision_acordare', 'format' => 'float'],
             '22' => [ 'caption' => 'Valoare comision de acordare', 'source' => 'valoare_comision_acordare', 'format' => 'float'],
-            '23' => [ 'caption' => 'Valoarea estimata totala de rambursat', 'source' => 'valoare_estimata_rambursare', 'format' => 'float'],
+            '23' => [ 'caption' => 'Valoare totala de rambursat - Estimata', 'source' => 'valoare_estimata_rambursare', 'format' => 'float'],
             '24' => [ 'caption' => 'D.A.E(%)', 'source' => 'dae', 'format' => 'float'],
             '25' => [ 'caption' => 'Taxa de evaluare a imobilului care se  aduce in garantie', 'source' => 'taxa_evaluare_imobil', 'format' => 'float'],
-            '26' => [ 'caption' => 'Taxele de înscriere în Arhiva Electronica de Garantii  Reale', 'source' => 'taxa_inscriere_arhiva', 'format' => 'float'],
-            '27' => [ 'caption' => 'Taxele notariale pentru(autentificare contract de vanzare,contract ipoteca)', 'source' => 'taxe_notariale_ante_contract', 'format' => 'float'],/*, contractului de vanzare sau de ipoteca  inclusiv taxe de intabulare*/
-            '28' => [ 'caption' => 'Depozitul colateral format din trei rate de dobanda', 'source' => 'depozit_colateral', 'format' => 'float'],/* de dobanda (credit prima casa)*/
+            '26' => [ 'caption' => 'Taxe de înscriere în Arhiva Electron. de Garantii  Reale Mobiliare', 'source' => 'taxa_inscriere_arhiva', 'format' => 'float'],
+            '27' => [ 'caption' => 'Taxe notariale autentificare contract de vanzare,contract de ipoteca', 'source' => 'taxe_notariale_ante_contract', 'format' => 'float'],/*, contractului de vanzare sau de ipoteca  inclusiv taxe de intabulare*/
+            '28' => [ 'caption' => 'Depozit colateral format din trei rate de dobanda', 'source' => 'depozit_colateral', 'format' => 'float'],/* de dobanda (credit prima casa)*/
             '29' => [ 'caption' => 'Prima de asigurare a imobilului - taxa anuala(%)', 'source' => 'prima_asigurare_imobil_anuala', 'format' => 'float'],
             '30' => [ 'caption' => 'Valoare prima de asigurare imobil', 'source' => 'valoare_prima_asigurare_imobil', 'format' => 'float'],
             '31' => [ 'caption' => 'Prima de asigurare a imobilului obligatorie PAD', 'source' => 'prima_asigurare_imobil_pad', 'format' => 'float'],
@@ -245,10 +246,35 @@ class CreateOfertaPdf
 
     protected function outfooter()
     {
-        $this->pdf->Pdf()->SetFont('freeserif', '', 9, '', false);
-        $this->pdf->Pdf()->SetXY(10, -25);
-        $this->pdf->Cell()->text('Contactatine la telefon 0756633766');
-//        $this->pdf->Cell()->text('Pentru informaţii suplimentare sau alte oferte imobiliare mă puteţi contacta la telefon ' . $this->apartament->current_user->telefon . ', pe email ' . $this->apartament->current_user->email . ' sau la sediul nostru pe ' . str_replace([chr(13) . chr(10), chr(10) . chr(13), chr(10), chr(13)], ' ', $this->apartament->current_org->adresa) )->width(190)->border('T')->halign('C')->out()->reset('border')->reset('width')->reset('halign');
+        $this->pdf->Pdf()->ln();
+        $this->pdf->Pdf()->SetFontSize(11);
+        $this->pdf->Pdf()->SetTextColor(20, 106, 135);
+        $html = "Oferta este intocmita in concordanta cu informatiile furnizate de catre partenerii bancari si valabile la data intocmirii prezentei oferte, precum si pe baza informatiilor furnizate de catre dumneavoastra. Nu ne asumam raspunderea ofertei daca informatiile furnizate nu au fost corecte sau nu corespund cu cele precizate in actele de venit.
+In momentul in care veti lua o decizie in ceea ce priveste banca a carei oferta considerati ca vi se potriveste, va vom trimite lista cu actele necesare pentru a putea intocmi dosarul de credit.
+Pentru orice nelamuriri sau intrebari va rugam sa ne contactati.";
+        $this->pdf->PDF()->writeHTML($html, true, 0, true, 0);
+    }
+
+    protected function contact()
+    {
+        $user = \Sentry::getUser();
+        $fullname = $user->nume . ' '. $user->prenume;
+        $this->pdf->Pdf()->ln();
+        $this->pdf->Pdf()->ln();
+        $this->pdf->Pdf()->SetFontSize(11);
+        $this->pdf->Pdf()->SetTextColor(20, 106, 135);
+        $this->pdf->PDF()->writeHTML($fullname, true, 0, true, 0);
+        $this->pdf->PDF()->writeHTML($user->telefon, true, 0, true, 0);
+        $this->pdf->PDF()->writeHTML($user->email, true, 0, true, 0);
+    }
+
+    protected function legenda()
+    {
+        $this->pdf->Pdf()->ln();
+        $this->pdf->Pdf()->SetFontSize(11);
+        $this->pdf->Pdf()->SetTextColor(20, 106, 135);
+        $html = "*Valorile din prezenta oferta sunt exprimate in Lei. (asta sa o pui sa fie exact sub tabel in prima linie)";
+        $this->pdf->PDF()->writeHTML($html, true, 0, true, 0);
     }
 
     public function banca($i)
@@ -423,7 +449,9 @@ class CreateOfertaPdf
         $this->outfieldcaptions();
 
 //        $this->outdetails();
+        $this->legenda();
         $this->outfooter();
+        $this->contact();
     }
 
     public function Output()

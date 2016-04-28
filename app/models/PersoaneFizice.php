@@ -224,7 +224,7 @@ class PersoaneFizice extends \Eloquent
     public static function valuta()
     {
         return[
-            'RON' => 'RON',
+            'LEU' => 'LEU',
             'EUR' => 'EUR',
         ];
     }
